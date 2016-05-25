@@ -10,7 +10,9 @@ angular.module('app.controllers', [])
    
 .controller('restavracijeCtrl', function($scope, Restavracije) {
 	console.log("asd");
-	Restavracije.getFromApi();
+	Restavracije.getRestavracije().then(function(data){
+		console.log(data);
+	});
 	/*$scope.test=null;
 	var object={
 		id: 1,
@@ -28,7 +30,7 @@ angular.module('app.controllers', [])
 })
    
 .controller('profilCtrl', function($scope) {
-
+	Restavracije.getFromApiRestavracije();
 })
    
 .controller('restavracijaCtrl', function($scope) {

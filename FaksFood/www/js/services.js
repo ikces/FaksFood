@@ -82,16 +82,41 @@ angular.module('app.services', [])
 .factory('Restavracije', function($cordovaSQLite, DBA, $http) {
   var self = this;
 
-  self.getFromApi = function(){
-	$http({
-	method: 'GET',
-	url: 'http://faksfood2-ikces.rhcloud.com/restavracije'})
-	.then(function successCallback(response) {
-		console.log(response);
-	}, function errorCallback(response) {
+  self.getFromApiRestavracije = function(){
+  	$http({
+      method: 'GET',
+      url: 'http://faksfood2-ikces.rhcloud.com/restavracije'})
+    .then(function successCallback(response) {
+      var sqlArr = [];
+      angular.forEach(response.data, function(value, key) {
+        sqlArr.push("('"+value.dolzina+"','"+value.guid+"','"+value.id+"','"+value.kraj_id+"','"+value.naziv+"',"+
+                    "'"+value.sirina+"','"+value.telefon+"','"+value.ulica+"','"+value.vrednost_obroka+"')");
+      });
+      var sqlString = "INSERT INTO restavracije (dolzina, guid, id, kraj_id, naziv, sirina, telefon, ulica, vrednost_obroka) VALUES";
+      sqlString += sqlArr.join();
 
-	});
+  	}, function errorCallback(response) {
+      return "Cannot connect to faksfood API";
+  	});
   }
-  
+  self.getFromApiMenus = function(){
+    $http({
+      method: 'GET',
+      url: 'http://faksfood2-ikces.rhcloud.com/restavracije/jedi'})
+    .then(function successCallback(response) {
+
+    }, function errorCallback(response) {
+      return "Cannot connect to faksfood API";
+    });
+  }
+
+
+  self.getRestavracije = function(){
+    return DBA.query("SELECT * FROM restavracije")
+      .then(function(result){
+        return DBA.getAll(result);
+      });
+  }
+
   return self;
 })
