@@ -9,6 +9,21 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.onetwothreeasd.faksFood"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.onetwothreeasd.faksFood"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.onetwothreeasd.faksFood"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.onetwothreeasd.faksFood"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.onetwothreeasd.faksFood"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.onetwothreeasd.faksFood"
         }
     },
     "dependent_plugins": {}

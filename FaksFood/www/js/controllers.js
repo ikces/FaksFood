@@ -8,8 +8,19 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('restavracijeCtrl', function($scope) {
-
+.controller('restavracijeCtrl', function($scope, Restavracije) {
+	console.log("asd");
+	Restavracije.getFromApi();
+	/*$scope.test=null;
+	var object={
+		id: 1,
+		name: 'test'
+	};
+	Team.add(object);
+	Team.get(1).then(function(team){
+		console.log(team);
+		$scope.test=team;
+	});	*/
 })
    
 .controller('zemljevidCtrl', function($scope, $ionicLoading
