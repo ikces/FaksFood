@@ -5,9 +5,11 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives'])
+var db = null;
 
-.run(function($ionicPlatform) {
+angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives', 'ngCordova'])
+
+.run(function($ionicPlatform, $cordovaSQLite) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,5 +21,19 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    if(window.cordova) {
+      // App syntax
+      db = $cordovaSQLite.openDB("myapp.db",{location:'default'});
+    } else {
+      // Ionic serve syntax
+      db = window.openDatabase("myapp.db", "1.0", "My app", -1);
+    }
+
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS team (id integer primary key, name text)");
+
   });
-})
+}).config(['$ionicConfigProvider', function($ionicConfigProvider) {
+    $ionicConfigProvider.tabs.position('bottom'); // other values: top
+    $ionicConfigProvider.navBar.alignTitle('center');
+}]);
