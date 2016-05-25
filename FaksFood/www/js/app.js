@@ -30,12 +30,11 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
       db = window.openDatabase("myapp.db", "1.0", "My app", -1);
     }
 
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS restavracije (id integer primary key, guid text, naziv text, telefon text, ulica text, kraj_id integer, vrednost_obroka real, sirina real, dolzina real);"+ 
-                                "CREATE TABLE IF NOT EXISTS odpiralni_casi (id integer primary key, tip integer, cas_odpre text, cas_zapre text, restavracije_id integer);"+
-                                "CREATE TABLE IF NOT EXISTS kraj (id integer primary key, naziv text);"+
-                                "CREATE TABLE IF NOT EXISTS vrste_ponudbe (id integer primary key, naziv text, icona text, restavracije_id integer);"+
-                                "CREATE TABLE IF NOT EXISTS jedilniki (id integer primary key, jedi text, restavracije_id integer);"
-            );
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS restavracije (id integer primary key, guid text, naziv text, telefon text, ulica text, kraj_id integer, vrednost_obroka text, sirina real, dolzina real)"); 
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS odpiralni_casi (id integer primary key, tip integer, cas_odpre text, cas_zapre text, restavracije_id integer)");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS kraj (id integer primary key, naziv text)");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS vrste_ponudbe (id integer primary key, naziv text, icona text, restavracije_id integer)");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS jedilniki (id integer primary key, jedi text, restavracije_id integer)");
     
   });
 

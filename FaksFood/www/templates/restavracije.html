@@ -1,10 +1,7 @@
 <ion-view title="Restavracije" id="page7" class=" ">
     <ion-content padding="true" class="has-header">
-        <ion-list id="restavracije-list5" class=" ">
-        	{{test}}
-            <ion-item id="restavracije-list-item2" ui-sref="tabsController.restavracija" class="  ">Item 1</ion-item>
-            <ion-item id="restavracije-list-item3" class="  ">Item 2</ion-item>
-            <ion-item id="restavracije-list-item4" class="  ">Item 3</ion-item>
+        <ion-list id="restavracije-list5" class=" " ng-repeat="rest in restavracije">
+            <ion-item id="restavracije-list-item2" ui-sref="tabsController.restavracija" class="  ">{{rest.naziv}}</ion-item>
         </ion-list>
     </ion-content>
 </ion-view>

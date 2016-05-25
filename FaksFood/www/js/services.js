@@ -83,18 +83,23 @@ angular.module('app.services', [])
   var self = this;
 
   self.getFromApiRestavracije = function(){
+    console.log("SEM NOTER")
   	$http({
       method: 'GET',
       url: 'http://faksfood2-ikces.rhcloud.com/restavracije'})
     .then(function successCallback(response) {
+      DBA.query("DELETE FROM restavracije");
       var sqlArr = [];
+      var sqlString = "INSERT INTO restavracije(dolzina, `guid`, kraj_id, naziv, sirina, telefon, ulica, vrednost_obroka) VALUES";
       angular.forEach(response.data, function(value, key) {
-        sqlArr.push("('"+value.dolzina+"','"+value.guid+"','"+value.id+"','"+value.kraj_id+"','"+value.naziv+"',"+
+        sqlArr.push("('"+value.dolzina+"','"+value.guid+"', '"+value.kraj_id+"','"+value.naziv.replace(/'/g,"")+"',"+
                     "'"+value.sirina+"','"+value.telefon+"','"+value.ulica+"','"+value.vrednost_obroka+"')");
       });
-      var sqlString = "INSERT INTO restavracije (dolzina, guid, id, kraj_id, naziv, sirina, telefon, ulica, vrednost_obroka) VALUES";
-      sqlString += sqlArr.join();
-
+      if(sqlArr.length != 0){
+        sqlString += sqlArr.join();
+        DBA.query(sqlString);
+        console.log("success", sqlString);
+      }   
   	}, function errorCallback(response) {
       return "Cannot connect to faksfood API";
   	});

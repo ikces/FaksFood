@@ -9,9 +9,8 @@ angular.module('app.controllers', [])
 })
    
 .controller('restavracijeCtrl', function($scope, Restavracije) {
-	console.log("asd");
 	Restavracije.getRestavracije().then(function(data){
-		console.log(data);
+		$scope.restavracije = data;
 	});
 	/*$scope.test=null;
 	var object={
@@ -71,7 +70,7 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('profilCtrl', function($scope) {
+.controller('profilCtrl', function($scope, Restavracije) {
 	Restavracije.getFromApiRestavracije();
 })
    
