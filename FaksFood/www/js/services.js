@@ -83,7 +83,6 @@ angular.module('app.services', [])
   var self = this;
 
   self.getFromApiRestavracije = function(){
-    console.log("SEM NOTER")
   	$http({
       method: 'GET',
       url: 'http://faksfood2-ikces.rhcloud.com/restavracije'})
@@ -98,7 +97,6 @@ angular.module('app.services', [])
       if(sqlArr.length != 0){
         sqlString += sqlArr.join();
         DBA.query(sqlString);
-        console.log("success", sqlString);
       }   
   	}, function errorCallback(response) {
       return "Cannot connect to faksfood API";

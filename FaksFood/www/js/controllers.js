@@ -8,20 +8,34 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('restavracijeCtrl', function($scope, Restavracije) {
-	Restavracije.getRestavracije().then(function(data){
+.controller('restavracijeCtrl', function($scope, filterFilter, Restavracije) {
+	var data = null;
+    var ind = 0
+
+    Restavracije.getRestavracije().then(function(data){
 		$scope.restavracije = data;
 	});
-	/*$scope.test=null;
-	var object={
-		id: 1,
-		name: 'test'
-	};
-	Team.add(object);
-	Team.get(1).then(function(team){
-		console.log(team);
-		$scope.test=team;
-	});	*/
+
+    $scope.typed = function(searchText){
+        $scope.buffer = filterFilter(data, searchText);
+        console.log("ASD");
+    }
+
+    $scope.$watch('data', function(){
+        console.log('data changed')
+        ind = 0;
+    })
+	$scope.items = [];
+    $scope.loadMore = function() {
+        $http.get('/more-items').success(function(items) {
+            useItems(items);
+            $scope.$broadcast('scroll.infiniteScrollComplete');
+        });
+    };
+
+    $scope.$on('$stateChangeSuccess', function() {
+        $scope.loadMore();
+    });
 })
    
 .controller('zemljevidCtrl', function($scope, $ionicLoading
