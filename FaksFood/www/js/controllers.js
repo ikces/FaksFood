@@ -46,12 +46,57 @@ angular.module('app.controllers', [])
     }
 })
    
-.controller('zemljevidCtrl', function($scope, NgMap) {
-    NgMap.getMap().then(function(map) {
-        console.log(map.getCenter());
-        console.log('markers', map.markers);
-        console.log('shapes', map.shapes);
+
+.controller('zemljevidCtrl', function($scope, NgMap, $cordovaGeolocation, Restavracije) {
+    //pridobitev trenutne lokacije
+
+
+//Pridobi podatke o restavracijah
+    Restavracije.getRestavracije().then(function(getdata){    
+        $scope.array=getdata; 
     });
+
+    var posOptions = {timeout: 10000, enableHighAccuracy: false};
+  $cordovaGeolocation
+    .getCurrentPosition(posOptions)
+    .then(function (position) {
+      $scope.lat  = position.coords.latitude;
+      $scope.long = position.coords.longitude;
+
+    }, function(err) {
+      // error
+    });
+
+
+
+$scope.showData = function(event, marker) {
+        console.log('clicked pin!');
+        //HOW CAN I GET THE MARKER OBJECT (The one that was clicked) HERE?
+        console.log('id_restavracije ->', marker); //prints undefined
+      };
+
+
+console.log($scope.array);
+  //watch.clearWatch();
+        //Prikaz zemljevida 
+        NgMap.getMap().then(function(map) {
+                    console.log("zemljevd test");
+                    console.log(map.getCenter());
+                    console.log('markers', map.markers);
+                    console.log('shapes', map.shapes);
+                    $scope.map = map;
+                });
+   
+
+
+
+
+ $scope.clickFn = function(id){
+    $scope.info = id;
+    console.log(id)
+ }
+
+
 
 })
    
