@@ -21,7 +21,15 @@
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
     "ionic-plugin-keyboard",
-    "cordova-sqlite-storage@0.7.14"
+    "cordova-sqlite-storage@0.7.14",
+    {
+      "variables": {
+        "API_KEY_FOR_ANDROID": "AIzaSyC4DhwycIsfxcNoOdzVtYeolGSpARUXXgc",
+        "API_KEY_FOR_IOS": "AIzaSyCauRiYRAb4oMA0i1MDO3Ylr6mPV_m5cY8"
+      },
+      "locator": "cordova-plugin-googlemaps",
+      "id": "plugin.google.maps"
+    }
   ],
   "cordovaPlatforms": [
     "ios"

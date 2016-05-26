@@ -1,7 +1,13 @@
 <ion-view title="Restavracije" id="page7" class=" ">
+    <ion-header-bar class="bar-light bar-subheader">
+	      <input type="text" placeholder="Iskanje" ng-model="search" ng-change="typed(search)">
+	      <!--<button ng-if="search.length"
+	              class="button button-icon ion-android-close input-button"
+	              ng-click="clearSearch()">
+	      </button>-->
+	</ion-header-bar>
     <ion-content padding="true" class="has-header">
-    	<input ng-model="search" ng-change="typed(search)">
-        <ion-list id="restavracije-list5" class=" " ng-repeat="rest in restavracije | filter: {'naziv': 'mcdo'}">
+        <ion-list id="restavracije-list5" class=" " ng-repeat="rest in restavracije | filter: {'naziv': search}">
         	<ion-item id="restavracije-list-item2" ui-sref="tabsController.restavracija" class="  ">{{rest.naziv}}</ion-item>
         </ion-list>
         <ion-infinite-scroll on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
