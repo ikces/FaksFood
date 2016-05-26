@@ -66,7 +66,7 @@ angular.module('app.controllers', [])
 })
    
 .controller('zemljevidCtrl', function($scope) {
-
+   
 
 })
    
