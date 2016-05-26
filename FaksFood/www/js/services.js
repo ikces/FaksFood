@@ -96,7 +96,9 @@ angular.module('app.services', [])
       });
       if(sqlArr.length != 0){
         sqlString += sqlArr.join();
-        DBA.query(sqlString);
+        DBA.query(sqlString).then(function(resp){
+          console.log(resp);
+        });
       }   
   	}, function errorCallback(response) {
       return "Cannot connect to faksfood API";
@@ -119,6 +121,27 @@ angular.module('app.services', [])
       .then(function(result){
         return DBA.getAll(result);
       });
+  }
+
+  return self;
+})
+.factory('Version', function($cordovaSQLite, DBA) {
+  var self = this;
+
+  self.get = function() {
+    return DBA.query("SELECT id, version FROM version WHERE id = (1)")
+      .then(function(result) {
+        return result.rows
+      });
+  }
+
+  self.add = function(value) {
+    return DBA.query("INSERT INTO version (id, version) VALUES (1,'"+value+"')");
+  }
+
+
+  self.update = function(value) {
+    return DBA.query("UPDATE version SET id = 1, version = '"+value+"' WHERE id = 1");
   }
 
   return self;

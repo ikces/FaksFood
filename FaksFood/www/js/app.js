@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 var db = null;
 
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives', 'ngCordova'])
+angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives', 'ngCordova', 'ngMap'])
 
 .run(function($ionicPlatform, $cordovaSQLite) {
   $ionicPlatform.ready(function() {
@@ -35,6 +35,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS kraj (id integer primary key, naziv text)");
     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS vrste_ponudbe (id integer primary key, naziv text, icona text, restavracije_id integer)");
     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS jedilniki (id integer primary key, jedi text, restavracije_id integer)");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS version (id integer, version text)");
     
   });
 
