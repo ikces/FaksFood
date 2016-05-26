@@ -1,6 +1,7 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/usr/local/bin/node',
 1 verbose cli   '/usr/local/bin/npm',
+<<<<<<< HEAD
 1 verbose cli   'install',
 1 verbose cli   'ngCordova' ]
 2 info using npm@2.14.20
@@ -90,3 +91,2581 @@
 37 error 404 Note that you can also install from a
 37 error 404 tarball, folder, http url, or git url.
 38 verbose exit [ 1, true ]
+=======
+1 verbose cli   '-g',
+1 verbose cli   'install',
+1 verbose cli   'ios-sim',
+1 verbose cli   'ios-deploy' ]
+2 info using npm@2.14.20
+3 info using node@v4.4.0
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'ios-sim', null ]
+7 verbose cache add spec ios-sim
+8 silly cache add args [ 'ios-deploy', null ]
+9 verbose cache add spec ios-deploy
+10 silly cache add parsed spec Result {
+10 silly cache add   raw: 'ios-sim',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'ios-sim',
+10 silly cache add   rawSpec: '',
+10 silly cache add   spec: 'latest',
+10 silly cache add   type: 'tag' }
+11 silly addNamed ios-sim@latest
+12 verbose addNamed "latest" is being treated as a dist-tag for ios-sim
+13 info addNameTag [ 'ios-sim', 'latest' ]
+14 silly mapToRegistry name ios-sim
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npmjs.org/
+17 silly mapToRegistry uri https://registry.npmjs.org/ios-sim
+18 verbose addNameTag registry:https://registry.npmjs.org/ios-sim not in flight; fetching
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: 'ios-deploy',
+19 silly cache add   scope: null,
+19 silly cache add   name: 'ios-deploy',
+19 silly cache add   rawSpec: '',
+19 silly cache add   spec: 'latest',
+19 silly cache add   type: 'tag' }
+20 silly addNamed ios-deploy@latest
+21 verbose addNamed "latest" is being treated as a dist-tag for ios-deploy
+22 info addNameTag [ 'ios-deploy', 'latest' ]
+23 silly mapToRegistry name ios-deploy
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry uri https://registry.npmjs.org/ios-deploy
+27 verbose addNameTag registry:https://registry.npmjs.org/ios-deploy not in flight; fetching
+28 verbose request uri https://registry.npmjs.org/ios-sim
+29 verbose request no auth needed
+30 info attempt registry request try #1 at 11:31:31 AM
+31 verbose request id 864fe44cc59bcbf2
+32 verbose etag "40T4Q8K92RYWIMZ5K5NVSZV3A"
+33 http request GET https://registry.npmjs.org/ios-sim
+34 verbose request uri https://registry.npmjs.org/ios-deploy
+35 verbose request no auth needed
+36 info attempt registry request try #1 at 11:31:31 AM
+37 verbose etag "5ALDUQ1GLDBEYMDJK8RUMV18V"
+38 http request GET https://registry.npmjs.org/ios-deploy
+39 http 304 https://registry.npmjs.org/ios-deploy
+40 verbose headers { date: 'Thu, 26 May 2016 09:31:31 GMT',
+40 verbose headers   via: '1.1 varnish',
+40 verbose headers   'cache-control': 'max-age=300',
+40 verbose headers   etag: '"5ALDUQ1GLDBEYMDJK8RUMV18V"',
+40 verbose headers   age: '109',
+40 verbose headers   connection: 'keep-alive',
+40 verbose headers   'x-served-by': 'cache-fra1237-FRA',
+40 verbose headers   'x-cache': 'HIT',
+40 verbose headers   'x-cache-hits': '2',
+40 verbose headers   'x-timer': 'S1464255091.652394,VS0,VE0',
+40 verbose headers   vary: 'Accept-Encoding' }
+41 silly get cb [ 304,
+41 silly get   { date: 'Thu, 26 May 2016 09:31:31 GMT',
+41 silly get     via: '1.1 varnish',
+41 silly get     'cache-control': 'max-age=300',
+41 silly get     etag: '"5ALDUQ1GLDBEYMDJK8RUMV18V"',
+41 silly get     age: '109',
+41 silly get     connection: 'keep-alive',
+41 silly get     'x-served-by': 'cache-fra1237-FRA',
+41 silly get     'x-cache': 'HIT',
+41 silly get     'x-cache-hits': '2',
+41 silly get     'x-timer': 'S1464255091.652394,VS0,VE0',
+41 silly get     vary: 'Accept-Encoding' } ]
+42 verbose etag https://registry.npmjs.org/ios-deploy from cache
+43 verbose get saving ios-deploy to /Users/VidSecki/.npm/registry.npmjs.org/ios-deploy/.cache.json
+44 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+45 http 304 https://registry.npmjs.org/ios-sim
+46 verbose headers { date: 'Thu, 26 May 2016 09:31:31 GMT',
+46 verbose headers   via: '1.1 varnish',
+46 verbose headers   'cache-control': 'max-age=300',
+46 verbose headers   etag: '"40T4Q8K92RYWIMZ5K5NVSZV3A"',
+46 verbose headers   age: '108',
+46 verbose headers   connection: 'keep-alive',
+46 verbose headers   'x-served-by': 'cache-fra1241-FRA',
+46 verbose headers   'x-cache': 'HIT',
+46 verbose headers   'x-cache-hits': '1',
+46 verbose headers   'x-timer': 'S1464255091.652200,VS0,VE0',
+46 verbose headers   vary: 'Accept-Encoding' }
+47 silly get cb [ 304,
+47 silly get   { date: 'Thu, 26 May 2016 09:31:31 GMT',
+47 silly get     via: '1.1 varnish',
+47 silly get     'cache-control': 'max-age=300',
+47 silly get     etag: '"40T4Q8K92RYWIMZ5K5NVSZV3A"',
+47 silly get     age: '108',
+47 silly get     connection: 'keep-alive',
+47 silly get     'x-served-by': 'cache-fra1241-FRA',
+47 silly get     'x-cache': 'HIT',
+47 silly get     'x-cache-hits': '1',
+47 silly get     'x-timer': 'S1464255091.652200,VS0,VE0',
+47 silly get     vary: 'Accept-Encoding' } ]
+48 verbose etag https://registry.npmjs.org/ios-sim from cache
+49 verbose get saving ios-sim to /Users/VidSecki/.npm/registry.npmjs.org/ios-sim/.cache.json
+50 verbose correctMkdir /Users/VidSecki/.npm correctMkdir already in flight; waiting
+51 silly addNameTag next cb for ios-sim with tag latest
+52 silly addNamed ios-sim@5.0.8
+53 verbose addNamed "5.0.8" is a plain semver version for ios-sim
+54 silly addNameTag next cb for ios-deploy with tag latest
+55 silly addNamed ios-deploy@1.8.6
+56 verbose addNamed "1.8.6" is a plain semver version for ios-deploy
+57 silly cache afterAdd ios-sim@5.0.8
+58 verbose afterAdd /Users/VidSecki/.npm/ios-sim/5.0.8/package/package.json not in flight; writing
+59 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+60 silly cache afterAdd ios-deploy@1.8.6
+61 verbose afterAdd /Users/VidSecki/.npm/ios-deploy/1.8.6/package/package.json not in flight; writing
+62 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+63 verbose afterAdd /Users/VidSecki/.npm/ios-sim/5.0.8/package/package.json written
+64 verbose afterAdd /Users/VidSecki/.npm/ios-deploy/1.8.6/package/package.json written
+65 silly install resolved [ { name: 'ios-sim',
+65 silly install resolved     version: '5.0.8',
+65 silly install resolved     preferGlobal: 'true',
+65 silly install resolved     description: 'launch iOS apps into the iOS Simulator from the command line (Xcode 6.0+)',
+65 silly install resolved     main: 'ios-sim.js',
+65 silly install resolved     repository:
+65 silly install resolved      { type: 'git',
+65 silly install resolved        url: 'git+https://github.com/phonegap/ios-sim.git' },
+65 silly install resolved     engines: { node: '>=0.10.0' },
+65 silly install resolved     keywords: [ 'ios-sim', 'iOS Simulator' ],
+65 silly install resolved     bin: { 'ios-sim': './bin/ios-sim' },
+65 silly install resolved     bugs: { url: 'https://github.com/phonegap/ios-sim/issues' },
+65 silly install resolved     author: { name: 'Shazron Abdullah' },
+65 silly install resolved     license: 'MIT',
+65 silly install resolved     dependencies:
+65 silly install resolved      { plist: '^1.2.0',
+65 silly install resolved        simctl: '^0.0.9',
+65 silly install resolved        nopt: '1.0.9',
+65 silly install resolved        'bplist-parser': '^0.0.6' },
+65 silly install resolved     devDependencies: { jshint: '^2.9.1' },
+65 silly install resolved     scripts: { test: 'npm run jshint', jshint: 'jshint src ./ios-sim.js' },
+65 silly install resolved     gitHead: 'f0fc8160c262fe86ccaf8eeef1ff4ef22eb19b5c',
+65 silly install resolved     homepage: 'https://github.com/phonegap/ios-sim#readme',
+65 silly install resolved     _id: 'ios-sim@5.0.8',
+65 silly install resolved     _shasum: '20520bbcfdadb0b0cb08690b90969b6e60a9a796',
+65 silly install resolved     _from: 'ios-sim@latest',
+65 silly install resolved     _npmVersion: '2.11.3',
+65 silly install resolved     _nodeVersion: '0.12.7',
+65 silly install resolved     _npmUser: { name: 'shazron', email: 'shazron@gmail.com' },
+65 silly install resolved     dist:
+65 silly install resolved      { shasum: '20520bbcfdadb0b0cb08690b90969b6e60a9a796',
+65 silly install resolved        tarball: 'https://registry.npmjs.org/ios-sim/-/ios-sim-5.0.8.tgz' },
+65 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+65 silly install resolved     _npmOperationalInternal:
+65 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+65 silly install resolved        tmp: 'tmp/ios-sim-5.0.8.tgz_1458757739978_0.3562360794749111' },
+65 silly install resolved     directories: {},
+65 silly install resolved     _resolved: 'https://registry.npmjs.org/ios-sim/-/ios-sim-5.0.8.tgz',
+65 silly install resolved     readme: 'ERROR: No README data found!' },
+65 silly install resolved   { name: 'ios-deploy',
+65 silly install resolved     version: '1.8.6',
+65 silly install resolved     os: [ 'darwin' ],
+65 silly install resolved     description: 'launch iOS apps iOS devices from the command line (Xcode 7)',
+65 silly install resolved     main: 'ios-deploy',
+65 silly install resolved     scripts:
+65 silly install resolved      { preinstall: './src/scripts/check_reqs.js && xcodebuild',
+65 silly install resolved        test: 'npm run pycompile && npm run jshint && xcodebuild -target ios-deploy-lib && xcodebuild test -scheme ios-deploy-tests',
+65 silly install resolved        jshint: 'node node_modules/jshint/bin/jshint src/scripts/*.js',
+65 silly install resolved        pycompile: 'python -m py_compile src/scripts/*.py' },
+65 silly install resolved     bin: { 'ios-deploy': './build/Release/ios-deploy' },
+65 silly install resolved     repository:
+65 silly install resolved      { type: 'git',
+65 silly install resolved        url: 'git+https://github.com/phonegap/ios-deploy.git' },
+65 silly install resolved     devDependencies: { jshint: '2.5.8' },
+65 silly install resolved     keywords: [ 'ios-deploy', 'deploy to iOS device' ],
+65 silly install resolved     bugs: { url: 'https://github.com/phonegap/ios-deploy/issues' },
+65 silly install resolved     author: { name: 'Greg Hughes' },
+65 silly install resolved     license: 'GPLv3',
+65 silly install resolved     gitHead: 'd7cccae1ade60378ce1134f496b68eeac53eb860',
+65 silly install resolved     homepage: 'https://github.com/phonegap/ios-deploy#readme',
+65 silly install resolved     _id: 'ios-deploy@1.8.6',
+65 silly install resolved     _shasum: 'abb0b5132e7e6c89d1f521ba7c81c44eec54d4f5',
+65 silly install resolved     _from: 'ios-deploy@latest',
+65 silly install resolved     _npmVersion: '2.14.7',
+65 silly install resolved     _nodeVersion: '4.2.2',
+65 silly install resolved     _npmUser: { name: 'shazron', email: 'shazron@gmail.com' },
+65 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+65 silly install resolved     dist:
+65 silly install resolved      { shasum: 'abb0b5132e7e6c89d1f521ba7c81c44eec54d4f5',
+65 silly install resolved        tarball: 'https://registry.npmjs.org/ios-deploy/-/ios-deploy-1.8.6.tgz' },
+65 silly install resolved     _npmOperationalInternal:
+65 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+65 silly install resolved        tmp: 'tmp/ios-deploy-1.8.6.tgz_1460409336359_0.34613347332924604' },
+65 silly install resolved     directories: {},
+65 silly install resolved     _resolved: 'https://registry.npmjs.org/ios-deploy/-/ios-deploy-1.8.6.tgz',
+65 silly install resolved     readme: 'ERROR: No README data found!' } ]
+66 info install ios-sim@5.0.8 into /usr/local/lib
+67 info install ios-deploy@1.8.6 into /usr/local/lib
+68 info installOne ios-sim@5.0.8
+69 verbose installOne of ios-sim to /usr/local/lib not in flight; installing
+70 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+71 info installOne ios-deploy@1.8.6
+72 verbose installOne of ios-deploy to /usr/local/lib not in flight; installing
+73 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir already in flight; waiting
+74 verbose lock using /Users/VidSecki/.npm/_locks/ios-sim-3bb56db538048d2f.lock for /usr/local/lib/node_modules/ios-sim
+75 verbose lock using /Users/VidSecki/.npm/_locks/ios-deploy-198957223cd98201.lock for /usr/local/lib/node_modules/ios-deploy
+76 silly install write writing ios-deploy 1.8.6 to /usr/local/lib/node_modules/ios-deploy
+77 silly install write writing ios-sim 5.0.8 to /usr/local/lib/node_modules/ios-sim
+78 verbose unbuild lib/node_modules/ios-deploy
+79 verbose unbuild lib/node_modules/ios-sim
+80 silly gentlyRm /usr/local/lib/node_modules/ios-deploy is being purged from base /usr/local
+81 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-deploy
+82 verbose tar unpack /Users/VidSecki/.npm/ios-deploy/1.8.6/package.tgz
+83 verbose tar unpacking to /usr/local/lib/node_modules/ios-deploy
+84 silly gentlyRm /usr/local/lib/node_modules/ios-deploy is being purged
+85 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-deploy
+86 silly gunzTarPerm modes [ '755', '644' ]
+87 info preuninstall ios-sim@5.0.8
+88 info uninstall ios-sim@5.0.8
+89 silly gunzTarPerm extractEntry package.json
+90 verbose unbuild rmStuff ios-sim@5.0.8 from /usr/local/lib/node_modules
+91 silly gentlyRm /usr/local/bin/ios-sim is being gently removed
+92 silly gentlyRm verifying /usr/local is an npm working directory
+93 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+94 silly gentlyRm deletion target /usr/local/bin/ios-sim is under /usr/local
+95 verbose gentlyRm vacuuming from /usr/local/bin/ios-sim up to /usr/local
+96 info postuninstall ios-sim@5.0.8
+97 silly gunzTarPerm extractEntry .npmignore
+98 silly gunzTarPerm extractEntry README.md
+99 silly gentlyRm /usr/local/lib/node_modules/ios-sim is being purged from base /usr/local
+100 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim
+101 silly vacuum-fs purging /usr/local/lib/node_modules/ios-sim
+102 silly gunzTarPerm extractEntry LICENSE
+103 silly gunzTarPerm extractEntry CONTRIBUTING.md
+104 silly gunzTarPerm extractEntry demo/.npmignore
+105 silly gunzTarPerm extractEntry demo/Entitlements.plist
+106 silly gunzTarPerm extractEntry demo/Info.plist
+107 silly gunzTarPerm extractEntry demo/Makefile
+108 silly gunzTarPerm extractEntry demo/ResourceRules.plist
+109 silly vacuum-fs quitting because other entries in /usr/local/lib/node_modules
+110 verbose tar unpack /Users/VidSecki/.npm/ios-sim/5.0.8/package.tgz
+111 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim
+112 silly gentlyRm /usr/local/lib/node_modules/ios-sim is being purged
+113 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim
+114 silly gunzTarPerm modes [ '755', '644' ]
+115 silly gunzTarPerm extractEntry demo/demo.c
+116 silly gunzTarPerm extractEntry ios-deploy.xcodeproj/project.pbxproj
+117 silly gunzTarPerm extractEntry package.json
+118 silly gunzTarPerm extractEntry .npmignore
+119 silly gunzTarPerm extractEntry README.md
+120 silly gunzTarPerm extractEntry ios-deploy.xcodeproj/project.xcworkspace/xcuserdata/shaz.xcuserdatad/UserInterfaceState.xcuserstate
+121 silly gunzTarPerm extractEntry ios-deploy.xcodeproj/xcshareddata/xcschemes/ios-deploy-tests.xcscheme
+122 silly gunzTarPerm extractEntry LICENSE
+123 silly gunzTarPerm extractEntry ios-sim.js
+124 silly gunzTarPerm extractEntry ios-deploy.xcodeproj/xcuserdata/shaz.xcuserdatad/xcschemes/ios-deploy-lib.xcscheme
+125 silly gunzTarPerm extractEntry ios-deploy.xcodeproj/xcuserdata/shaz.xcuserdatad/xcschemes/ios-deploy.xcscheme
+126 silly gunzTarPerm extractEntry doc/help.txt
+127 silly gunzTarPerm extractEntry .github/CONTRIBUTING.md
+128 silly gunzTarPerm extractEntry ios-deploy.xcodeproj/xcuserdata/shaz.xcuserdatad/xcschemes/xcschememanagement.plist
+129 silly gunzTarPerm extractEntry src/ios-deploy/MobileDevice.h
+130 silly gunzTarPerm extractEntry src/ios-deploy/errors.h
+131 silly gunzTarPerm extractEntry src/ios-deploy/ios-deploy.m
+132 silly gunzTarPerm extractEntry .github/ISSUE_TEMPLATE.md
+133 silly gunzTarPerm extractEntry resources/buildbox/build.sh
+134 silly gunzTarPerm extractEntry bin/ios-sim
+135 silly gunzTarPerm extractEntry bin/ios-sim.cmd
+136 silly gunzTarPerm extractEntry src/cli.js
+137 silly gunzTarPerm extractEntry src/commands.js
+138 silly gunzTarPerm extractEntry src/help.js
+139 silly gunzTarPerm extractEntry src/lib.js
+140 silly gunzTarPerm extractEntry src/ios-deploy/version.h
+141 silly gunzTarPerm extractEntry src/ios-deploy-lib/libios_deploy.h
+142 silly gunzTarPerm extractEntry src/ios-deploy-lib/libios_deploy.m
+143 silly gunzTarPerm extractEntry src/ios-deploy-tests/Info.plist
+144 silly gunzTarPerm extractEntry src/ios-deploy-tests/ios_deploy_tests.m
+145 silly gunzTarPerm extractEntry src/scripts/check_reqs.js
+146 silly gunzTarPerm extractEntry src/scripts/lldb.py
+147 verbose write writing to /usr/local/lib/node_modules/ios-sim/package.json
+148 info preinstall ios-sim@5.0.8
+149 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/package.json
+150 silly prepareForInstallMany adding plist@^1.2.0 from ios-sim dependencies
+151 silly prepareForInstallMany adding simctl@^0.0.9 from ios-sim dependencies
+152 silly prepareForInstallMany adding nopt@1.0.9 from ios-sim dependencies
+153 silly prepareForInstallMany adding bplist-parser@^0.0.6 from ios-sim dependencies
+154 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/package.json
+155 silly cache add args [ 'nopt@1.0.9', null ]
+156 verbose cache add spec nopt@1.0.9
+157 silly cache add parsed spec Result {
+157 silly cache add   raw: 'nopt@1.0.9',
+157 silly cache add   scope: null,
+157 silly cache add   name: 'nopt',
+157 silly cache add   rawSpec: '1.0.9',
+157 silly cache add   spec: '1.0.9',
+157 silly cache add   type: 'version' }
+158 silly addNamed nopt@1.0.9
+159 verbose addNamed "1.0.9" is a plain semver version for nopt
+160 silly mapToRegistry name nopt
+161 silly mapToRegistry using default registry
+162 silly mapToRegistry registry https://registry.npmjs.org/
+163 silly mapToRegistry uri https://registry.npmjs.org/nopt
+164 verbose addNameVersion registry:https://registry.npmjs.org/nopt not in flight; fetching
+165 silly cache add args [ 'bplist-parser@^0.0.6', null ]
+166 verbose cache add spec bplist-parser@^0.0.6
+167 silly cache add parsed spec Result {
+167 silly cache add   raw: 'bplist-parser@^0.0.6',
+167 silly cache add   scope: null,
+167 silly cache add   name: 'bplist-parser',
+167 silly cache add   rawSpec: '^0.0.6',
+167 silly cache add   spec: '>=0.0.6 <0.0.7',
+167 silly cache add   type: 'range' }
+168 silly addNamed bplist-parser@>=0.0.6 <0.0.7
+169 verbose addNamed ">=0.0.6 <0.0.7" is a valid semver range for bplist-parser
+170 silly addNameRange { name: 'bplist-parser',
+170 silly addNameRange   range: '>=0.0.6 <0.0.7',
+170 silly addNameRange   hasData: false }
+171 silly mapToRegistry name bplist-parser
+172 silly mapToRegistry using default registry
+173 silly mapToRegistry registry https://registry.npmjs.org/
+174 silly mapToRegistry uri https://registry.npmjs.org/bplist-parser
+175 verbose addNameRange registry:https://registry.npmjs.org/bplist-parser not in flight; fetching
+176 silly cache add args [ 'plist@^1.2.0', null ]
+177 verbose cache add spec plist@^1.2.0
+178 silly cache add parsed spec Result {
+178 silly cache add   raw: 'plist@^1.2.0',
+178 silly cache add   scope: null,
+178 silly cache add   name: 'plist',
+178 silly cache add   rawSpec: '^1.2.0',
+178 silly cache add   spec: '>=1.2.0 <2.0.0',
+178 silly cache add   type: 'range' }
+179 silly addNamed plist@>=1.2.0 <2.0.0
+180 verbose addNamed ">=1.2.0 <2.0.0" is a valid semver range for plist
+181 silly addNameRange { name: 'plist', range: '>=1.2.0 <2.0.0', hasData: false }
+182 silly mapToRegistry name plist
+183 silly mapToRegistry using default registry
+184 silly mapToRegistry registry https://registry.npmjs.org/
+185 silly mapToRegistry uri https://registry.npmjs.org/plist
+186 verbose addNameRange registry:https://registry.npmjs.org/plist not in flight; fetching
+187 silly cache add args [ 'simctl@^0.0.9', null ]
+188 verbose cache add spec simctl@^0.0.9
+189 silly cache add parsed spec Result {
+189 silly cache add   raw: 'simctl@^0.0.9',
+189 silly cache add   scope: null,
+189 silly cache add   name: 'simctl',
+189 silly cache add   rawSpec: '^0.0.9',
+189 silly cache add   spec: '>=0.0.9 <0.0.10',
+189 silly cache add   type: 'range' }
+190 silly addNamed simctl@>=0.0.9 <0.0.10
+191 verbose addNamed ">=0.0.9 <0.0.10" is a valid semver range for simctl
+192 silly addNameRange { name: 'simctl', range: '>=0.0.9 <0.0.10', hasData: false }
+193 silly mapToRegistry name simctl
+194 silly mapToRegistry using default registry
+195 silly mapToRegistry registry https://registry.npmjs.org/
+196 silly mapToRegistry uri https://registry.npmjs.org/simctl
+197 verbose addNameRange registry:https://registry.npmjs.org/simctl not in flight; fetching
+198 verbose request uri https://registry.npmjs.org/nopt
+199 verbose request no auth needed
+200 info attempt registry request try #1 at 11:31:31 AM
+201 verbose etag "53NWQ6XY2NLAFB30G2E3W8W60"
+202 http request GET https://registry.npmjs.org/nopt
+203 verbose request uri https://registry.npmjs.org/bplist-parser
+204 verbose request no auth needed
+205 info attempt registry request try #1 at 11:31:31 AM
+206 verbose etag "AGWSPFCRLNGDFFNZ3XI793Q8Q"
+207 http request GET https://registry.npmjs.org/bplist-parser
+208 verbose request uri https://registry.npmjs.org/plist
+209 verbose request no auth needed
+210 info attempt registry request try #1 at 11:31:31 AM
+211 verbose etag "4XDD08SKJS1KRG42L3GA94ULV"
+212 http request GET https://registry.npmjs.org/plist
+213 verbose request uri https://registry.npmjs.org/simctl
+214 verbose request no auth needed
+215 info attempt registry request try #1 at 11:31:31 AM
+216 verbose etag "DMXP05YIUD43R0Q4Z5AT1HZEN"
+217 http request GET https://registry.npmjs.org/simctl
+218 verbose write writing to /usr/local/lib/node_modules/ios-deploy/package.json
+219 info preinstall ios-deploy@1.8.6
+220 verbose unsafe-perm in lifecycle false
+221 http 304 https://registry.npmjs.org/bplist-parser
+222 verbose headers { date: 'Thu, 26 May 2016 09:31:32 GMT',
+222 verbose headers   via: '1.1 varnish',
+222 verbose headers   'cache-control': 'max-age=300',
+222 verbose headers   etag: '"AGWSPFCRLNGDFFNZ3XI793Q8Q"',
+222 verbose headers   age: '113',
+222 verbose headers   connection: 'keep-alive',
+222 verbose headers   'x-served-by': 'cache-fra1247-FRA',
+222 verbose headers   'x-cache': 'HIT',
+222 verbose headers   'x-cache-hits': '2',
+222 verbose headers   'x-timer': 'S1464255092.290459,VS0,VE0',
+222 verbose headers   vary: 'Accept-Encoding' }
+223 silly get cb [ 304,
+223 silly get   { date: 'Thu, 26 May 2016 09:31:32 GMT',
+223 silly get     via: '1.1 varnish',
+223 silly get     'cache-control': 'max-age=300',
+223 silly get     etag: '"AGWSPFCRLNGDFFNZ3XI793Q8Q"',
+223 silly get     age: '113',
+223 silly get     connection: 'keep-alive',
+223 silly get     'x-served-by': 'cache-fra1247-FRA',
+223 silly get     'x-cache': 'HIT',
+223 silly get     'x-cache-hits': '2',
+223 silly get     'x-timer': 'S1464255092.290459,VS0,VE0',
+223 silly get     vary: 'Accept-Encoding' } ]
+224 verbose etag https://registry.npmjs.org/bplist-parser from cache
+225 verbose get saving bplist-parser to /Users/VidSecki/.npm/registry.npmjs.org/bplist-parser/.cache.json
+226 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+227 http 304 https://registry.npmjs.org/nopt
+228 verbose headers { date: 'Thu, 26 May 2016 09:31:32 GMT',
+228 verbose headers   via: '1.1 varnish',
+228 verbose headers   'cache-control': 'max-age=300',
+228 verbose headers   etag: '"53NWQ6XY2NLAFB30G2E3W8W60"',
+228 verbose headers   age: '79',
+228 verbose headers   connection: 'keep-alive',
+228 verbose headers   'x-served-by': 'cache-fra1239-FRA',
+228 verbose headers   'x-cache': 'HIT',
+228 verbose headers   'x-cache-hits': '8',
+228 verbose headers   'x-timer': 'S1464255092.290619,VS0,VE0',
+228 verbose headers   vary: 'Accept-Encoding' }
+229 silly get cb [ 304,
+229 silly get   { date: 'Thu, 26 May 2016 09:31:32 GMT',
+229 silly get     via: '1.1 varnish',
+229 silly get     'cache-control': 'max-age=300',
+229 silly get     etag: '"53NWQ6XY2NLAFB30G2E3W8W60"',
+229 silly get     age: '79',
+229 silly get     connection: 'keep-alive',
+229 silly get     'x-served-by': 'cache-fra1239-FRA',
+229 silly get     'x-cache': 'HIT',
+229 silly get     'x-cache-hits': '8',
+229 silly get     'x-timer': 'S1464255092.290619,VS0,VE0',
+229 silly get     vary: 'Accept-Encoding' } ]
+230 verbose etag https://registry.npmjs.org/nopt from cache
+231 verbose get saving nopt to /Users/VidSecki/.npm/registry.npmjs.org/nopt/.cache.json
+232 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+233 silly addNameRange number 2 { name: 'bplist-parser', range: '>=0.0.6 <0.0.7', hasData: true }
+234 silly addNameRange versions [ 'bplist-parser',
+234 silly addNameRange   [ '0.0.1',
+234 silly addNameRange     '0.0.2',
+234 silly addNameRange     '0.0.3',
+234 silly addNameRange     '0.0.4',
+234 silly addNameRange     '0.0.5',
+234 silly addNameRange     '0.0.6',
+234 silly addNameRange     '0.1.0',
+234 silly addNameRange     '0.1.1' ] ]
+235 silly addNamed bplist-parser@0.0.6
+236 verbose addNamed "0.0.6" is a plain semver version for bplist-parser
+237 silly cache afterAdd nopt@1.0.9
+238 verbose afterAdd /Users/VidSecki/.npm/nopt/1.0.9/package/package.json not in flight; writing
+239 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+240 silly cache afterAdd bplist-parser@0.0.6
+241 verbose afterAdd /Users/VidSecki/.npm/bplist-parser/0.0.6/package/package.json not in flight; writing
+242 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+243 verbose afterAdd /Users/VidSecki/.npm/nopt/1.0.9/package/package.json written
+244 verbose afterAdd /Users/VidSecki/.npm/bplist-parser/0.0.6/package/package.json written
+245 http 304 https://registry.npmjs.org/plist
+246 verbose headers { date: 'Thu, 26 May 2016 09:31:32 GMT',
+246 verbose headers   via: '1.1 varnish',
+246 verbose headers   'cache-control': 'max-age=300',
+246 verbose headers   etag: '"4XDD08SKJS1KRG42L3GA94ULV"',
+246 verbose headers   age: '27',
+246 verbose headers   connection: 'keep-alive',
+246 verbose headers   'x-served-by': 'cache-fra1240-FRA',
+246 verbose headers   'x-cache': 'HIT',
+246 verbose headers   'x-cache-hits': '1',
+246 verbose headers   'x-timer': 'S1464255092.344424,VS0,VE0',
+246 verbose headers   vary: 'Accept-Encoding' }
+247 silly get cb [ 304,
+247 silly get   { date: 'Thu, 26 May 2016 09:31:32 GMT',
+247 silly get     via: '1.1 varnish',
+247 silly get     'cache-control': 'max-age=300',
+247 silly get     etag: '"4XDD08SKJS1KRG42L3GA94ULV"',
+247 silly get     age: '27',
+247 silly get     connection: 'keep-alive',
+247 silly get     'x-served-by': 'cache-fra1240-FRA',
+247 silly get     'x-cache': 'HIT',
+247 silly get     'x-cache-hits': '1',
+247 silly get     'x-timer': 'S1464255092.344424,VS0,VE0',
+247 silly get     vary: 'Accept-Encoding' } ]
+248 verbose etag https://registry.npmjs.org/plist from cache
+249 verbose get saving plist to /Users/VidSecki/.npm/registry.npmjs.org/plist/.cache.json
+250 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+251 silly addNameRange number 2 { name: 'plist', range: '>=1.2.0 <2.0.0', hasData: true }
+252 silly addNameRange versions [ 'plist',
+252 silly addNameRange   [ '0.1.0',
+252 silly addNameRange     '0.1.1',
+252 silly addNameRange     '0.2.0',
+252 silly addNameRange     '0.2.1',
+252 silly addNameRange     '0.3.1',
+252 silly addNameRange     '0.3.2',
+252 silly addNameRange     '0.3.3',
+252 silly addNameRange     '0.4.0',
+252 silly addNameRange     '0.4.1',
+252 silly addNameRange     '0.4.2',
+252 silly addNameRange     '0.4.3',
+252 silly addNameRange     '1.0.0',
+252 silly addNameRange     '1.0.1',
+252 silly addNameRange     '1.1.0',
+252 silly addNameRange     '1.2.0' ] ]
+253 silly addNamed plist@1.2.0
+254 verbose addNamed "1.2.0" is a plain semver version for plist
+255 silly cache afterAdd plist@1.2.0
+256 verbose afterAdd /Users/VidSecki/.npm/plist/1.2.0/package/package.json not in flight; writing
+257 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+258 verbose afterAdd /Users/VidSecki/.npm/plist/1.2.0/package/package.json written
+259 http 304 https://registry.npmjs.org/simctl
+260 verbose headers { date: 'Thu, 26 May 2016 09:31:32 GMT',
+260 verbose headers   via: '1.1 varnish',
+260 verbose headers   'cache-control': 'max-age=300',
+260 verbose headers   etag: '"DMXP05YIUD43R0Q4Z5AT1HZEN"',
+260 verbose headers   age: '0',
+260 verbose headers   connection: 'keep-alive',
+260 verbose headers   'x-served-by': 'cache-fra1223-FRA',
+260 verbose headers   'x-cache': 'HIT',
+260 verbose headers   'x-cache-hits': '1',
+260 verbose headers   'x-timer': 'S1464255092.344799,VS0,VE745',
+260 verbose headers   vary: 'Accept-Encoding' }
+261 silly get cb [ 304,
+261 silly get   { date: 'Thu, 26 May 2016 09:31:32 GMT',
+261 silly get     via: '1.1 varnish',
+261 silly get     'cache-control': 'max-age=300',
+261 silly get     etag: '"DMXP05YIUD43R0Q4Z5AT1HZEN"',
+261 silly get     age: '0',
+261 silly get     connection: 'keep-alive',
+261 silly get     'x-served-by': 'cache-fra1223-FRA',
+261 silly get     'x-cache': 'HIT',
+261 silly get     'x-cache-hits': '1',
+261 silly get     'x-timer': 'S1464255092.344799,VS0,VE745',
+261 silly get     vary: 'Accept-Encoding' } ]
+262 verbose etag https://registry.npmjs.org/simctl from cache
+263 verbose get saving simctl to /Users/VidSecki/.npm/registry.npmjs.org/simctl/.cache.json
+264 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+265 silly addNameRange number 2 { name: 'simctl', range: '>=0.0.9 <0.0.10', hasData: true }
+266 silly addNameRange versions [ 'simctl',
+266 silly addNameRange   [ '0.0.1',
+266 silly addNameRange     '0.0.2',
+266 silly addNameRange     '0.0.3',
+266 silly addNameRange     '0.0.5',
+266 silly addNameRange     '0.0.6',
+266 silly addNameRange     '0.0.7',
+266 silly addNameRange     '0.0.8',
+266 silly addNameRange     '0.0.9' ] ]
+267 silly addNamed simctl@0.0.9
+268 verbose addNamed "0.0.9" is a plain semver version for simctl
+269 silly cache afterAdd simctl@0.0.9
+270 verbose afterAdd /Users/VidSecki/.npm/simctl/0.0.9/package/package.json not in flight; writing
+271 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+272 verbose afterAdd /Users/VidSecki/.npm/simctl/0.0.9/package/package.json written
+273 silly install resolved [ { name: 'nopt',
+273 silly install resolved     version: '1.0.9',
+273 silly install resolved     description: 'Option parsing for Node, supporting types, shorthands, etc. Used by npm.',
+273 silly install resolved     author:
+273 silly install resolved      { name: 'Isaac Z. Schlueter',
+273 silly install resolved        email: 'i@izs.me',
+273 silly install resolved        url: 'http://blog.izs.me/' },
+273 silly install resolved     main: 'lib/nopt.js',
+273 silly install resolved     scripts: { test: 'node lib/nopt.js' },
+273 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/nopt.git' },
+273 silly install resolved     bin: { nopt: './bin/nopt.js' },
+273 silly install resolved     license:
+273 silly install resolved      { type: 'MIT',
+273 silly install resolved        url: 'https://github.com/isaacs/nopt/raw/master/LICENSE' },
+273 silly install resolved     dependencies: { abbrev: '1' },
+273 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+273 silly install resolved     _id: 'nopt@1.0.9',
+273 silly install resolved     devDependencies: {},
+273 silly install resolved     engines: { node: '*' },
+273 silly install resolved     _engineSupported: true,
+273 silly install resolved     _npmVersion: '1.0.30',
+273 silly install resolved     _nodeVersion: 'v0.5.8-pre',
+273 silly install resolved     _defaultsLoaded: true,
+273 silly install resolved     dist:
+273 silly install resolved      { shasum: '3bc0d7cba7bfb0d5a676dbed7c0ebe48a4fd454e',
+273 silly install resolved        tarball: 'https://registry.npmjs.org/nopt/-/nopt-1.0.9.tgz' },
+273 silly install resolved     maintainers: [ [Object] ],
+273 silly install resolved     directories: {},
+273 silly install resolved     _shasum: '3bc0d7cba7bfb0d5a676dbed7c0ebe48a4fd454e',
+273 silly install resolved     _resolved: 'https://registry.npmjs.org/nopt/-/nopt-1.0.9.tgz',
+273 silly install resolved     _from: 'nopt@1.0.9',
+273 silly install resolved     bugs: { url: 'https://github.com/isaacs/nopt/issues' },
+273 silly install resolved     readme: 'ERROR: No README data found!',
+273 silly install resolved     homepage: 'https://github.com/isaacs/nopt#readme' },
+273 silly install resolved   { name: 'bplist-parser',
+273 silly install resolved     version: '0.0.6',
+273 silly install resolved     description: 'Binary plist parser.',
+273 silly install resolved     main: 'bplistParser.js',
+273 silly install resolved     scripts: { test: './node_modules/nodeunit/bin/nodeunit test' },
+273 silly install resolved     keywords: [ 'bplist', 'plist', 'parser' ],
+273 silly install resolved     author: { name: 'Joe Ferner', email: 'joe.ferner@nearinfinity.com' },
+273 silly install resolved     license: 'MIT',
+273 silly install resolved     devDependencies: { nodeunit: '~0.7.4' },
+273 silly install resolved     repository:
+273 silly install resolved      { type: 'git',
+273 silly install resolved        url: 'git+https://github.com/nearinfinity/node-bplist-parser.git' },
+273 silly install resolved     gitHead: 'a2230a5df3c7014ffbe5761bcb091ea2d061b47b',
+273 silly install resolved     bugs: { url: 'https://github.com/nearinfinity/node-bplist-parser/issues' },
+273 silly install resolved     homepage: 'https://github.com/nearinfinity/node-bplist-parser',
+273 silly install resolved     _id: 'bplist-parser@0.0.6',
+273 silly install resolved     _shasum: '38da3471817df9d44ab3892e27707bbbd75a11b9',
+273 silly install resolved     _from: 'bplist-parser@>=0.0.6 <0.0.7',
+273 silly install resolved     _npmVersion: '1.4.14',
+273 silly install resolved     _npmUser: { name: 'joeferner', email: 'joe@fernsroth.com' },
+273 silly install resolved     maintainers: [ [Object] ],
+273 silly install resolved     dist:
+273 silly install resolved      { shasum: '38da3471817df9d44ab3892e27707bbbd75a11b9',
+273 silly install resolved        tarball: 'http://registry.npmjs.org/bplist-parser/-/bplist-parser-0.0.6.tgz' },
+273 silly install resolved     directories: {},
+273 silly install resolved     _resolved: 'https://registry.npmjs.org/bplist-parser/-/bplist-parser-0.0.6.tgz',
+273 silly install resolved     readme: 'ERROR: No README data found!' },
+273 silly install resolved   { name: 'plist',
+273 silly install resolved     description: 'Mac OS X Plist parser/builder for Node.js and browsers',
+273 silly install resolved     version: '1.2.0',
+273 silly install resolved     author: { name: 'Nathan Rajlich', email: 'nathan@tootallnate.net' },
+273 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+273 silly install resolved     repository:
+273 silly install resolved      { type: 'git',
+273 silly install resolved        url: 'git://github.com/TooTallNate/node-plist.git' },
+273 silly install resolved     license: 'MIT',
+273 silly install resolved     keywords: [ 'apple', 'browser', 'mac', 'plist', 'parser', 'xml' ],
+273 silly install resolved     main: 'lib/plist.js',
+273 silly install resolved     dependencies:
+273 silly install resolved      { 'base64-js': '0.0.8',
+273 silly install resolved        xmlbuilder: '4.0.0',
+273 silly install resolved        xmldom: '0.1.x',
+273 silly install resolved        'util-deprecate': '1.0.2' },
+273 silly install resolved     devDependencies:
+273 silly install resolved      { browserify: '12.0.1',
+273 silly install resolved        mocha: '2.3.3',
+273 silly install resolved        multiline: '1.0.2',
+273 silly install resolved        zuul: '3.7.2' },
+273 silly install resolved     scripts: { test: 'make test' },
+273 silly install resolved     gitHead: '69520574f27864145192338b72e608fbe1bda6f7',
+273 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-plist/issues' },
+273 silly install resolved     homepage: 'https://github.com/TooTallNate/node-plist#readme',
+273 silly install resolved     _id: 'plist@1.2.0',
+273 silly install resolved     _shasum: '084b5093ddc92506e259f874b8d9b1afb8c79593',
+273 silly install resolved     _from: 'plist@>=1.2.0 <2.0.0',
+273 silly install resolved     _npmVersion: '3.3.11',
+273 silly install resolved     _nodeVersion: '5.0.0',
+273 silly install resolved     _npmUser: { name: 'mreinstein', email: 'reinstein.mike@gmail.com' },
+273 silly install resolved     dist:
+273 silly install resolved      { shasum: '084b5093ddc92506e259f874b8d9b1afb8c79593',
+273 silly install resolved        tarball: 'https://registry.npmjs.org/plist/-/plist-1.2.0.tgz' },
+273 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+273 silly install resolved     directories: {},
+273 silly install resolved     _resolved: 'https://registry.npmjs.org/plist/-/plist-1.2.0.tgz',
+273 silly install resolved     readme: 'ERROR: No README data found!' },
+273 silly install resolved   { name: 'simctl',
+273 silly install resolved     version: '0.0.9',
+273 silly install resolved     description: 'library for Xcode simctl utility on OS X',
+273 silly install resolved     repository:
+273 silly install resolved      { type: 'git',
+273 silly install resolved        url: 'git+https://github.com/phonegap/simctl.git' },
+273 silly install resolved     main: 'simctl.js',
+273 silly install resolved     dependencies: { shelljs: '^0.2.6', tail: '^0.4.0' },
+273 silly install resolved     keywords: [ 'simctl', 'iOS Simulator' ],
+273 silly install resolved     author: { name: 'Shazron Abdullah' },
+273 silly install resolved     license: 'MIT',
+273 silly install resolved     gitHead: '34426c719130a73b83af65f50a11a46267a5ad0b',
+273 silly install resolved     bugs: { url: 'https://github.com/phonegap/simctl/issues' },
+273 silly install resolved     homepage: 'https://github.com/phonegap/simctl#readme',
+273 silly install resolved     _id: 'simctl@0.0.9',
+273 silly install resolved     scripts: {},
+273 silly install resolved     _shasum: 'cd36c9d3a1ae1709645f97e0ce205cc3cac6fd1b',
+273 silly install resolved     _from: 'simctl@>=0.0.9 <0.0.10',
+273 silly install resolved     _npmVersion: '2.11.3',
+273 silly install resolved     _nodeVersion: '0.12.7',
+273 silly install resolved     _npmUser: { name: 'shazron', email: 'shazron@gmail.com' },
+273 silly install resolved     dist:
+273 silly install resolved      { shasum: 'cd36c9d3a1ae1709645f97e0ce205cc3cac6fd1b',
+273 silly install resolved        tarball: 'https://registry.npmjs.org/simctl/-/simctl-0.0.9.tgz' },
+273 silly install resolved     maintainers: [ [Object] ],
+273 silly install resolved     _npmOperationalInternal:
+273 silly install resolved      { host: 'packages-13-west.internal.npmjs.com',
+273 silly install resolved        tmp: 'tmp/simctl-0.0.9.tgz_1458354134802_0.09800405637361109' },
+273 silly install resolved     directories: {},
+273 silly install resolved     _resolved: 'https://registry.npmjs.org/simctl/-/simctl-0.0.9.tgz',
+273 silly install resolved     readme: 'ERROR: No README data found!' } ]
+274 info install nopt@1.0.9 into /usr/local/lib/node_modules/ios-sim
+275 info install bplist-parser@0.0.6 into /usr/local/lib/node_modules/ios-sim
+276 info install plist@1.2.0 into /usr/local/lib/node_modules/ios-sim
+277 info install simctl@0.0.9 into /usr/local/lib/node_modules/ios-sim
+278 info installOne nopt@1.0.9
+279 verbose installOne of nopt to /usr/local/lib/node_modules/ios-sim not in flight; installing
+280 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+281 info installOne bplist-parser@0.0.6
+282 verbose installOne of bplist-parser to /usr/local/lib/node_modules/ios-sim not in flight; installing
+283 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+284 info installOne plist@1.2.0
+285 verbose installOne of plist to /usr/local/lib/node_modules/ios-sim not in flight; installing
+286 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+287 info installOne simctl@0.0.9
+288 verbose installOne of simctl to /usr/local/lib/node_modules/ios-sim not in flight; installing
+289 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+290 verbose lock using /Users/VidSecki/.npm/_locks/bplist-parser-1a8c83f7dff18e12.lock for /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser
+291 verbose lock using /Users/VidSecki/.npm/_locks/nopt-f92080d6b9c091ba.lock for /usr/local/lib/node_modules/ios-sim/node_modules/nopt
+292 verbose lock using /Users/VidSecki/.npm/_locks/simctl-9ed0fe1894d28046.lock for /usr/local/lib/node_modules/ios-sim/node_modules/simctl
+293 silly install write writing bplist-parser 0.0.6 to /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser
+294 silly install write writing nopt 1.0.9 to /usr/local/lib/node_modules/ios-sim/node_modules/nopt
+295 verbose lock using /Users/VidSecki/.npm/_locks/plist-c46bcbb6daba9d53.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist
+296 silly install write writing simctl 0.0.9 to /usr/local/lib/node_modules/ios-sim/node_modules/simctl
+297 silly install write writing plist 1.2.0 to /usr/local/lib/node_modules/ios-sim/node_modules/plist
+298 verbose unbuild lib/node_modules/ios-sim/node_modules/bplist-parser
+299 verbose unbuild lib/node_modules/ios-sim/node_modules/simctl
+300 verbose unbuild lib/node_modules/ios-sim/node_modules/nopt
+301 verbose unbuild lib/node_modules/ios-sim/node_modules/plist
+302 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser is being purged from base /usr/local
+303 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser
+304 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/simctl is being purged from base /usr/local
+305 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/simctl
+306 verbose tar unpack /Users/VidSecki/.npm/bplist-parser/0.0.6/package.tgz
+307 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser
+308 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser is being purged
+309 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser
+310 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/nopt is being purged from base /usr/local
+311 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/nopt
+312 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist is being purged from base /usr/local
+313 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist
+314 verbose tar unpack /Users/VidSecki/.npm/simctl/0.0.9/package.tgz
+315 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/simctl
+316 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/simctl is being purged
+317 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/simctl
+318 silly gunzTarPerm modes [ '755', '644' ]
+319 verbose tar unpack /Users/VidSecki/.npm/nopt/1.0.9/package.tgz
+320 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/nopt
+321 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/nopt is being purged
+322 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/nopt
+323 verbose tar unpack /Users/VidSecki/.npm/plist/1.2.0/package.tgz
+324 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/plist
+325 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist is being purged
+326 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist
+327 silly gunzTarPerm modes [ '755', '644' ]
+328 silly gunzTarPerm modes [ '755', '644' ]
+329 silly gunzTarPerm modes [ '755', '644' ]
+330 silly gunzTarPerm extractEntry package.json
+331 silly gunzTarPerm extractEntry package.json
+332 silly gunzTarPerm extractEntry .gitignore
+333 silly gunzTarPerm extractEntry package.json
+334 silly gunzTarPerm extractEntry .npmignore
+335 silly gunzTarPerm extractEntry README.md
+336 silly gunzTarPerm extractEntry LICENSE
+337 silly gunzTarPerm extractEntry package.json
+338 silly gunzTarPerm extractEntry .npmignore
+339 silly gunzTarPerm extractEntry README.md
+340 silly gunzTarPerm extractEntry README.md
+341 silly gunzTarPerm extractEntry LICENSE
+342 silly gunzTarPerm extractEntry README.md
+343 silly gunzTarPerm extractEntry bin/nopt.js
+344 silly gunzTarPerm extractEntry bplistParser.js
+345 silly gunzTarPerm modified mode [ 'bplistParser.js', 436, 420 ]
+346 silly gunzTarPerm extractEntry test/parseTest.js
+347 silly gunzTarPerm extractEntry LICENSE
+348 silly gunzTarPerm extractEntry simctl.js
+349 silly gunzTarPerm extractEntry History.md
+350 silly gunzTarPerm extractEntry Makefile
+351 silly gunzTarPerm extractEntry examples/my-program.js
+352 silly gunzTarPerm extractEntry lib/nopt.js
+353 silly gunzTarPerm extractEntry test/airplay.bplist
+354 silly gunzTarPerm extractEntry lib/simctl-extensions.js
+355 silly gunzTarPerm extractEntry lib/simctl-list-parser.js
+356 silly gunzTarPerm extractEntry .jshintrc
+357 silly gunzTarPerm extractEntry test/iTunes-small.bplist
+358 silly gunzTarPerm extractEntry test/sample1.bplist
+359 silly gunzTarPerm extractEntry test/sample2.bplist
+360 silly gunzTarPerm extractEntry test/uid.bplist
+361 silly gunzTarPerm extractEntry dist/plist-build.js
+362 silly gunzTarPerm extractEntry dist/plist-parse.js
+363 silly gunzTarPerm extractEntry dist/plist.js
+364 silly gunzTarPerm extractEntry examples/browser/index.html
+365 silly gunzTarPerm extractEntry lib/build.js
+366 silly gunzTarPerm extractEntry lib/node.js
+367 silly gunzTarPerm extractEntry lib/parse.js
+368 silly gunzTarPerm extractEntry lib/plist.js
+369 silly gunzTarPerm extractEntry .travis.yml
+370 silly gunzTarPerm extractEntry test/utf16.bplist
+371 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/simctl/package.json
+372 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/nopt/package.json
+373 info preinstall simctl@0.0.9
+374 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/simctl/package.json
+375 info preinstall nopt@1.0.9
+376 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/nopt/package.json
+377 silly prepareForInstallMany adding shelljs@^0.2.6 from simctl dependencies
+378 silly prepareForInstallMany adding tail@^0.4.0 from simctl dependencies
+379 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/simctl/package.json
+380 silly prepareForInstallMany adding abbrev@1 from nopt dependencies
+381 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/nopt/package.json
+382 silly cache add args [ 'shelljs@^0.2.6', null ]
+383 verbose cache add spec shelljs@^0.2.6
+384 silly cache add args [ 'tail@^0.4.0', null ]
+385 verbose cache add spec tail@^0.4.0
+386 silly cache add parsed spec Result {
+386 silly cache add   raw: 'shelljs@^0.2.6',
+386 silly cache add   scope: null,
+386 silly cache add   name: 'shelljs',
+386 silly cache add   rawSpec: '^0.2.6',
+386 silly cache add   spec: '>=0.2.6 <0.3.0',
+386 silly cache add   type: 'range' }
+387 silly addNamed shelljs@>=0.2.6 <0.3.0
+388 verbose addNamed ">=0.2.6 <0.3.0" is a valid semver range for shelljs
+389 silly addNameRange { name: 'shelljs', range: '>=0.2.6 <0.3.0', hasData: false }
+390 silly mapToRegistry name shelljs
+391 silly mapToRegistry using default registry
+392 silly mapToRegistry registry https://registry.npmjs.org/
+393 silly mapToRegistry uri https://registry.npmjs.org/shelljs
+394 verbose addNameRange registry:https://registry.npmjs.org/shelljs not in flight; fetching
+395 silly cache add parsed spec Result {
+395 silly cache add   raw: 'tail@^0.4.0',
+395 silly cache add   scope: null,
+395 silly cache add   name: 'tail',
+395 silly cache add   rawSpec: '^0.4.0',
+395 silly cache add   spec: '>=0.4.0 <0.5.0',
+395 silly cache add   type: 'range' }
+396 silly addNamed tail@>=0.4.0 <0.5.0
+397 verbose addNamed ">=0.4.0 <0.5.0" is a valid semver range for tail
+398 silly addNameRange { name: 'tail', range: '>=0.4.0 <0.5.0', hasData: false }
+399 silly mapToRegistry name tail
+400 silly mapToRegistry using default registry
+401 silly mapToRegistry registry https://registry.npmjs.org/
+402 silly mapToRegistry uri https://registry.npmjs.org/tail
+403 verbose addNameRange registry:https://registry.npmjs.org/tail not in flight; fetching
+404 silly cache add args [ 'abbrev@1', null ]
+405 verbose cache add spec abbrev@1
+406 silly cache add parsed spec Result {
+406 silly cache add   raw: 'abbrev@1',
+406 silly cache add   scope: null,
+406 silly cache add   name: 'abbrev',
+406 silly cache add   rawSpec: '1',
+406 silly cache add   spec: '>=1.0.0 <2.0.0',
+406 silly cache add   type: 'range' }
+407 silly addNamed abbrev@>=1.0.0 <2.0.0
+408 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for abbrev
+409 silly addNameRange { name: 'abbrev', range: '>=1.0.0 <2.0.0', hasData: false }
+410 silly mapToRegistry name abbrev
+411 silly mapToRegistry using default registry
+412 silly mapToRegistry registry https://registry.npmjs.org/
+413 silly mapToRegistry uri https://registry.npmjs.org/abbrev
+414 verbose addNameRange registry:https://registry.npmjs.org/abbrev not in flight; fetching
+415 verbose request uri https://registry.npmjs.org/tail
+416 verbose request no auth needed
+417 info attempt registry request try #1 at 11:31:32 AM
+418 verbose etag "BSBBSKKLRX91YSC2DB2Q61FU8"
+419 http request GET https://registry.npmjs.org/tail
+420 verbose request uri https://registry.npmjs.org/shelljs
+421 verbose request no auth needed
+422 info attempt registry request try #1 at 11:31:32 AM
+423 verbose etag "6UBJYQV3PDHHK5W4HM728G2CJ"
+424 http request GET https://registry.npmjs.org/shelljs
+425 verbose request uri https://registry.npmjs.org/abbrev
+426 verbose request no auth needed
+427 info attempt registry request try #1 at 11:31:32 AM
+428 verbose etag "36YO8I547JVNNQISD9L27M8BM"
+429 http request GET https://registry.npmjs.org/abbrev
+430 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser/package.json
+431 info preinstall bplist-parser@0.0.6
+432 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser/package.json
+433 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser/package.json
+434 silly install resolved []
+435 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser
+436 info build /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser
+437 info linkStuff bplist-parser@0.0.6
+438 silly linkStuff bplist-parser@0.0.6 has /usr/local/lib/node_modules/ios-sim/node_modules as its parent node_modules
+439 silly linkStuff bplist-parser@0.0.6 is part of a global install
+440 silly linkStuff bplist-parser@0.0.6 is installed into a global node_modules
+441 verbose linkBins bplist-parser@0.0.6
+442 verbose linkMans bplist-parser@0.0.6
+443 verbose rebuildBundles bplist-parser@0.0.6
+444 info install bplist-parser@0.0.6
+445 info postinstall bplist-parser@0.0.6
+446 verbose unlock done using /Users/VidSecki/.npm/_locks/bplist-parser-1a8c83f7dff18e12.lock for /usr/local/lib/node_modules/ios-sim/node_modules/bplist-parser
+447 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/plist/package.json
+448 info preinstall plist@1.2.0
+449 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/package.json
+450 silly prepareForInstallMany adding base64-js@0.0.8 from plist dependencies
+451 silly prepareForInstallMany adding xmlbuilder@4.0.0 from plist dependencies
+452 silly prepareForInstallMany adding xmldom@0.1.x from plist dependencies
+453 silly prepareForInstallMany adding util-deprecate@1.0.2 from plist dependencies
+454 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/package.json
+455 silly cache add args [ 'base64-js@0.0.8', null ]
+456 verbose cache add spec base64-js@0.0.8
+457 silly cache add args [ 'xmlbuilder@4.0.0', null ]
+458 verbose cache add spec xmlbuilder@4.0.0
+459 silly cache add parsed spec Result {
+459 silly cache add   raw: 'base64-js@0.0.8',
+459 silly cache add   scope: null,
+459 silly cache add   name: 'base64-js',
+459 silly cache add   rawSpec: '0.0.8',
+459 silly cache add   spec: '0.0.8',
+459 silly cache add   type: 'version' }
+460 silly addNamed base64-js@0.0.8
+461 verbose addNamed "0.0.8" is a plain semver version for base64-js
+462 silly mapToRegistry name base64-js
+463 silly mapToRegistry using default registry
+464 silly mapToRegistry registry https://registry.npmjs.org/
+465 silly mapToRegistry uri https://registry.npmjs.org/base64-js
+466 verbose addNameVersion registry:https://registry.npmjs.org/base64-js not in flight; fetching
+467 silly cache add parsed spec Result {
+467 silly cache add   raw: 'xmlbuilder@4.0.0',
+467 silly cache add   scope: null,
+467 silly cache add   name: 'xmlbuilder',
+467 silly cache add   rawSpec: '4.0.0',
+467 silly cache add   spec: '4.0.0',
+467 silly cache add   type: 'version' }
+468 silly addNamed xmlbuilder@4.0.0
+469 verbose addNamed "4.0.0" is a plain semver version for xmlbuilder
+470 silly mapToRegistry name xmlbuilder
+471 silly mapToRegistry using default registry
+472 silly mapToRegistry registry https://registry.npmjs.org/
+473 silly mapToRegistry uri https://registry.npmjs.org/xmlbuilder
+474 verbose addNameVersion registry:https://registry.npmjs.org/xmlbuilder not in flight; fetching
+475 silly cache add args [ 'xmldom@0.1.x', null ]
+476 verbose cache add spec xmldom@0.1.x
+477 silly cache add parsed spec Result {
+477 silly cache add   raw: 'xmldom@0.1.x',
+477 silly cache add   scope: null,
+477 silly cache add   name: 'xmldom',
+477 silly cache add   rawSpec: '0.1.x',
+477 silly cache add   spec: '>=0.1.0 <0.2.0',
+477 silly cache add   type: 'range' }
+478 silly addNamed xmldom@>=0.1.0 <0.2.0
+479 verbose addNamed ">=0.1.0 <0.2.0" is a valid semver range for xmldom
+480 silly addNameRange { name: 'xmldom', range: '>=0.1.0 <0.2.0', hasData: false }
+481 silly mapToRegistry name xmldom
+482 silly mapToRegistry using default registry
+483 silly mapToRegistry registry https://registry.npmjs.org/
+484 silly mapToRegistry uri https://registry.npmjs.org/xmldom
+485 verbose addNameRange registry:https://registry.npmjs.org/xmldom not in flight; fetching
+486 silly cache add args [ 'util-deprecate@1.0.2', null ]
+487 verbose cache add spec util-deprecate@1.0.2
+488 silly cache add parsed spec Result {
+488 silly cache add   raw: 'util-deprecate@1.0.2',
+488 silly cache add   scope: null,
+488 silly cache add   name: 'util-deprecate',
+488 silly cache add   rawSpec: '1.0.2',
+488 silly cache add   spec: '1.0.2',
+488 silly cache add   type: 'version' }
+489 silly addNamed util-deprecate@1.0.2
+490 verbose addNamed "1.0.2" is a plain semver version for util-deprecate
+491 silly mapToRegistry name util-deprecate
+492 silly mapToRegistry using default registry
+493 silly mapToRegistry registry https://registry.npmjs.org/
+494 silly mapToRegistry uri https://registry.npmjs.org/util-deprecate
+495 verbose addNameVersion registry:https://registry.npmjs.org/util-deprecate not in flight; fetching
+496 verbose request uri https://registry.npmjs.org/base64-js
+497 verbose request no auth needed
+498 info attempt registry request try #1 at 11:31:33 AM
+499 verbose etag "DE7IP3N2ZOSYM9WJFO7XTR2PZ"
+500 http request GET https://registry.npmjs.org/base64-js
+501 verbose request uri https://registry.npmjs.org/xmlbuilder
+502 verbose request no auth needed
+503 info attempt registry request try #1 at 11:31:33 AM
+504 verbose etag "5RM49TCXVBJOGEHLXTVR500F"
+505 http request GET https://registry.npmjs.org/xmlbuilder
+506 verbose request uri https://registry.npmjs.org/xmldom
+507 verbose request no auth needed
+508 info attempt registry request try #1 at 11:31:33 AM
+509 verbose etag "751OHK78IUVLWTOO7V63KW7TS"
+510 http request GET https://registry.npmjs.org/xmldom
+511 verbose request uri https://registry.npmjs.org/util-deprecate
+512 verbose request no auth needed
+513 info attempt registry request try #1 at 11:31:33 AM
+514 verbose etag "363T1WE4HHZV0LMEHAOBAVT0G"
+515 http request GET https://registry.npmjs.org/util-deprecate
+516 http 304 https://registry.npmjs.org/shelljs
+517 verbose headers { date: 'Thu, 26 May 2016 09:31:33 GMT',
+517 verbose headers   via: '1.1 varnish',
+517 verbose headers   'cache-control': 'max-age=300',
+517 verbose headers   etag: '"6UBJYQV3PDHHK5W4HM728G2CJ"',
+517 verbose headers   age: '244',
+517 verbose headers   connection: 'keep-alive',
+517 verbose headers   'x-served-by': 'cache-fra1228-FRA',
+517 verbose headers   'x-cache': 'HIT',
+517 verbose headers   'x-cache-hits': '12',
+517 verbose headers   'x-timer': 'S1464255093.478087,VS0,VE0',
+517 verbose headers   vary: 'Accept-Encoding' }
+518 silly get cb [ 304,
+518 silly get   { date: 'Thu, 26 May 2016 09:31:33 GMT',
+518 silly get     via: '1.1 varnish',
+518 silly get     'cache-control': 'max-age=300',
+518 silly get     etag: '"6UBJYQV3PDHHK5W4HM728G2CJ"',
+518 silly get     age: '244',
+518 silly get     connection: 'keep-alive',
+518 silly get     'x-served-by': 'cache-fra1228-FRA',
+518 silly get     'x-cache': 'HIT',
+518 silly get     'x-cache-hits': '12',
+518 silly get     'x-timer': 'S1464255093.478087,VS0,VE0',
+518 silly get     vary: 'Accept-Encoding' } ]
+519 verbose etag https://registry.npmjs.org/shelljs from cache
+520 verbose get saving shelljs to /Users/VidSecki/.npm/registry.npmjs.org/shelljs/.cache.json
+521 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+522 http 304 https://registry.npmjs.org/tail
+523 verbose headers { date: 'Thu, 26 May 2016 09:31:33 GMT',
+523 verbose headers   via: '1.1 varnish',
+523 verbose headers   'cache-control': 'max-age=300',
+523 verbose headers   etag: '"BSBBSKKLRX91YSC2DB2Q61FU8"',
+523 verbose headers   age: '174',
+523 verbose headers   connection: 'keep-alive',
+523 verbose headers   'x-served-by': 'cache-fra1248-FRA',
+523 verbose headers   'x-cache': 'HIT',
+523 verbose headers   'x-cache-hits': '2',
+523 verbose headers   'x-timer': 'S1464255093.477577,VS0,VE0',
+523 verbose headers   vary: 'Accept-Encoding' }
+524 silly get cb [ 304,
+524 silly get   { date: 'Thu, 26 May 2016 09:31:33 GMT',
+524 silly get     via: '1.1 varnish',
+524 silly get     'cache-control': 'max-age=300',
+524 silly get     etag: '"BSBBSKKLRX91YSC2DB2Q61FU8"',
+524 silly get     age: '174',
+524 silly get     connection: 'keep-alive',
+524 silly get     'x-served-by': 'cache-fra1248-FRA',
+524 silly get     'x-cache': 'HIT',
+524 silly get     'x-cache-hits': '2',
+524 silly get     'x-timer': 'S1464255093.477577,VS0,VE0',
+524 silly get     vary: 'Accept-Encoding' } ]
+525 verbose etag https://registry.npmjs.org/tail from cache
+526 verbose get saving tail to /Users/VidSecki/.npm/registry.npmjs.org/tail/.cache.json
+527 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+528 silly addNameRange number 2 { name: 'shelljs', range: '>=0.2.6 <0.3.0', hasData: true }
+529 silly addNameRange versions [ 'shelljs',
+529 silly addNameRange   [ '0.0.1',
+529 silly addNameRange     '0.0.2',
+529 silly addNameRange     '0.0.3',
+529 silly addNameRange     '0.0.4',
+529 silly addNameRange     '0.0.5',
+529 silly addNameRange     '0.0.6',
+529 silly addNameRange     '0.0.7',
+529 silly addNameRange     '0.0.8',
+529 silly addNameRange     '0.0.9',
+529 silly addNameRange     '0.1.0',
+529 silly addNameRange     '0.1.1',
+529 silly addNameRange     '0.1.2',
+529 silly addNameRange     '0.1.3',
+529 silly addNameRange     '0.1.4',
+529 silly addNameRange     '0.2.0',
+529 silly addNameRange     '0.2.1',
+529 silly addNameRange     '0.2.2',
+529 silly addNameRange     '0.2.3',
+529 silly addNameRange     '0.2.4',
+529 silly addNameRange     '0.2.5',
+529 silly addNameRange     '0.2.6',
+529 silly addNameRange     '0.3.0',
+529 silly addNameRange     '0.4.0',
+529 silly addNameRange     '0.5.0',
+529 silly addNameRange     '0.5.1',
+529 silly addNameRange     '0.5.2',
+529 silly addNameRange     '0.5.3',
+529 silly addNameRange     '0.6.0',
+529 silly addNameRange     '0.7.0',
+529 silly addNameRange     '0.0.1-alpha1',
+529 silly addNameRange     '0.0.2-pre1',
+529 silly addNameRange     '0.0.4-pre1',
+529 silly addNameRange     '0.0.5-pre1',
+529 silly addNameRange     '0.0.5-pre2',
+529 silly addNameRange     '0.0.5-pre3',
+529 silly addNameRange     '0.0.5-pre4',
+529 silly addNameRange     '0.0.6-pre1',
+529 silly addNameRange     '0.0.6-pre2' ] ]
+530 silly addNamed shelljs@0.2.6
+531 verbose addNamed "0.2.6" is a plain semver version for shelljs
+532 silly addNameRange number 2 { name: 'tail', range: '>=0.4.0 <0.5.0', hasData: true }
+533 silly addNameRange versions [ 'tail',
+533 silly addNameRange   [ '0.0.3',
+533 silly addNameRange     '0.0.4',
+533 silly addNameRange     '0.1.0',
+533 silly addNameRange     '0.1.1',
+533 silly addNameRange     '0.1.2',
+533 silly addNameRange     '0.2.0',
+533 silly addNameRange     '0.2.1',
+533 silly addNameRange     '0.2.2',
+533 silly addNameRange     '0.2.3',
+533 silly addNameRange     '0.2.4',
+533 silly addNameRange     '0.3.0',
+533 silly addNameRange     '0.3.1',
+533 silly addNameRange     '0.3.2',
+533 silly addNameRange     '0.3.5',
+533 silly addNameRange     '0.3.6',
+533 silly addNameRange     '0.3.7',
+533 silly addNameRange     '0.3.8',
+533 silly addNameRange     '0.3.9',
+533 silly addNameRange     '0.4.0',
+533 silly addNameRange     '1.0.0',
+533 silly addNameRange     '1.0.1',
+533 silly addNameRange     '1.1.0' ] ]
+534 silly addNamed tail@0.4.0
+535 verbose addNamed "0.4.0" is a plain semver version for tail
+536 silly cache afterAdd shelljs@0.2.6
+537 verbose afterAdd /Users/VidSecki/.npm/shelljs/0.2.6/package/package.json not in flight; writing
+538 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+539 silly cache afterAdd tail@0.4.0
+540 verbose afterAdd /Users/VidSecki/.npm/tail/0.4.0/package/package.json not in flight; writing
+541 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+542 verbose afterAdd /Users/VidSecki/.npm/shelljs/0.2.6/package/package.json written
+543 verbose afterAdd /Users/VidSecki/.npm/tail/0.4.0/package/package.json written
+544 silly install resolved [ { name: 'shelljs',
+544 silly install resolved     version: '0.2.6',
+544 silly install resolved     author: { name: 'Artur Adib', email: 'aadib@mozilla.com' },
+544 silly install resolved     description: 'Portable Unix shell commands for Node.js',
+544 silly install resolved     keywords: [ 'unix', 'shell', 'makefile', 'make', 'jake', 'synchronous' ],
+544 silly install resolved     repository: { type: 'git', url: 'git://github.com/arturadib/shelljs.git' },
+544 silly install resolved     homepage: 'http://github.com/arturadib/shelljs',
+544 silly install resolved     main: './shell.js',
+544 silly install resolved     scripts: { test: 'node scripts/run-tests' },
+544 silly install resolved     bin: { shjs: './bin/shjs' },
+544 silly install resolved     dependencies: {},
+544 silly install resolved     devDependencies: { jshint: '~2.1.11' },
+544 silly install resolved     optionalDependencies: {},
+544 silly install resolved     engines: { node: '>=0.8.0' },
+544 silly install resolved     bugs: { url: 'https://github.com/arturadib/shelljs/issues' },
+544 silly install resolved     _id: 'shelljs@0.2.6',
+544 silly install resolved     dist:
+544 silly install resolved      { shasum: '90492d72ffcc8159976baba62fb0f6884f0c3378',
+544 silly install resolved        tarball: 'http://registry.npmjs.org/shelljs/-/shelljs-0.2.6.tgz' },
+544 silly install resolved     _from: 'shelljs@>=0.2.6 <0.3.0',
+544 silly install resolved     _npmVersion: '1.3.8',
+544 silly install resolved     _npmUser: { name: 'artur', email: 'arturadib@gmail.com' },
+544 silly install resolved     maintainers: [ [Object] ],
+544 silly install resolved     directories: {},
+544 silly install resolved     _shasum: '90492d72ffcc8159976baba62fb0f6884f0c3378',
+544 silly install resolved     _resolved: 'https://registry.npmjs.org/shelljs/-/shelljs-0.2.6.tgz',
+544 silly install resolved     readme: 'ERROR: No README data found!' },
+544 silly install resolved   { author: { name: 'Luca Grulla' },
+544 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+544 silly install resolved     name: 'tail',
+544 silly install resolved     description: 'tail a file in node',
+544 silly install resolved     version: '0.4.0',
+544 silly install resolved     repository:
+544 silly install resolved      { type: 'git',
+544 silly install resolved        url: 'git://github.com/lucagrulla/node-tail.git' },
+544 silly install resolved     main: 'tail',
+544 silly install resolved     engines: { node: '>= 0.4.0' },
+544 silly install resolved     dependencies: {},
+544 silly install resolved     devDependencies: { 'coffee-script': '1.7.1' },
+544 silly install resolved     bugs: { url: 'https://github.com/lucagrulla/node-tail/issues' },
+544 silly install resolved     homepage: 'https://github.com/lucagrulla/node-tail',
+544 silly install resolved     _id: 'tail@0.4.0',
+544 silly install resolved     scripts: {},
+544 silly install resolved     _shasum: 'd29de72750cc99db1e053aff13c359ecfb713002',
+544 silly install resolved     _from: 'tail@>=0.4.0 <0.5.0',
+544 silly install resolved     _npmVersion: '1.4.15',
+544 silly install resolved     _npmUser: { name: 'lucagrulla', email: 'luca.grulla@gmail.com' },
+544 silly install resolved     maintainers: [ [Object] ],
+544 silly install resolved     dist:
+544 silly install resolved      { shasum: 'd29de72750cc99db1e053aff13c359ecfb713002',
+544 silly install resolved        tarball: 'https://registry.npmjs.org/tail/-/tail-0.4.0.tgz' },
+544 silly install resolved     directories: {},
+544 silly install resolved     _resolved: 'https://registry.npmjs.org/tail/-/tail-0.4.0.tgz',
+544 silly install resolved     readme: 'ERROR: No README data found!' } ]
+545 info install shelljs@0.2.6 into /usr/local/lib/node_modules/ios-sim/node_modules/simctl
+546 info install tail@0.4.0 into /usr/local/lib/node_modules/ios-sim/node_modules/simctl
+547 info installOne shelljs@0.2.6
+548 verbose installOne of shelljs to /usr/local/lib/node_modules/ios-sim/node_modules/simctl not in flight; installing
+549 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+550 info installOne tail@0.4.0
+551 verbose installOne of tail to /usr/local/lib/node_modules/ios-sim/node_modules/simctl not in flight; installing
+552 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+553 verbose lock using /Users/VidSecki/.npm/_locks/shelljs-a75750bbd04148c3.lock for /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs
+554 verbose lock using /Users/VidSecki/.npm/_locks/tail-c3506f175990dd6b.lock for /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail
+555 silly install write writing shelljs 0.2.6 to /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs
+556 silly install write writing tail 0.4.0 to /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail
+557 verbose unbuild lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail
+558 verbose unbuild lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs
+559 http 304 https://registry.npmjs.org/xmldom
+560 verbose headers { date: 'Thu, 26 May 2016 09:31:33 GMT',
+560 verbose headers   via: '1.1 varnish',
+560 verbose headers   'cache-control': 'max-age=300',
+560 verbose headers   etag: '"751OHK78IUVLWTOO7V63KW7TS"',
+560 verbose headers   age: '182',
+560 verbose headers   connection: 'keep-alive',
+560 verbose headers   'x-served-by': 'cache-fra1225-FRA',
+560 verbose headers   'x-cache': 'HIT',
+560 verbose headers   'x-cache-hits': '2',
+560 verbose headers   'x-timer': 'S1464255093.522353,VS0,VE0',
+560 verbose headers   vary: 'Accept-Encoding' }
+561 silly get cb [ 304,
+561 silly get   { date: 'Thu, 26 May 2016 09:31:33 GMT',
+561 silly get     via: '1.1 varnish',
+561 silly get     'cache-control': 'max-age=300',
+561 silly get     etag: '"751OHK78IUVLWTOO7V63KW7TS"',
+561 silly get     age: '182',
+561 silly get     connection: 'keep-alive',
+561 silly get     'x-served-by': 'cache-fra1225-FRA',
+561 silly get     'x-cache': 'HIT',
+561 silly get     'x-cache-hits': '2',
+561 silly get     'x-timer': 'S1464255093.522353,VS0,VE0',
+561 silly get     vary: 'Accept-Encoding' } ]
+562 verbose etag https://registry.npmjs.org/xmldom from cache
+563 verbose get saving xmldom to /Users/VidSecki/.npm/registry.npmjs.org/xmldom/.cache.json
+564 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+565 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail is being purged from base /usr/local
+566 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail
+567 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs is being purged from base /usr/local
+568 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs
+569 verbose tar unpack /Users/VidSecki/.npm/tail/0.4.0/package.tgz
+570 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail
+571 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail is being purged
+572 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail
+573 verbose tar unpack /Users/VidSecki/.npm/shelljs/0.2.6/package.tgz
+574 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs
+575 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs is being purged
+576 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs
+577 silly gunzTarPerm modes [ '755', '644' ]
+578 silly gunzTarPerm modes [ '755', '644' ]
+579 http 304 https://registry.npmjs.org/base64-js
+580 verbose headers { date: 'Thu, 26 May 2016 09:31:33 GMT',
+580 verbose headers   via: '1.1 varnish',
+580 verbose headers   'cache-control': 'max-age=300',
+580 verbose headers   etag: '"DE7IP3N2ZOSYM9WJFO7XTR2PZ"',
+580 verbose headers   age: '262',
+580 verbose headers   connection: 'keep-alive',
+580 verbose headers   'x-served-by': 'cache-fra1246-FRA',
+580 verbose headers   'x-cache': 'HIT',
+580 verbose headers   'x-cache-hits': '4',
+580 verbose headers   'x-timer': 'S1464255093.522895,VS0,VE0',
+580 verbose headers   vary: 'Accept-Encoding' }
+581 silly get cb [ 304,
+581 silly get   { date: 'Thu, 26 May 2016 09:31:33 GMT',
+581 silly get     via: '1.1 varnish',
+581 silly get     'cache-control': 'max-age=300',
+581 silly get     etag: '"DE7IP3N2ZOSYM9WJFO7XTR2PZ"',
+581 silly get     age: '262',
+581 silly get     connection: 'keep-alive',
+581 silly get     'x-served-by': 'cache-fra1246-FRA',
+581 silly get     'x-cache': 'HIT',
+581 silly get     'x-cache-hits': '4',
+581 silly get     'x-timer': 'S1464255093.522895,VS0,VE0',
+581 silly get     vary: 'Accept-Encoding' } ]
+582 verbose etag https://registry.npmjs.org/base64-js from cache
+583 verbose get saving base64-js to /Users/VidSecki/.npm/registry.npmjs.org/base64-js/.cache.json
+584 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+585 http 304 https://registry.npmjs.org/util-deprecate
+586 verbose headers { date: 'Thu, 26 May 2016 09:31:33 GMT',
+586 verbose headers   via: '1.1 varnish',
+586 verbose headers   'cache-control': 'max-age=300',
+586 verbose headers   etag: '"363T1WE4HHZV0LMEHAOBAVT0G"',
+586 verbose headers   age: '104',
+586 verbose headers   connection: 'keep-alive',
+586 verbose headers   'x-served-by': 'cache-fra1232-FRA',
+586 verbose headers   'x-cache': 'HIT',
+586 verbose headers   'x-cache-hits': '12',
+586 verbose headers   'x-timer': 'S1464255093.523200,VS0,VE0',
+586 verbose headers   vary: 'Accept-Encoding' }
+587 silly get cb [ 304,
+587 silly get   { date: 'Thu, 26 May 2016 09:31:33 GMT',
+587 silly get     via: '1.1 varnish',
+587 silly get     'cache-control': 'max-age=300',
+587 silly get     etag: '"363T1WE4HHZV0LMEHAOBAVT0G"',
+587 silly get     age: '104',
+587 silly get     connection: 'keep-alive',
+587 silly get     'x-served-by': 'cache-fra1232-FRA',
+587 silly get     'x-cache': 'HIT',
+587 silly get     'x-cache-hits': '12',
+587 silly get     'x-timer': 'S1464255093.523200,VS0,VE0',
+587 silly get     vary: 'Accept-Encoding' } ]
+588 verbose etag https://registry.npmjs.org/util-deprecate from cache
+589 verbose get saving util-deprecate to /Users/VidSecki/.npm/registry.npmjs.org/util-deprecate/.cache.json
+590 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+591 http 304 https://registry.npmjs.org/xmlbuilder
+592 verbose headers { date: 'Thu, 26 May 2016 09:31:33 GMT',
+592 verbose headers   via: '1.1 varnish',
+592 verbose headers   'cache-control': 'max-age=300',
+592 verbose headers   etag: '"5RM49TCXVBJOGEHLXTVR500F"',
+592 verbose headers   age: '52',
+592 verbose headers   connection: 'keep-alive',
+592 verbose headers   'x-served-by': 'cache-fra1221-FRA',
+592 verbose headers   'x-cache': 'HIT',
+592 verbose headers   'x-cache-hits': '1',
+592 verbose headers   'x-timer': 'S1464255093.522956,VS0,VE0',
+592 verbose headers   vary: 'Accept-Encoding' }
+593 silly get cb [ 304,
+593 silly get   { date: 'Thu, 26 May 2016 09:31:33 GMT',
+593 silly get     via: '1.1 varnish',
+593 silly get     'cache-control': 'max-age=300',
+593 silly get     etag: '"5RM49TCXVBJOGEHLXTVR500F"',
+593 silly get     age: '52',
+593 silly get     connection: 'keep-alive',
+593 silly get     'x-served-by': 'cache-fra1221-FRA',
+593 silly get     'x-cache': 'HIT',
+593 silly get     'x-cache-hits': '1',
+593 silly get     'x-timer': 'S1464255093.522956,VS0,VE0',
+593 silly get     vary: 'Accept-Encoding' } ]
+594 verbose etag https://registry.npmjs.org/xmlbuilder from cache
+595 verbose get saving xmlbuilder to /Users/VidSecki/.npm/registry.npmjs.org/xmlbuilder/.cache.json
+596 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+597 silly addNameRange number 2 { name: 'xmldom', range: '>=0.1.0 <0.2.0', hasData: true }
+598 silly addNameRange versions [ 'xmldom',
+598 silly addNameRange   [ '0.1.0',
+598 silly addNameRange     '0.1.1',
+598 silly addNameRange     '0.1.2',
+598 silly addNameRange     '0.1.3',
+598 silly addNameRange     '0.1.4',
+598 silly addNameRange     '0.1.5',
+598 silly addNameRange     '0.1.6',
+598 silly addNameRange     '0.1.7',
+598 silly addNameRange     '0.1.8',
+598 silly addNameRange     '0.1.9',
+598 silly addNameRange     '0.1.10',
+598 silly addNameRange     '0.1.11',
+598 silly addNameRange     '0.1.12',
+598 silly addNameRange     '0.1.13',
+598 silly addNameRange     '0.1.14',
+598 silly addNameRange     '0.1.15',
+598 silly addNameRange     '0.1.16',
+598 silly addNameRange     '0.1.17',
+598 silly addNameRange     '0.1.18',
+598 silly addNameRange     '0.1.19',
+598 silly addNameRange     '0.1.20',
+598 silly addNameRange     '0.1.21',
+598 silly addNameRange     '0.1.22' ] ]
+599 silly addNamed xmldom@0.1.22
+600 verbose addNamed "0.1.22" is a plain semver version for xmldom
+601 silly gunzTarPerm extractEntry package.json
+602 silly gunzTarPerm extractEntry package.json
+603 silly gunzTarPerm extractEntry README.md
+604 silly gunzTarPerm extractEntry tail.js
+605 silly gunzTarPerm extractEntry .npmignore
+606 silly gunzTarPerm extractEntry README.md
+607 silly cache afterAdd xmldom@0.1.22
+608 verbose afterAdd /Users/VidSecki/.npm/xmldom/0.1.22/package/package.json not in flight; writing
+609 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+610 silly cache afterAdd util-deprecate@1.0.2
+611 verbose afterAdd /Users/VidSecki/.npm/util-deprecate/1.0.2/package/package.json not in flight; writing
+612 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+613 verbose afterAdd /Users/VidSecki/.npm/xmldom/0.1.22/package/package.json written
+614 silly cache afterAdd xmlbuilder@4.0.0
+615 verbose afterAdd /Users/VidSecki/.npm/xmlbuilder/4.0.0/package/package.json not in flight; writing
+616 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+617 silly cache afterAdd base64-js@0.0.8
+618 verbose afterAdd /Users/VidSecki/.npm/base64-js/0.0.8/package/package.json not in flight; writing
+619 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+620 silly gunzTarPerm extractEntry LICENSE
+621 verbose afterAdd /Users/VidSecki/.npm/util-deprecate/1.0.2/package/package.json written
+622 verbose afterAdd /Users/VidSecki/.npm/xmlbuilder/4.0.0/package/package.json written
+623 verbose afterAdd /Users/VidSecki/.npm/base64-js/0.0.8/package/package.json written
+624 silly install resolved [ { name: 'xmldom',
+624 silly install resolved     version: '0.1.22',
+624 silly install resolved     description: 'A W3C Standard XML DOM(Level2 CORE) implementation and parser(DOMParser/XMLSerializer).',
+624 silly install resolved     keywords:
+624 silly install resolved      [ 'w3c',
+624 silly install resolved        'dom',
+624 silly install resolved        'xml',
+624 silly install resolved        'parser',
+624 silly install resolved        'javascript',
+624 silly install resolved        'DOMParser',
+624 silly install resolved        'XMLSerializer' ],
+624 silly install resolved     author:
+624 silly install resolved      { name: 'jindw',
+624 silly install resolved        email: 'jindw@xidea.org',
+624 silly install resolved        url: 'http://www.xidea.org' },
+624 silly install resolved     homepage: 'https://github.com/jindw/xmldom',
+624 silly install resolved     repository: { type: 'git', url: 'git://github.com/jindw/xmldom.git' },
+624 silly install resolved     main: './dom-parser.js',
+624 silly install resolved     scripts: { test: 'proof platform win32 && proof test */*/*.t.js || t/test' },
+624 silly install resolved     engines: { node: '>=0.1' },
+624 silly install resolved     dependencies: {},
+624 silly install resolved     devDependencies: { proof: '0.0.28' },
+624 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+624 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+624 silly install resolved     bugs:
+624 silly install resolved      { url: 'http://github.com/jindw/xmldom/issues',
+624 silly install resolved        email: 'jindw@xidea.org' },
+624 silly install resolved     licenses: [ [Object] ],
+624 silly install resolved     gitHead: '29a83b315aef56c156602286b2d884a3b4c2521f',
+624 silly install resolved     _id: 'xmldom@0.1.22',
+624 silly install resolved     _shasum: '10de4e5e964981f03c8cc72fadc08d14b6c3aa26',
+624 silly install resolved     _from: 'xmldom@>=0.1.0 <0.2.0',
+624 silly install resolved     _npmVersion: '3.3.12',
+624 silly install resolved     _nodeVersion: '5.5.0',
+624 silly install resolved     _npmUser: { name: 'jindw', email: 'jindw@xidea.org' },
+624 silly install resolved     dist:
+624 silly install resolved      { shasum: '10de4e5e964981f03c8cc72fadc08d14b6c3aa26',
+624 silly install resolved        tarball: 'https://registry.npmjs.org/xmldom/-/xmldom-0.1.22.tgz' },
+624 silly install resolved     directories: {},
+624 silly install resolved     _resolved: 'https://registry.npmjs.org/xmldom/-/xmldom-0.1.22.tgz',
+624 silly install resolved     readme: 'ERROR: No README data found!' },
+624 silly install resolved   { name: 'util-deprecate',
+624 silly install resolved     version: '1.0.2',
+624 silly install resolved     description: 'The Node.js `util.deprecate()` function with browser support',
+624 silly install resolved     main: 'node.js',
+624 silly install resolved     browser: 'browser.js',
+624 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+624 silly install resolved     repository:
+624 silly install resolved      { type: 'git',
+624 silly install resolved        url: 'git://github.com/TooTallNate/util-deprecate.git' },
+624 silly install resolved     keywords: [ 'util', 'deprecate', 'browserify', 'browser', 'node' ],
+624 silly install resolved     author:
+624 silly install resolved      { name: 'Nathan Rajlich',
+624 silly install resolved        email: 'nathan@tootallnate.net',
+624 silly install resolved        url: 'http://n8.io/' },
+624 silly install resolved     license: 'MIT',
+624 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/util-deprecate/issues' },
+624 silly install resolved     homepage: 'https://github.com/TooTallNate/util-deprecate',
+624 silly install resolved     gitHead: '475fb6857cd23fafff20c1be846c1350abf8e6d4',
+624 silly install resolved     _id: 'util-deprecate@1.0.2',
+624 silly install resolved     _shasum: '450d4dc9fa70de732762fbd2d4a28981419a0ccf',
+624 silly install resolved     _from: 'util-deprecate@1.0.2',
+624 silly install resolved     _npmVersion: '2.14.4',
+624 silly install resolved     _nodeVersion: '4.1.2',
+624 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+624 silly install resolved     maintainers: [ [Object] ],
+624 silly install resolved     dist:
+624 silly install resolved      { shasum: '450d4dc9fa70de732762fbd2d4a28981419a0ccf',
+624 silly install resolved        tarball: 'http://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz' },
+624 silly install resolved     directories: {},
+624 silly install resolved     _resolved: 'https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz',
+624 silly install resolved     readme: 'ERROR: No README data found!' },
+624 silly install resolved   { name: 'xmlbuilder',
+624 silly install resolved     version: '4.0.0',
+624 silly install resolved     keywords: [ 'xml', 'xmlbuilder' ],
+624 silly install resolved     homepage: 'http://github.com/oozcitak/xmlbuilder-js',
+624 silly install resolved     description: 'An XML builder for node.js',
+624 silly install resolved     author: { name: 'Ozgur Ozcitak', email: 'oozcitak@gmail.com' },
+624 silly install resolved     contributors: [],
+624 silly install resolved     license: 'MIT',
+624 silly install resolved     repository:
+624 silly install resolved      { type: 'git',
+624 silly install resolved        url: 'git://github.com/oozcitak/xmlbuilder-js.git' },
+624 silly install resolved     bugs: { url: 'http://github.com/oozcitak/xmlbuilder-js/issues' },
+624 silly install resolved     main: './lib/index',
+624 silly install resolved     engines: { node: '>=0.8.0' },
+624 silly install resolved     dependencies: { lodash: '^3.5.0' },
+624 silly install resolved     devDependencies:
+624 silly install resolved      { 'coffee-script': '*',
+624 silly install resolved        mocha: '*',
+624 silly install resolved        'coffee-coverage': '*',
+624 silly install resolved        istanbul: '*',
+624 silly install resolved        coveralls: '*' },
+624 silly install resolved     scripts:
+624 silly install resolved      { prepublish: 'coffee -co lib src',
+624 silly install resolved        postpublish: 'rm -rf lib',
+624 silly install resolved        test: 'mocha && istanbul report text lcov' },
+624 silly install resolved     gitHead: 'ec17840a6705ef666b7d04c771de11df6091fff5',
+624 silly install resolved     _id: 'xmlbuilder@4.0.0',
+624 silly install resolved     _shasum: '98b8f651ca30aa624036f127d11cc66dc7b907a3',
+624 silly install resolved     _from: 'xmlbuilder@4.0.0',
+624 silly install resolved     _npmVersion: '1.4.28',
+624 silly install resolved     _npmUser: { name: 'oozcitak', email: 'oozcitak@gmail.com' },
+624 silly install resolved     maintainers: [ [Object] ],
+624 silly install resolved     dist:
+624 silly install resolved      { shasum: '98b8f651ca30aa624036f127d11cc66dc7b907a3',
+624 silly install resolved        tarball: 'https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-4.0.0.tgz' },
+624 silly install resolved     directories: {},
+624 silly install resolved     _resolved: 'https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-4.0.0.tgz',
+624 silly install resolved     readme: 'ERROR: No README data found!' },
+624 silly install resolved   { author:
+624 silly install resolved      { name: 'T. Jameson Little',
+624 silly install resolved        email: 't.jameson.little@gmail.com' },
+624 silly install resolved     name: 'base64-js',
+624 silly install resolved     description: 'Base64 encoding/decoding in pure JS',
+624 silly install resolved     version: '0.0.8',
+624 silly install resolved     repository:
+624 silly install resolved      { type: 'git',
+624 silly install resolved        url: 'git://github.com/beatgammit/base64-js.git' },
+624 silly install resolved     main: 'lib/b64.js',
+624 silly install resolved     scripts: { test: 'tape test/*.js' },
+624 silly install resolved     testling: { files: 'test/*.js', browsers: [Object] },
+624 silly install resolved     engines: { node: '>= 0.4' },
+624 silly install resolved     license: 'MIT',
+624 silly install resolved     dependencies: {},
+624 silly install resolved     devDependencies: { tape: '~2.3.2' },
+624 silly install resolved     gitHead: 'b4a8a5fa9b0caeddb5ad94dd1108253d8f2a315f',
+624 silly install resolved     bugs: { url: 'https://github.com/beatgammit/base64-js/issues' },
+624 silly install resolved     homepage: 'https://github.com/beatgammit/base64-js',
+624 silly install resolved     _id: 'base64-js@0.0.8',
+624 silly install resolved     _shasum: '1101e9544f4a76b1bc3b26d452ca96d7a35e7978',
+624 silly install resolved     _from: 'base64-js@0.0.8',
+624 silly install resolved     _npmVersion: '2.1.16',
+624 silly install resolved     _nodeVersion: '0.10.35',
+624 silly install resolved     _npmUser: { name: 'feross', email: 'feross@feross.org' },
+624 silly install resolved     maintainers: [ [Object], [Object] ],
+624 silly install resolved     dist:
+624 silly install resolved      { shasum: '1101e9544f4a76b1bc3b26d452ca96d7a35e7978',
+624 silly install resolved        tarball: 'https://registry.npmjs.org/base64-js/-/base64-js-0.0.8.tgz' },
+624 silly install resolved     directories: {},
+624 silly install resolved     _resolved: 'https://registry.npmjs.org/base64-js/-/base64-js-0.0.8.tgz',
+624 silly install resolved     readme: 'ERROR: No README data found!' } ]
+625 info install xmldom@0.1.22 into /usr/local/lib/node_modules/ios-sim/node_modules/plist
+626 info install util-deprecate@1.0.2 into /usr/local/lib/node_modules/ios-sim/node_modules/plist
+627 info install xmlbuilder@4.0.0 into /usr/local/lib/node_modules/ios-sim/node_modules/plist
+628 info install base64-js@0.0.8 into /usr/local/lib/node_modules/ios-sim/node_modules/plist
+629 info installOne xmldom@0.1.22
+630 verbose installOne of xmldom to /usr/local/lib/node_modules/ios-sim/node_modules/plist not in flight; installing
+631 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+632 info installOne util-deprecate@1.0.2
+633 verbose installOne of util-deprecate to /usr/local/lib/node_modules/ios-sim/node_modules/plist not in flight; installing
+634 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+635 info installOne xmlbuilder@4.0.0
+636 verbose installOne of xmlbuilder to /usr/local/lib/node_modules/ios-sim/node_modules/plist not in flight; installing
+637 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+638 info installOne base64-js@0.0.8
+639 verbose installOne of base64-js to /usr/local/lib/node_modules/ios-sim/node_modules/plist not in flight; installing
+640 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+641 verbose lock using /Users/VidSecki/.npm/_locks/xmldom-7c2ea6f3471e73ac.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom
+642 verbose lock using /Users/VidSecki/.npm/_locks/util-deprecate-944267c240898859.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate
+643 verbose lock using /Users/VidSecki/.npm/_locks/xmlbuilder-30b3bfef66e40ad3.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder
+644 verbose lock using /Users/VidSecki/.npm/_locks/base64-js-1eb6d3ce43995bab.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js
+645 silly install write writing xmldom 0.1.22 to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom
+646 silly install write writing util-deprecate 1.0.2 to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate
+647 silly install write writing xmlbuilder 4.0.0 to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder
+648 silly install write writing base64-js 0.0.8 to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js
+649 silly gunzTarPerm extractEntry global.js
+650 silly gunzTarPerm extractEntry make.js
+651 verbose unbuild lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom
+652 verbose unbuild lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate
+653 verbose unbuild lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder
+654 verbose unbuild lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js
+655 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom is being purged from base /usr/local
+656 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom
+657 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate is being purged from base /usr/local
+658 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate
+659 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder is being purged from base /usr/local
+660 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder
+661 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js is being purged from base /usr/local
+662 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js
+663 verbose tar unpack /Users/VidSecki/.npm/xmldom/0.1.22/package.tgz
+664 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom
+665 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom is being purged
+666 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom
+667 verbose tar unpack /Users/VidSecki/.npm/util-deprecate/1.0.2/package.tgz
+668 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate
+669 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate is being purged
+670 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate
+671 verbose tar unpack /Users/VidSecki/.npm/xmlbuilder/4.0.0/package.tgz
+672 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder
+673 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder is being purged
+674 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder
+675 verbose tar unpack /Users/VidSecki/.npm/base64-js/0.0.8/package.tgz
+676 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js
+677 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js is being purged
+678 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js
+679 silly gunzTarPerm modes [ '755', '644' ]
+680 silly gunzTarPerm modes [ '755', '644' ]
+681 silly gunzTarPerm modes [ '755', '644' ]
+682 silly gunzTarPerm modes [ '755', '644' ]
+683 silly gunzTarPerm extractEntry shell.js
+684 silly gunzTarPerm extractEntry bin/shjs
+685 silly gunzTarPerm extractEntry package.json
+686 silly gunzTarPerm extractEntry package.json
+687 silly gunzTarPerm extractEntry package.json
+688 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+689 silly gunzTarPerm extractEntry package.json
+690 silly gunzTarPerm extractEntry README.md
+691 silly gunzTarPerm extractEntry .travis.yml
+692 silly gunzTarPerm extractEntry .npmignore
+693 silly gunzTarPerm extractEntry README.md
+694 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+695 silly gunzTarPerm extractEntry README.md
+696 silly gunzTarPerm extractEntry LICENSE
+697 silly gunzTarPerm extractEntry .npmignore
+698 silly gunzTarPerm extractEntry LICENSE
+699 silly gunzTarPerm extractEntry .travis.yml
+700 silly gunzTarPerm extractEntry .jshintrc
+701 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail/package.json
+702 info preinstall tail@0.4.0
+703 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail/package.json
+704 silly gunzTarPerm extractEntry scripts/generate-docs.js
+705 silly gunzTarPerm extractEntry scripts/run-tests.js
+706 silly gunzTarPerm extractEntry LICENSE.MIT
+707 silly gunzTarPerm extractEntry bench/bench.js
+708 silly gunzTarPerm extractEntry LICENSE
+709 silly gunzTarPerm extractEntry lib/XMLAttribute.js
+710 silly gunzTarPerm modified mode [ 'lib/XMLAttribute.js', 436, 420 ]
+711 silly gunzTarPerm extractEntry browser.js
+712 silly gunzTarPerm extractEntry node.js
+713 silly gunzTarPerm extractEntry __package__.js
+714 silly gunzTarPerm extractEntry dom.js
+715 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail/package.json
+716 silly gunzTarPerm extractEntry lib/XMLDTDElement.js
+717 silly gunzTarPerm modified mode [ 'lib/XMLDTDElement.js', 436, 420 ]
+718 silly gunzTarPerm extractEntry lib/XMLDTDEntity.js
+719 silly gunzTarPerm modified mode [ 'lib/XMLDTDEntity.js', 436, 420 ]
+720 silly gunzTarPerm extractEntry .documentup.json
+721 silly gunzTarPerm extractEntry src/cat.js
+722 silly gunzTarPerm extractEntry lib/b64.js
+723 silly gunzTarPerm extractEntry test/convert.js
+724 silly gunzTarPerm extractEntry dom-parser.js
+725 silly gunzTarPerm extractEntry History.md
+726 silly install resolved []
+727 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail
+728 info build /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail
+729 info linkStuff tail@0.4.0
+730 silly linkStuff tail@0.4.0 has /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules as its parent node_modules
+731 silly linkStuff tail@0.4.0 is part of a global install
+732 silly linkStuff tail@0.4.0 is installed into a global node_modules
+733 silly gunzTarPerm extractEntry src/exec.js
+734 silly gunzTarPerm extractEntry src/find.js
+735 silly gunzTarPerm extractEntry test/url-safe.js
+736 silly gunzTarPerm extractEntry sax.js
+737 silly gunzTarPerm extractEntry .travis.yml
+738 silly gunzTarPerm extractEntry lib/XMLDTDNotation.js
+739 silly gunzTarPerm modified mode [ 'lib/XMLDTDNotation.js', 436, 420 ]
+740 silly gunzTarPerm extractEntry lib/XMLDTDAttList.js
+741 silly gunzTarPerm modified mode [ 'lib/XMLDTDAttList.js', 436, 420 ]
+742 silly gunzTarPerm extractEntry lib/XMLDocType.js
+743 silly gunzTarPerm modified mode [ 'lib/XMLDocType.js', 436, 420 ]
+744 silly gunzTarPerm extractEntry lib/XMLElement.js
+745 silly gunzTarPerm modified mode [ 'lib/XMLElement.js', 436, 420 ]
+746 silly gunzTarPerm extractEntry lib/XMLNode.js
+747 silly gunzTarPerm modified mode [ 'lib/XMLNode.js', 436, 420 ]
+748 silly gunzTarPerm extractEntry lib/XMLProcessingInstruction.js
+749 silly gunzTarPerm modified mode [ 'lib/XMLProcessingInstruction.js', 436, 420 ]
+750 silly gunzTarPerm extractEntry lib/XMLRaw.js
+751 silly gunzTarPerm modified mode [ 'lib/XMLRaw.js', 436, 420 ]
+752 silly gunzTarPerm extractEntry lib/XMLComment.js
+753 silly gunzTarPerm modified mode [ 'lib/XMLComment.js', 436, 420 ]
+754 silly gunzTarPerm extractEntry lib/XMLStringifier.js
+755 silly gunzTarPerm modified mode [ 'lib/XMLStringifier.js', 436, 420 ]
+756 silly gunzTarPerm extractEntry lib/XMLCData.js
+757 silly gunzTarPerm modified mode [ 'lib/XMLCData.js', 436, 420 ]
+758 silly gunzTarPerm extractEntry lib/XMLText.js
+759 silly gunzTarPerm modified mode [ 'lib/XMLText.js', 436, 420 ]
+760 silly gunzTarPerm extractEntry lib/XMLBuilder.js
+761 silly gunzTarPerm modified mode [ 'lib/XMLBuilder.js', 436, 420 ]
+762 silly gunzTarPerm extractEntry lib/index.js
+763 silly gunzTarPerm modified mode [ 'lib/index.js', 436, 420 ]
+764 silly gunzTarPerm extractEntry lib/XMLDeclaration.js
+765 silly gunzTarPerm modified mode [ 'lib/XMLDeclaration.js', 436, 420 ]
+766 verbose linkBins tail@0.4.0
+767 verbose linkMans tail@0.4.0
+768 verbose rebuildBundles tail@0.4.0
+769 info install tail@0.4.0
+770 info postinstall tail@0.4.0
+771 silly gunzTarPerm extractEntry changelog
+772 silly gunzTarPerm extractEntry readme.md
+773 silly gunzTarPerm extractEntry component.json
+774 verbose unlock done using /Users/VidSecki/.npm/_locks/tail-c3506f175990dd6b.lock for /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/tail
+775 silly gunzTarPerm extractEntry src/grep.js
+776 silly gunzTarPerm extractEntry src/ls.js
+777 silly gunzTarPerm extractEntry src/error.js
+778 silly gunzTarPerm extractEntry src/mv.js
+779 silly gunzTarPerm extractEntry src/popd.js
+780 silly gunzTarPerm extractEntry src/pushd.js
+781 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate/package.json
+782 silly gunzTarPerm extractEntry src/pwd.js
+783 silly gunzTarPerm extractEntry src/rm.js
+784 info preinstall util-deprecate@1.0.2
+785 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate/package.json
+786 silly gunzTarPerm extractEntry src/echo.js
+787 silly gunzTarPerm extractEntry src/sed.js
+788 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate/package.json
+789 silly install resolved []
+790 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate
+791 info build /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate
+792 silly gunzTarPerm extractEntry src/dirs.js
+793 silly gunzTarPerm extractEntry src/tempdir.js
+794 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js/package.json
+795 info linkStuff util-deprecate@1.0.2
+796 silly linkStuff util-deprecate@1.0.2 has /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules as its parent node_modules
+797 silly linkStuff util-deprecate@1.0.2 is part of a global install
+798 silly linkStuff util-deprecate@1.0.2 is installed into a global node_modules
+799 info preinstall base64-js@0.0.8
+800 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js/package.json
+801 verbose linkBins util-deprecate@1.0.2
+802 verbose linkMans util-deprecate@1.0.2
+803 verbose rebuildBundles util-deprecate@1.0.2
+804 info install util-deprecate@1.0.2
+805 silly gunzTarPerm extractEntry src/cp.js
+806 silly gunzTarPerm extractEntry src/test.js
+807 info postinstall util-deprecate@1.0.2
+808 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js/package.json
+809 verbose unlock done using /Users/VidSecki/.npm/_locks/util-deprecate-944267c240898859.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/util-deprecate
+810 silly install resolved []
+811 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js
+812 info build /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js
+813 silly gunzTarPerm extractEntry src/common.js
+814 silly gunzTarPerm extractEntry src/to.js
+815 info linkStuff base64-js@0.0.8
+816 silly linkStuff base64-js@0.0.8 has /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules as its parent node_modules
+817 silly linkStuff base64-js@0.0.8 is part of a global install
+818 silly linkStuff base64-js@0.0.8 is installed into a global node_modules
+819 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom/package.json
+820 verbose linkBins base64-js@0.0.8
+821 verbose linkMans base64-js@0.0.8
+822 verbose rebuildBundles base64-js@0.0.8
+823 silly gunzTarPerm extractEntry src/chmod.js
+824 silly gunzTarPerm extractEntry src/toEnd.js
+825 info install base64-js@0.0.8
+826 info preinstall xmldom@0.1.22
+827 info postinstall base64-js@0.0.8
+828 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom/package.json
+829 verbose unlock done using /Users/VidSecki/.npm/_locks/base64-js-1eb6d3ce43995bab.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/base64-js
+830 silly gunzTarPerm extractEntry src/cd.js
+831 silly gunzTarPerm extractEntry src/which.js
+832 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom/package.json
+833 silly install resolved []
+834 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom
+835 info build /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom
+836 silly gunzTarPerm extractEntry src/mkdir.js
+837 info linkStuff xmldom@0.1.22
+838 silly linkStuff xmldom@0.1.22 has /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules as its parent node_modules
+839 silly linkStuff xmldom@0.1.22 is part of a global install
+840 silly linkStuff xmldom@0.1.22 is installed into a global node_modules
+841 verbose linkBins xmldom@0.1.22
+842 verbose linkMans xmldom@0.1.22
+843 verbose rebuildBundles xmldom@0.1.22
+844 info install xmldom@0.1.22
+845 info postinstall xmldom@0.1.22
+846 verbose unlock done using /Users/VidSecki/.npm/_locks/xmldom-7c2ea6f3471e73ac.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmldom
+847 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/package.json
+848 info preinstall xmlbuilder@4.0.0
+849 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/package.json
+850 silly prepareForInstallMany adding lodash@^3.5.0 from xmlbuilder dependencies
+851 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/package.json
+852 silly cache add args [ 'lodash@^3.5.0', null ]
+853 verbose cache add spec lodash@^3.5.0
+854 silly cache add parsed spec Result {
+854 silly cache add   raw: 'lodash@^3.5.0',
+854 silly cache add   scope: null,
+854 silly cache add   name: 'lodash',
+854 silly cache add   rawSpec: '^3.5.0',
+854 silly cache add   spec: '>=3.5.0 <4.0.0',
+854 silly cache add   type: 'range' }
+855 silly addNamed lodash@>=3.5.0 <4.0.0
+856 verbose addNamed ">=3.5.0 <4.0.0" is a valid semver range for lodash
+857 silly addNameRange { name: 'lodash', range: '>=3.5.0 <4.0.0', hasData: false }
+858 silly mapToRegistry name lodash
+859 silly mapToRegistry using default registry
+860 silly mapToRegistry registry https://registry.npmjs.org/
+861 silly mapToRegistry uri https://registry.npmjs.org/lodash
+862 verbose addNameRange registry:https://registry.npmjs.org/lodash not in flight; fetching
+863 verbose request uri https://registry.npmjs.org/lodash
+864 verbose request no auth needed
+865 info attempt registry request try #1 at 11:31:33 AM
+866 verbose etag "6EVWK4S1VPV74EZT640EUIW89"
+867 http request GET https://registry.npmjs.org/lodash
+868 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs/package.json
+869 info preinstall shelljs@0.2.6
+870 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs/package.json
+871 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs/package.json
+872 silly install resolved []
+873 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs
+874 info build /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs
+875 info linkStuff shelljs@0.2.6
+876 silly linkStuff shelljs@0.2.6 has /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules as its parent node_modules
+877 silly linkStuff shelljs@0.2.6 is part of a global install
+878 silly linkStuff shelljs@0.2.6 is installed into a global node_modules
+879 verbose linkBins shelljs@0.2.6
+880 verbose link bins [ { shjs: './bin/shjs' },
+880 verbose link bins   '/usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/.bin',
+880 verbose link bins   false ]
+881 verbose linkMans shelljs@0.2.6
+882 verbose rebuildBundles shelljs@0.2.6
+883 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/.bin/shjs is being purged
+884 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/.bin/shjs
+885 info install shelljs@0.2.6
+886 info postinstall shelljs@0.2.6
+887 verbose unlock done using /Users/VidSecki/.npm/_locks/shelljs-a75750bbd04148c3.lock for /usr/local/lib/node_modules/ios-sim/node_modules/simctl/node_modules/shelljs
+888 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/simctl
+889 info build /usr/local/lib/node_modules/ios-sim/node_modules/simctl
+890 info linkStuff simctl@0.0.9
+891 silly linkStuff simctl@0.0.9 has /usr/local/lib/node_modules/ios-sim/node_modules as its parent node_modules
+892 silly linkStuff simctl@0.0.9 is part of a global install
+893 silly linkStuff simctl@0.0.9 is installed into a global node_modules
+894 verbose linkBins simctl@0.0.9
+895 verbose linkMans simctl@0.0.9
+896 verbose rebuildBundles simctl@0.0.9
+897 verbose rebuildBundles [ '.bin', 'shelljs', 'tail' ]
+898 info install simctl@0.0.9
+899 info postinstall simctl@0.0.9
+900 verbose unlock done using /Users/VidSecki/.npm/_locks/simctl-9ed0fe1894d28046.lock for /usr/local/lib/node_modules/ios-sim/node_modules/simctl
+901 http 304 https://registry.npmjs.org/lodash
+902 verbose headers { date: 'Thu, 26 May 2016 09:31:34 GMT',
+902 verbose headers   via: '1.1 varnish',
+902 verbose headers   'cache-control': 'max-age=300',
+902 verbose headers   etag: '"6EVWK4S1VPV74EZT640EUIW89"',
+902 verbose headers   age: '159',
+902 verbose headers   connection: 'keep-alive',
+902 verbose headers   'x-served-by': 'cache-fra1247-FRA',
+902 verbose headers   'x-cache': 'HIT',
+902 verbose headers   'x-cache-hits': '29',
+902 verbose headers   'x-timer': 'S1464255094.018967,VS0,VE0',
+902 verbose headers   vary: 'Accept-Encoding' }
+903 silly get cb [ 304,
+903 silly get   { date: 'Thu, 26 May 2016 09:31:34 GMT',
+903 silly get     via: '1.1 varnish',
+903 silly get     'cache-control': 'max-age=300',
+903 silly get     etag: '"6EVWK4S1VPV74EZT640EUIW89"',
+903 silly get     age: '159',
+903 silly get     connection: 'keep-alive',
+903 silly get     'x-served-by': 'cache-fra1247-FRA',
+903 silly get     'x-cache': 'HIT',
+903 silly get     'x-cache-hits': '29',
+903 silly get     'x-timer': 'S1464255094.018967,VS0,VE0',
+903 silly get     vary: 'Accept-Encoding' } ]
+904 verbose etag https://registry.npmjs.org/lodash from cache
+905 verbose get saving lodash to /Users/VidSecki/.npm/registry.npmjs.org/lodash/.cache.json
+906 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+907 http 200 https://registry.npmjs.org/abbrev
+908 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+908 verbose headers   etag: '"5COR5F08LNF679JR9VE4E6VZW"',
+908 verbose headers   'content-type': 'application/json',
+908 verbose headers   'content-encoding': 'gzip',
+908 verbose headers   'cache-control': 'max-age=300',
+908 verbose headers   'content-length': '1554',
+908 verbose headers   'accept-ranges': 'bytes',
+908 verbose headers   date: 'Thu, 26 May 2016 09:31:34 GMT',
+908 verbose headers   via: '1.1 varnish',
+908 verbose headers   age: '0',
+908 verbose headers   connection: 'keep-alive',
+908 verbose headers   'x-served-by': 'cache-fra1231-FRA',
+908 verbose headers   'x-cache': 'HIT',
+908 verbose headers   'x-cache-hits': '1',
+908 verbose headers   'x-timer': 'S1464255093.478396,VS0,VE545',
+908 verbose headers   vary: 'Accept-Encoding' }
+909 silly get cb [ 200,
+909 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+909 silly get     etag: '"5COR5F08LNF679JR9VE4E6VZW"',
+909 silly get     'content-type': 'application/json',
+909 silly get     'content-encoding': 'gzip',
+909 silly get     'cache-control': 'max-age=300',
+909 silly get     'content-length': '1554',
+909 silly get     'accept-ranges': 'bytes',
+909 silly get     date: 'Thu, 26 May 2016 09:31:34 GMT',
+909 silly get     via: '1.1 varnish',
+909 silly get     age: '0',
+909 silly get     connection: 'keep-alive',
+909 silly get     'x-served-by': 'cache-fra1231-FRA',
+909 silly get     'x-cache': 'HIT',
+909 silly get     'x-cache-hits': '1',
+909 silly get     'x-timer': 'S1464255093.478396,VS0,VE545',
+909 silly get     vary: 'Accept-Encoding' } ]
+910 verbose get saving abbrev to /Users/VidSecki/.npm/registry.npmjs.org/abbrev/.cache.json
+911 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+912 silly addNameRange number 2 { name: 'lodash', range: '>=3.5.0 <4.0.0', hasData: true }
+913 silly addNameRange versions [ 'lodash',
+913 silly addNameRange   [ '0.1.0',
+913 silly addNameRange     '0.2.0',
+913 silly addNameRange     '0.2.1',
+913 silly addNameRange     '0.2.2',
+913 silly addNameRange     '0.3.0',
+913 silly addNameRange     '0.3.1',
+913 silly addNameRange     '0.3.2',
+913 silly addNameRange     '0.4.0',
+913 silly addNameRange     '0.4.1',
+913 silly addNameRange     '0.4.2',
+913 silly addNameRange     '0.5.0-rc.1',
+913 silly addNameRange     '0.5.0',
+913 silly addNameRange     '0.5.1',
+913 silly addNameRange     '0.5.2',
+913 silly addNameRange     '0.6.0',
+913 silly addNameRange     '0.6.1',
+913 silly addNameRange     '0.7.0',
+913 silly addNameRange     '0.8.0',
+913 silly addNameRange     '0.8.1',
+913 silly addNameRange     '0.8.2',
+913 silly addNameRange     '0.9.0',
+913 silly addNameRange     '0.9.1',
+913 silly addNameRange     '0.9.2',
+913 silly addNameRange     '0.10.0',
+913 silly addNameRange     '1.0.0-rc.1',
+913 silly addNameRange     '1.0.0-rc.2',
+913 silly addNameRange     '1.0.0-rc.3',
+913 silly addNameRange     '1.0.0',
+913 silly addNameRange     '1.0.1',
+913 silly addNameRange     '1.1.0',
+913 silly addNameRange     '1.1.1',
+913 silly addNameRange     '1.2.0',
+913 silly addNameRange     '1.2.1',
+913 silly addNameRange     '1.3.0',
+913 silly addNameRange     '1.3.1',
+913 silly addNameRange     '2.0.0',
+913 silly addNameRange     '2.1.0',
+913 silly addNameRange     '2.2.0',
+913 silly addNameRange     '2.2.1',
+913 silly addNameRange     '2.3.0',
+913 silly addNameRange     '2.4.0',
+913 silly addNameRange     '2.4.1',
+913 silly addNameRange     '3.0.0',
+913 silly addNameRange     '3.0.1',
+913 silly addNameRange     '3.1.0',
+913 silly addNameRange     '3.2.0',
+913 silly addNameRange     '3.3.0',
+913 silly addNameRange     '3.3.1',
+913 silly addNameRange     '3.4.0',
+913 silly addNameRange     '3.5.0',
+913 silly addNameRange     '3.6.0',
+913 silly addNameRange     '1.0.2',
+913 silly addNameRange     '3.7.0',
+913 silly addNameRange     '2.4.2',
+913 silly addNameRange     '3.8.0',
+913 silly addNameRange     '3.9.0',
+913 silly addNameRange     '3.9.1',
+913 silly addNameRange     '3.9.2',
+913 silly addNameRange     '3.9.3',
+913 silly addNameRange     '3.10.0',
+913 silly addNameRange     '3.10.1',
+913 silly addNameRange     '4.0.0',
+913 silly addNameRange     '4.0.1',
+913 silly addNameRange     '4.1.0',
+913 silly addNameRange     '4.2.0',
+913 silly addNameRange     '4.2.1',
+913 silly addNameRange     '4.3.0',
+913 silly addNameRange     '4.4.0',
+913 silly addNameRange     '4.5.0',
+913 silly addNameRange     '4.5.1',
+913 silly addNameRange     '4.6.0',
+913 silly addNameRange     '4.6.1',
+913 silly addNameRange     '4.7.0',
+913 silly addNameRange     '4.8.0',
+913 silly addNameRange     '4.8.1',
+913 silly addNameRange     '4.8.2',
+913 silly addNameRange     '4.9.0',
+913 silly addNameRange     '4.10.0',
+913 silly addNameRange     '4.11.0',
+913 silly addNameRange     '4.11.1',
+913 silly addNameRange     '4.11.2',
+913 silly addNameRange     '4.12.0',
+913 silly addNameRange     '4.13.0',
+913 silly addNameRange     '4.13.1' ] ]
+914 silly addNamed lodash@3.10.1
+915 verbose addNamed "3.10.1" is a plain semver version for lodash
+916 silly addNameRange number 2 { name: 'abbrev', range: '>=1.0.0 <2.0.0', hasData: true }
+917 silly addNameRange versions [ 'abbrev', [ '1.0.3', '1.0.4', '1.0.5', '1.0.6', '1.0.7' ] ]
+918 silly addNamed abbrev@1.0.7
+919 verbose addNamed "1.0.7" is a plain semver version for abbrev
+920 silly cache afterAdd lodash@3.10.1
+921 verbose afterAdd /Users/VidSecki/.npm/lodash/3.10.1/package/package.json not in flight; writing
+922 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+923 silly cache afterAdd abbrev@1.0.7
+924 verbose afterAdd /Users/VidSecki/.npm/abbrev/1.0.7/package/package.json not in flight; writing
+925 verbose correctMkdir /Users/VidSecki/.npm correctMkdir not in flight; initializing
+926 verbose afterAdd /Users/VidSecki/.npm/lodash/3.10.1/package/package.json written
+927 silly install resolved [ { name: 'lodash',
+927 silly install resolved     version: '3.10.1',
+927 silly install resolved     description: 'The modern build of lodash modular utilities.',
+927 silly install resolved     homepage: 'https://lodash.com/',
+927 silly install resolved     icon: 'https://lodash.com/icon.svg',
+927 silly install resolved     license: 'MIT',
+927 silly install resolved     main: 'index.js',
+927 silly install resolved     keywords: [ 'modules', 'stdlib', 'util' ],
+927 silly install resolved     author:
+927 silly install resolved      { name: 'John-David Dalton',
+927 silly install resolved        email: 'john.david.dalton@gmail.com',
+927 silly install resolved        url: 'http://allyoucanleet.com/' },
+927 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+927 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/lodash/lodash.git' },
+927 silly install resolved     scripts: { test: 'echo "See https://travis-ci.org/lodash/lodash-cli for testing details."' },
+927 silly install resolved     bugs: { url: 'https://github.com/lodash/lodash/issues' },
+927 silly install resolved     _id: 'lodash@3.10.1',
+927 silly install resolved     _shasum: '5bf45e8e49ba4189e17d482789dfd15bd140b7b6',
+927 silly install resolved     _from: 'lodash@>=3.5.0 <4.0.0',
+927 silly install resolved     _npmVersion: '2.13.1',
+927 silly install resolved     _nodeVersion: '0.12.5',
+927 silly install resolved     _npmUser: { name: 'jdalton', email: 'john.david.dalton@gmail.com' },
+927 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+927 silly install resolved     dist:
+927 silly install resolved      { shasum: '5bf45e8e49ba4189e17d482789dfd15bd140b7b6',
+927 silly install resolved        tarball: 'http://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz' },
+927 silly install resolved     directories: {},
+927 silly install resolved     _resolved: 'https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz',
+927 silly install resolved     readme: 'ERROR: No README data found!' } ]
+928 info install lodash@3.10.1 into /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder
+929 info installOne lodash@3.10.1
+930 verbose installOne of lodash to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder not in flight; installing
+931 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+932 verbose afterAdd /Users/VidSecki/.npm/abbrev/1.0.7/package/package.json written
+933 silly install resolved [ { name: 'abbrev',
+933 silly install resolved     version: '1.0.7',
+933 silly install resolved     description: 'Like ruby\'s abbrev module, but in js',
+933 silly install resolved     author: { name: 'Isaac Z. Schlueter', email: 'i@izs.me' },
+933 silly install resolved     main: 'abbrev.js',
+933 silly install resolved     scripts: { test: 'tap test.js --cov' },
+933 silly install resolved     repository:
+933 silly install resolved      { type: 'git',
+933 silly install resolved        url: 'git+ssh://git@github.com/isaacs/abbrev-js.git' },
+933 silly install resolved     license: 'ISC',
+933 silly install resolved     devDependencies: { tap: '^1.2.0' },
+933 silly install resolved     gitHead: '821d09ce7da33627f91bbd8ed631497ed6f760c2',
+933 silly install resolved     bugs: { url: 'https://github.com/isaacs/abbrev-js/issues' },
+933 silly install resolved     homepage: 'https://github.com/isaacs/abbrev-js#readme',
+933 silly install resolved     _id: 'abbrev@1.0.7',
+933 silly install resolved     _shasum: '5b6035b2ee9d4fb5cf859f08a9be81b208491843',
+933 silly install resolved     _from: 'abbrev@>=1.0.0 <2.0.0',
+933 silly install resolved     _npmVersion: '2.10.1',
+933 silly install resolved     _nodeVersion: '2.0.1',
+933 silly install resolved     _npmUser: { name: 'isaacs', email: 'isaacs@npmjs.com' },
+933 silly install resolved     dist:
+933 silly install resolved      { shasum: '5b6035b2ee9d4fb5cf859f08a9be81b208491843',
+933 silly install resolved        tarball: 'http://registry.npmjs.org/abbrev/-/abbrev-1.0.7.tgz' },
+933 silly install resolved     maintainers: [ [Object] ],
+933 silly install resolved     directories: {},
+933 silly install resolved     _resolved: 'https://registry.npmjs.org/abbrev/-/abbrev-1.0.7.tgz',
+933 silly install resolved     readme: 'ERROR: No README data found!' } ]
+934 info install abbrev@1.0.7 into /usr/local/lib/node_modules/ios-sim/node_modules/nopt
+935 info installOne abbrev@1.0.7
+936 verbose installOne of abbrev to /usr/local/lib/node_modules/ios-sim/node_modules/nopt not in flight; installing
+937 verbose correctMkdir /Users/VidSecki/.npm/_locks correctMkdir not in flight; initializing
+938 verbose lock using /Users/VidSecki/.npm/_locks/lodash-ceb86bf4fe227c3e.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash
+939 silly install write writing lodash 3.10.1 to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash
+940 verbose lock using /Users/VidSecki/.npm/_locks/abbrev-ba87b95a7f866a10.lock for /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev
+941 silly install write writing abbrev 1.0.7 to /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev
+942 verbose unbuild lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash
+943 verbose unbuild lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev
+944 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash is being purged from base /usr/local
+945 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash
+946 verbose tar unpack /Users/VidSecki/.npm/lodash/3.10.1/package.tgz
+947 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash
+948 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash is being purged
+949 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash
+950 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev is being purged from base /usr/local
+951 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev
+952 silly gunzTarPerm modes [ '755', '644' ]
+953 verbose tar unpack /Users/VidSecki/.npm/abbrev/1.0.7/package.tgz
+954 verbose tar unpacking to /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev
+955 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev is being purged
+956 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev
+957 silly gunzTarPerm modes [ '755', '644' ]
+958 silly gunzTarPerm extractEntry package.json
+959 silly gunzTarPerm extractEntry package.json
+960 silly gunzTarPerm extractEntry README.md
+961 silly gunzTarPerm extractEntry LICENSE
+962 silly gunzTarPerm extractEntry .npmignore
+963 silly gunzTarPerm extractEntry README.md
+964 silly gunzTarPerm extractEntry LICENSE
+965 silly gunzTarPerm extractEntry abbrev.js
+966 silly gunzTarPerm extractEntry chain.js
+967 silly gunzTarPerm extractEntry string.js
+968 silly gunzTarPerm extractEntry test.js
+969 silly gunzTarPerm extractEntry CONTRIBUTING.md
+970 silly gunzTarPerm extractEntry collection.js
+971 silly gunzTarPerm extractEntry .travis.yml
+972 silly gunzTarPerm extractEntry array.js
+973 silly gunzTarPerm extractEntry date.js
+974 silly gunzTarPerm extractEntry number.js
+975 silly gunzTarPerm extractEntry function.js
+976 silly gunzTarPerm extractEntry index.js
+977 silly gunzTarPerm extractEntry math.js
+978 silly gunzTarPerm extractEntry support.js
+979 silly gunzTarPerm extractEntry lang.js
+980 silly gunzTarPerm extractEntry object.js
+981 silly gunzTarPerm extractEntry utility.js
+982 silly gunzTarPerm extractEntry collection/all.js
+983 silly gunzTarPerm extractEntry collection/forEachRight.js
+984 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev/package.json
+985 silly gunzTarPerm extractEntry collection/groupBy.js
+986 silly gunzTarPerm extractEntry collection/include.js
+987 info preinstall abbrev@1.0.7
+988 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev/package.json
+989 silly gunzTarPerm extractEntry collection/includes.js
+990 silly gunzTarPerm extractEntry collection/forEach.js
+991 silly gunzTarPerm extractEntry collection/inject.js
+992 silly gunzTarPerm extractEntry collection/invoke.js
+993 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev/package.json
+994 silly gunzTarPerm extractEntry collection/map.js
+995 silly gunzTarPerm extractEntry collection/max.js
+996 silly install resolved []
+997 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev
+998 info build /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev
+999 silly gunzTarPerm extractEntry collection/min.js
+1000 silly gunzTarPerm extractEntry collection/foldr.js
+1001 silly gunzTarPerm extractEntry collection/partition.js
+1002 info linkStuff abbrev@1.0.7
+1003 silly linkStuff abbrev@1.0.7 has /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules as its parent node_modules
+1004 silly linkStuff abbrev@1.0.7 is part of a global install
+1005 silly linkStuff abbrev@1.0.7 is installed into a global node_modules
+1006 silly gunzTarPerm extractEntry collection/foldl.js
+1007 silly gunzTarPerm extractEntry collection/pluck.js
+1008 verbose linkBins abbrev@1.0.7
+1009 verbose linkMans abbrev@1.0.7
+1010 verbose rebuildBundles abbrev@1.0.7
+1011 info install abbrev@1.0.7
+1012 silly gunzTarPerm extractEntry collection/findWhere.js
+1013 info postinstall abbrev@1.0.7
+1014 silly gunzTarPerm extractEntry collection/reduce.js
+1015 silly gunzTarPerm extractEntry collection/findLast.js
+1016 verbose unlock done using /Users/VidSecki/.npm/_locks/abbrev-ba87b95a7f866a10.lock for /usr/local/lib/node_modules/ios-sim/node_modules/nopt/node_modules/abbrev
+1017 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/nopt
+1018 info build /usr/local/lib/node_modules/ios-sim/node_modules/nopt
+1019 silly gunzTarPerm extractEntry collection/reduceRight.js
+1020 silly gunzTarPerm extractEntry collection/find.js
+1021 info linkStuff nopt@1.0.9
+1022 silly linkStuff nopt@1.0.9 has /usr/local/lib/node_modules/ios-sim/node_modules as its parent node_modules
+1023 silly linkStuff nopt@1.0.9 is part of a global install
+1024 silly linkStuff nopt@1.0.9 is installed into a global node_modules
+1025 silly gunzTarPerm extractEntry collection/reject.js
+1026 silly gunzTarPerm extractEntry collection/filter.js
+1027 silly gunzTarPerm extractEntry collection/sample.js
+1028 verbose linkBins nopt@1.0.9
+1029 verbose link bins [ { nopt: './bin/nopt.js' },
+1029 verbose link bins   '/usr/local/lib/node_modules/ios-sim/node_modules/.bin',
+1029 verbose link bins   false ]
+1030 verbose linkMans nopt@1.0.9
+1031 verbose rebuildBundles nopt@1.0.9
+1032 verbose rebuildBundles [ 'abbrev' ]
+1033 silly gunzTarPerm extractEntry collection/every.js
+1034 silly gentlyRm /usr/local/lib/node_modules/ios-sim/node_modules/.bin/nopt is being purged
+1035 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-sim/node_modules/.bin/nopt
+1036 silly gunzTarPerm extractEntry collection/select.js
+1037 silly gunzTarPerm extractEntry collection/eachRight.js
+1038 info install nopt@1.0.9
+1039 silly gunzTarPerm extractEntry collection/shuffle.js
+1040 info postinstall nopt@1.0.9
+1041 silly gunzTarPerm extractEntry collection/each.js
+1042 silly gunzTarPerm extractEntry collection/size.js
+1043 verbose unlock done using /Users/VidSecki/.npm/_locks/nopt-f92080d6b9c091ba.lock for /usr/local/lib/node_modules/ios-sim/node_modules/nopt
+1044 silly gunzTarPerm extractEntry collection/detect.js
+1045 silly gunzTarPerm extractEntry collection/some.js
+1046 silly gunzTarPerm extractEntry collection/countBy.js
+1047 silly gunzTarPerm extractEntry collection/sortBy.js
+1048 silly gunzTarPerm extractEntry collection/contains.js
+1049 silly gunzTarPerm extractEntry collection/sortByAll.js
+1050 silly gunzTarPerm extractEntry collection/collect.js
+1051 silly gunzTarPerm extractEntry collection/sortByOrder.js
+1052 silly gunzTarPerm extractEntry collection/at.js
+1053 silly gunzTarPerm extractEntry collection/sum.js
+1054 silly gunzTarPerm extractEntry collection/any.js
+1055 silly gunzTarPerm extractEntry collection/where.js
+1056 silly gunzTarPerm extractEntry collection/indexBy.js
+1057 silly gunzTarPerm extractEntry math/add.js
+1058 silly gunzTarPerm extractEntry math/ceil.js
+1059 silly gunzTarPerm extractEntry math/floor.js
+1060 silly gunzTarPerm extractEntry math/max.js
+1061 silly gunzTarPerm extractEntry math/min.js
+1062 silly gunzTarPerm extractEntry math/round.js
+1063 silly gunzTarPerm extractEntry math/sum.js
+1064 silly gunzTarPerm extractEntry number/inRange.js
+1065 silly gunzTarPerm extractEntry number/random.js
+1066 silly gunzTarPerm extractEntry function/after.js
+1067 silly gunzTarPerm extractEntry function/curryRight.js
+1068 silly gunzTarPerm extractEntry function/debounce.js
+1069 silly gunzTarPerm extractEntry function/defer.js
+1070 silly gunzTarPerm extractEntry function/delay.js
+1071 silly gunzTarPerm extractEntry function/curry.js
+1072 silly gunzTarPerm extractEntry function/flowRight.js
+1073 silly gunzTarPerm extractEntry function/memoize.js
+1074 silly gunzTarPerm extractEntry function/modArgs.js
+1075 silly gunzTarPerm extractEntry function/negate.js
+1076 silly gunzTarPerm extractEntry function/once.js
+1077 silly gunzTarPerm extractEntry function/compose.js
+1078 silly gunzTarPerm extractEntry function/partial.js
+1079 silly gunzTarPerm extractEntry function/bindKey.js
+1080 silly gunzTarPerm extractEntry function/partialRight.js
+1081 silly gunzTarPerm extractEntry function/bindAll.js
+1082 silly gunzTarPerm extractEntry function/rearg.js
+1083 silly gunzTarPerm extractEntry function/bind.js
+1084 silly gunzTarPerm extractEntry function/restParam.js
+1085 silly gunzTarPerm extractEntry function/before.js
+1086 silly gunzTarPerm extractEntry function/spread.js
+1087 silly gunzTarPerm extractEntry function/backflow.js
+1088 silly gunzTarPerm extractEntry function/throttle.js
+1089 silly gunzTarPerm extractEntry function/ary.js
+1090 silly gunzTarPerm extractEntry function/wrap.js
+1091 silly gunzTarPerm extractEntry function/flow.js
+1092 silly gunzTarPerm extractEntry object/assign.js
+1093 silly gunzTarPerm extractEntry object/functions.js
+1094 silly gunzTarPerm extractEntry object/get.js
+1095 silly gunzTarPerm extractEntry object/has.js
+1096 silly gunzTarPerm extractEntry object/forOwnRight.js
+1097 silly gunzTarPerm extractEntry object/keys.js
+1098 silly gunzTarPerm extractEntry object/keysIn.js
+1099 silly gunzTarPerm extractEntry object/mapKeys.js
+1100 silly gunzTarPerm extractEntry object/mapValues.js
+1101 silly gunzTarPerm extractEntry object/merge.js
+1102 silly gunzTarPerm extractEntry object/forOwn.js
+1103 silly gunzTarPerm extractEntry object/methods.js
+1104 silly gunzTarPerm extractEntry object/forInRight.js
+1105 silly gunzTarPerm extractEntry object/omit.js
+1106 silly gunzTarPerm extractEntry object/forIn.js
+1107 silly gunzTarPerm extractEntry object/pairs.js
+1108 silly gunzTarPerm extractEntry object/findLastKey.js
+1109 silly gunzTarPerm extractEntry object/pick.js
+1110 silly gunzTarPerm extractEntry object/findKey.js
+1111 silly gunzTarPerm extractEntry object/result.js
+1112 silly gunzTarPerm extractEntry object/extend.js
+1113 silly gunzTarPerm extractEntry object/set.js
+1114 silly gunzTarPerm extractEntry object/defaultsDeep.js
+1115 silly gunzTarPerm extractEntry object/transform.js
+1116 silly gunzTarPerm extractEntry object/defaults.js
+1117 silly gunzTarPerm extractEntry object/values.js
+1118 silly gunzTarPerm extractEntry object/create.js
+1119 silly gunzTarPerm extractEntry object/valuesIn.js
+1120 silly gunzTarPerm extractEntry object/invert.js
+1121 silly gunzTarPerm extractEntry date/now.js
+1122 silly gunzTarPerm extractEntry internal/LazyWrapper.js
+1123 silly gunzTarPerm extractEntry internal/compareAscending.js
+1124 silly gunzTarPerm extractEntry internal/compareMultiple.js
+1125 silly gunzTarPerm extractEntry internal/composeArgs.js
+1126 silly gunzTarPerm extractEntry internal/charsRightIndex.js
+1127 silly gunzTarPerm extractEntry internal/createAggregator.js
+1128 silly gunzTarPerm extractEntry internal/createAssigner.js
+1129 silly gunzTarPerm extractEntry internal/createBaseEach.js
+1130 silly gunzTarPerm extractEntry internal/createBaseFor.js
+1131 silly gunzTarPerm extractEntry internal/createBindWrapper.js
+1132 silly gunzTarPerm extractEntry internal/charsLeftIndex.js
+1133 silly gunzTarPerm extractEntry internal/createCache.js
+1134 silly gunzTarPerm extractEntry internal/cachePush.js
+1135 silly gunzTarPerm extractEntry internal/createCompounder.js
+1136 silly gunzTarPerm extractEntry internal/cacheIndexOf.js
+1137 silly gunzTarPerm extractEntry internal/createCtorWrapper.js
+1138 silly gunzTarPerm extractEntry internal/bufferClone.js
+1139 silly gunzTarPerm extractEntry internal/createCurry.js
+1140 silly gunzTarPerm extractEntry internal/bindCallback.js
+1141 silly gunzTarPerm extractEntry internal/createDefaults.js
+1142 silly gunzTarPerm extractEntry internal/binaryIndexBy.js
+1143 silly gunzTarPerm extractEntry internal/createExtremum.js
+1144 silly gunzTarPerm extractEntry internal/binaryIndex.js
+1145 silly gunzTarPerm extractEntry internal/createFind.js
+1146 silly gunzTarPerm extractEntry internal/baseWrapperValue.js
+1147 silly gunzTarPerm extractEntry internal/createFindIndex.js
+1148 silly gunzTarPerm extractEntry internal/baseWhile.js
+1149 silly gunzTarPerm extractEntry internal/createFindKey.js
+1150 silly gunzTarPerm extractEntry internal/baseValues.js
+1151 silly gunzTarPerm extractEntry internal/createFlow.js
+1152 silly gunzTarPerm extractEntry internal/baseUniq.js
+1153 silly gunzTarPerm extractEntry internal/createForEach.js
+1154 silly gunzTarPerm extractEntry internal/baseToString.js
+1155 silly gunzTarPerm extractEntry internal/createForIn.js
+1156 silly gunzTarPerm extractEntry internal/baseSum.js
+1157 silly gunzTarPerm extractEntry internal/createForOwn.js
+1158 silly gunzTarPerm extractEntry internal/baseSortByOrder.js
+1159 silly gunzTarPerm extractEntry internal/createHybridWrapper.js
+1160 silly gunzTarPerm extractEntry internal/baseSortBy.js
+1161 silly gunzTarPerm extractEntry internal/createObjectMapper.js
+1162 silly gunzTarPerm extractEntry internal/baseSome.js
+1163 silly gunzTarPerm extractEntry internal/createPadDir.js
+1164 silly gunzTarPerm extractEntry internal/baseSlice.js
+1165 silly gunzTarPerm extractEntry internal/createPadding.js
+1166 silly gunzTarPerm extractEntry internal/baseSetData.js
+1167 silly gunzTarPerm extractEntry internal/createPartial.js
+1168 silly gunzTarPerm extractEntry internal/baseReduce.js
+1169 silly gunzTarPerm extractEntry internal/createPartialWrapper.js
+1170 silly gunzTarPerm extractEntry internal/baseRandom.js
+1171 silly gunzTarPerm extractEntry internal/createReduce.js
+1172 silly gunzTarPerm extractEntry internal/basePullAt.js
+1173 silly gunzTarPerm extractEntry internal/createRound.js
+1174 silly gunzTarPerm extractEntry internal/basePropertyDeep.js
+1175 silly gunzTarPerm extractEntry internal/createSortedIndex.js
+1176 silly gunzTarPerm extractEntry internal/baseProperty.js
+1177 silly gunzTarPerm extractEntry internal/createWrapper.js
+1178 silly gunzTarPerm extractEntry internal/baseMergeDeep.js
+1179 silly gunzTarPerm extractEntry internal/deburrLetter.js
+1180 silly gunzTarPerm extractEntry internal/baseMerge.js
+1181 silly gunzTarPerm extractEntry internal/equalArrays.js
+1182 silly gunzTarPerm extractEntry internal/baseMatchesProperty.js
+1183 silly gunzTarPerm extractEntry internal/equalByTag.js
+1184 silly gunzTarPerm extractEntry internal/baseMatches.js
+1185 silly gunzTarPerm extractEntry internal/equalObjects.js
+1186 silly gunzTarPerm extractEntry internal/baseMap.js
+1187 silly gunzTarPerm extractEntry internal/escapeHtmlChar.js
+1188 silly gunzTarPerm extractEntry internal/baseLodash.js
+1189 silly gunzTarPerm extractEntry internal/escapeRegExpChar.js
+1190 silly gunzTarPerm extractEntry internal/baseIsMatch.js
+1191 silly gunzTarPerm extractEntry internal/escapeStringChar.js
+1192 silly gunzTarPerm extractEntry internal/baseIsFunction.js
+1193 silly gunzTarPerm extractEntry internal/getData.js
+1194 silly gunzTarPerm extractEntry internal/baseIsEqualDeep.js
+1195 silly gunzTarPerm extractEntry internal/getFuncName.js
+1196 silly gunzTarPerm extractEntry internal/baseIsEqual.js
+1197 silly gunzTarPerm extractEntry internal/getLength.js
+1198 silly gunzTarPerm extractEntry internal/baseIndexOf.js
+1199 silly gunzTarPerm extractEntry internal/getMatchData.js
+1200 silly gunzTarPerm extractEntry internal/baseGet.js
+1201 silly gunzTarPerm extractEntry internal/getNative.js
+1202 silly gunzTarPerm extractEntry internal/baseFunctions.js
+1203 silly gunzTarPerm extractEntry internal/getView.js
+1204 silly gunzTarPerm extractEntry internal/baseForRight.js
+1205 silly gunzTarPerm extractEntry internal/indexOfNaN.js
+1206 silly gunzTarPerm extractEntry internal/baseForOwnRight.js
+1207 silly gunzTarPerm extractEntry internal/initCloneArray.js
+1208 silly gunzTarPerm extractEntry internal/baseForOwn.js
+1209 silly gunzTarPerm extractEntry internal/initCloneByTag.js
+1210 silly gunzTarPerm extractEntry internal/baseForIn.js
+1211 silly gunzTarPerm extractEntry internal/initCloneObject.js
+1212 silly gunzTarPerm extractEntry internal/baseFor.js
+1213 silly gunzTarPerm extractEntry internal/invokePath.js
+1214 silly gunzTarPerm extractEntry internal/baseFlatten.js
+1215 silly gunzTarPerm extractEntry internal/isArrayLike.js
+1216 silly gunzTarPerm extractEntry internal/baseFindIndex.js
+1217 silly gunzTarPerm extractEntry internal/isIndex.js
+1218 silly gunzTarPerm extractEntry internal/baseFind.js
+1219 silly gunzTarPerm extractEntry internal/isIterateeCall.js
+1220 silly gunzTarPerm extractEntry internal/baseFilter.js
+1221 silly gunzTarPerm extractEntry internal/isKey.js
+1222 silly gunzTarPerm extractEntry internal/baseFill.js
+1223 silly gunzTarPerm extractEntry internal/isLaziable.js
+1224 silly gunzTarPerm extractEntry internal/baseExtremum.js
+1225 silly gunzTarPerm extractEntry internal/isLength.js
+1226 silly gunzTarPerm extractEntry internal/baseEvery.js
+1227 silly gunzTarPerm extractEntry internal/isObjectLike.js
+1228 silly gunzTarPerm extractEntry internal/baseEachRight.js
+1229 silly gunzTarPerm extractEntry internal/isSpace.js
+1230 silly gunzTarPerm extractEntry internal/baseEach.js
+1231 silly gunzTarPerm extractEntry internal/isStrictComparable.js
+1232 silly gunzTarPerm extractEntry internal/baseDifference.js
+1233 silly gunzTarPerm extractEntry internal/lazyClone.js
+1234 silly gunzTarPerm extractEntry internal/baseDelay.js
+1235 silly gunzTarPerm extractEntry internal/lazyReverse.js
+1236 silly gunzTarPerm extractEntry internal/baseCreate.js
+1237 silly gunzTarPerm extractEntry internal/lazyValue.js
+1238 silly gunzTarPerm extractEntry internal/baseCopy.js
+1239 silly gunzTarPerm extractEntry internal/mapDelete.js
+1240 silly gunzTarPerm extractEntry internal/baseCompareAscending.js
+1241 silly gunzTarPerm extractEntry internal/mapGet.js
+1242 silly gunzTarPerm extractEntry internal/baseClone.js
+1243 silly gunzTarPerm extractEntry internal/mapHas.js
+1244 silly gunzTarPerm extractEntry internal/baseCallback.js
+1245 silly gunzTarPerm extractEntry internal/mapSet.js
+1246 silly gunzTarPerm extractEntry internal/baseAt.js
+1247 silly gunzTarPerm extractEntry internal/mergeData.js
+1248 silly gunzTarPerm extractEntry internal/baseAssign.js
+1249 silly gunzTarPerm extractEntry internal/mergeDefaults.js
+1250 silly gunzTarPerm extractEntry internal/assignWith.js
+1251 silly gunzTarPerm extractEntry internal/metaMap.js
+1252 silly gunzTarPerm extractEntry internal/assignOwnDefaults.js
+1253 silly gunzTarPerm extractEntry internal/pickByArray.js
+1254 silly gunzTarPerm extractEntry internal/assignDefaults.js
+1255 silly gunzTarPerm extractEntry internal/pickByCallback.js
+1256 silly gunzTarPerm extractEntry internal/arraySum.js
+1257 silly gunzTarPerm extractEntry internal/reEscape.js
+1258 silly gunzTarPerm extractEntry internal/arraySome.js
+1259 silly gunzTarPerm extractEntry internal/reEvaluate.js
+1260 silly gunzTarPerm extractEntry internal/arrayReduceRight.js
+1261 silly gunzTarPerm extractEntry internal/reInterpolate.js
+1262 silly gunzTarPerm extractEntry internal/arrayReduce.js
+1263 silly gunzTarPerm extractEntry internal/realNames.js
+1264 silly gunzTarPerm extractEntry internal/arrayPush.js
+1265 silly gunzTarPerm extractEntry internal/reorder.js
+1266 silly gunzTarPerm extractEntry internal/arrayMap.js
+1267 silly gunzTarPerm extractEntry internal/replaceHolders.js
+1268 silly gunzTarPerm extractEntry internal/arrayFilter.js
+1269 silly gunzTarPerm extractEntry internal/setData.js
+1270 silly gunzTarPerm extractEntry internal/arrayExtremum.js
+1271 silly gunzTarPerm extractEntry internal/shimKeys.js
+1272 silly gunzTarPerm extractEntry internal/arrayEvery.js
+1273 silly gunzTarPerm extractEntry internal/sortedUniq.js
+1274 silly gunzTarPerm extractEntry internal/arrayEachRight.js
+1275 silly gunzTarPerm extractEntry internal/toIterable.js
+1276 silly gunzTarPerm extractEntry internal/arrayEach.js
+1277 silly gunzTarPerm extractEntry internal/toObject.js
+1278 silly gunzTarPerm extractEntry internal/arrayCopy.js
+1279 silly gunzTarPerm extractEntry internal/toPath.js
+1280 silly gunzTarPerm extractEntry internal/arrayConcat.js
+1281 silly gunzTarPerm extractEntry internal/trimmedLeftIndex.js
+1282 silly gunzTarPerm extractEntry internal/SetCache.js
+1283 silly gunzTarPerm extractEntry internal/trimmedRightIndex.js
+1284 silly gunzTarPerm extractEntry internal/MapCache.js
+1285 silly gunzTarPerm extractEntry internal/unescapeHtmlChar.js
+1286 silly gunzTarPerm extractEntry internal/LodashWrapper.js
+1287 silly gunzTarPerm extractEntry internal/wrapperClone.js
+1288 silly gunzTarPerm extractEntry internal/composeArgsRight.js
+1289 silly gunzTarPerm extractEntry string/camelCase.js
+1290 silly gunzTarPerm extractEntry string/padLeft.js
+1291 silly gunzTarPerm extractEntry string/padRight.js
+1292 silly gunzTarPerm extractEntry string/parseInt.js
+1293 silly gunzTarPerm extractEntry string/pad.js
+1294 silly gunzTarPerm extractEntry string/snakeCase.js
+1295 silly gunzTarPerm extractEntry string/startCase.js
+1296 silly gunzTarPerm extractEntry string/startsWith.js
+1297 silly gunzTarPerm extractEntry string/template.js
+1298 silly gunzTarPerm extractEntry string/templateSettings.js
+1299 silly gunzTarPerm extractEntry string/kebabCase.js
+1300 silly gunzTarPerm extractEntry string/trim.js
+1301 silly gunzTarPerm extractEntry string/escapeRegExp.js
+1302 silly gunzTarPerm extractEntry string/trimLeft.js
+1303 silly gunzTarPerm extractEntry string/escape.js
+1304 silly gunzTarPerm extractEntry string/trimRight.js
+1305 silly gunzTarPerm extractEntry string/endsWith.js
+1306 silly gunzTarPerm extractEntry string/trunc.js
+1307 silly gunzTarPerm extractEntry string/deburr.js
+1308 silly gunzTarPerm extractEntry string/unescape.js
+1309 silly gunzTarPerm extractEntry string/capitalize.js
+1310 silly gunzTarPerm extractEntry string/words.js
+1311 silly gunzTarPerm extractEntry string/repeat.js
+1312 silly gunzTarPerm extractEntry chain/chain.js
+1313 silly gunzTarPerm extractEntry chain/run.js
+1314 silly gunzTarPerm extractEntry chain/tap.js
+1315 silly gunzTarPerm extractEntry chain/thru.js
+1316 silly gunzTarPerm extractEntry chain/toJSON.js
+1317 silly gunzTarPerm extractEntry chain/reverse.js
+1318 silly gunzTarPerm extractEntry chain/value.js
+1319 silly gunzTarPerm extractEntry chain/valueOf.js
+1320 silly gunzTarPerm extractEntry chain/wrapperChain.js
+1321 silly gunzTarPerm extractEntry chain/wrapperCommit.js
+1322 silly gunzTarPerm extractEntry chain/wrapperConcat.js
+1323 silly gunzTarPerm extractEntry chain/plant.js
+1324 silly gunzTarPerm extractEntry chain/wrapperPlant.js
+1325 silly gunzTarPerm extractEntry chain/lodash.js
+1326 silly gunzTarPerm extractEntry chain/wrapperReverse.js
+1327 silly gunzTarPerm extractEntry chain/concat.js
+1328 silly gunzTarPerm extractEntry chain/wrapperToString.js
+1329 silly gunzTarPerm extractEntry chain/commit.js
+1330 silly gunzTarPerm extractEntry chain/wrapperValue.js
+1331 silly gunzTarPerm extractEntry chain/toString.js
+1332 silly gunzTarPerm extractEntry array/chunk.js
+1333 silly gunzTarPerm extractEntry array/last.js
+1334 silly gunzTarPerm extractEntry array/lastIndexOf.js
+1335 silly gunzTarPerm extractEntry array/object.js
+1336 silly gunzTarPerm extractEntry array/pull.js
+1337 silly gunzTarPerm extractEntry array/intersection.js
+1338 silly gunzTarPerm extractEntry array/remove.js
+1339 silly gunzTarPerm extractEntry array/rest.js
+1340 silly gunzTarPerm extractEntry array/slice.js
+1341 silly gunzTarPerm extractEntry array/sortedIndex.js
+1342 silly gunzTarPerm extractEntry array/sortedLastIndex.js
+1343 silly gunzTarPerm extractEntry array/initial.js
+1344 silly gunzTarPerm extractEntry array/tail.js
+1345 silly gunzTarPerm extractEntry array/indexOf.js
+1346 silly gunzTarPerm extractEntry array/take.js
+1347 silly gunzTarPerm extractEntry array/head.js
+1348 silly gunzTarPerm extractEntry array/takeRight.js
+1349 silly gunzTarPerm extractEntry array/flattenDeep.js
+1350 silly gunzTarPerm extractEntry array/takeRightWhile.js
+1351 silly gunzTarPerm extractEntry array/flatten.js
+1352 silly gunzTarPerm extractEntry array/takeWhile.js
+1353 silly gunzTarPerm extractEntry array/first.js
+1354 silly gunzTarPerm extractEntry array/union.js
+1355 silly gunzTarPerm extractEntry array/findLastIndex.js
+1356 silly gunzTarPerm extractEntry array/uniq.js
+1357 silly gunzTarPerm extractEntry array/findIndex.js
+1358 silly gunzTarPerm extractEntry array/unique.js
+1359 silly gunzTarPerm extractEntry array/fill.js
+1360 silly gunzTarPerm extractEntry array/unzip.js
+1361 silly gunzTarPerm extractEntry array/dropWhile.js
+1362 silly gunzTarPerm extractEntry array/unzipWith.js
+1363 silly gunzTarPerm extractEntry array/dropRightWhile.js
+1364 silly gunzTarPerm extractEntry array/without.js
+1365 silly gunzTarPerm extractEntry array/dropRight.js
+1366 silly gunzTarPerm extractEntry array/xor.js
+1367 silly gunzTarPerm extractEntry array/drop.js
+1368 silly gunzTarPerm extractEntry array/zip.js
+1369 silly gunzTarPerm extractEntry array/difference.js
+1370 silly gunzTarPerm extractEntry array/zipObject.js
+1371 silly gunzTarPerm extractEntry array/compact.js
+1372 silly gunzTarPerm extractEntry array/zipWith.js
+1373 silly gunzTarPerm extractEntry array/pullAt.js
+1374 silly gunzTarPerm extractEntry utility/attempt.js
+1375 silly gunzTarPerm extractEntry utility/iteratee.js
+1376 silly gunzTarPerm extractEntry utility/matches.js
+1377 silly gunzTarPerm extractEntry utility/matchesProperty.js
+1378 silly gunzTarPerm extractEntry utility/method.js
+1379 silly gunzTarPerm extractEntry utility/identity.js
+1380 silly gunzTarPerm extractEntry utility/mixin.js
+1381 silly gunzTarPerm extractEntry utility/noop.js
+1382 silly gunzTarPerm extractEntry utility/property.js
+1383 silly gunzTarPerm extractEntry utility/propertyOf.js
+1384 silly gunzTarPerm extractEntry utility/range.js
+1385 silly gunzTarPerm extractEntry utility/constant.js
+1386 silly gunzTarPerm extractEntry utility/times.js
+1387 silly gunzTarPerm extractEntry utility/callback.js
+1388 silly gunzTarPerm extractEntry utility/uniqueId.js
+1389 silly gunzTarPerm extractEntry utility/methodOf.js
+1390 silly gunzTarPerm extractEntry lang/clone.js
+1391 silly gunzTarPerm extractEntry lang/isEqual.js
+1392 silly gunzTarPerm extractEntry lang/isError.js
+1393 silly gunzTarPerm extractEntry lang/isFinite.js
+1394 silly gunzTarPerm extractEntry lang/isFunction.js
+1395 silly gunzTarPerm extractEntry lang/isEmpty.js
+1396 silly gunzTarPerm extractEntry lang/isNaN.js
+1397 silly gunzTarPerm extractEntry lang/isNative.js
+1398 silly gunzTarPerm extractEntry lang/isNull.js
+1399 silly gunzTarPerm extractEntry lang/isNumber.js
+1400 silly gunzTarPerm extractEntry lang/isObject.js
+1401 silly gunzTarPerm extractEntry lang/isElement.js
+1402 silly gunzTarPerm extractEntry lang/isPlainObject.js
+1403 silly gunzTarPerm extractEntry lang/isDate.js
+1404 silly gunzTarPerm extractEntry lang/isRegExp.js
+1405 silly gunzTarPerm extractEntry lang/isBoolean.js
+1406 silly gunzTarPerm extractEntry lang/isString.js
+1407 silly gunzTarPerm extractEntry lang/isArray.js
+1408 silly gunzTarPerm extractEntry lang/isTypedArray.js
+1409 silly gunzTarPerm extractEntry lang/isArguments.js
+1410 silly gunzTarPerm extractEntry lang/isUndefined.js
+1411 silly gunzTarPerm extractEntry lang/gte.js
+1412 silly gunzTarPerm extractEntry lang/lt.js
+1413 silly gunzTarPerm extractEntry lang/gt.js
+1414 silly gunzTarPerm extractEntry lang/lte.js
+1415 silly gunzTarPerm extractEntry lang/eq.js
+1416 silly gunzTarPerm extractEntry lang/toArray.js
+1417 silly gunzTarPerm extractEntry lang/cloneDeep.js
+1418 silly gunzTarPerm extractEntry lang/toPlainObject.js
+1419 silly gunzTarPerm extractEntry lang/isMatch.js
+1420 verbose write writing to /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash/package.json
+1421 info preinstall lodash@3.10.1
+1422 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash/package.json
+1423 verbose readDependencies loading dependencies from /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash/package.json
+1424 silly install resolved []
+1425 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash
+1426 info build /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash
+1427 info linkStuff lodash@3.10.1
+1428 silly linkStuff lodash@3.10.1 has /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules as its parent node_modules
+1429 silly linkStuff lodash@3.10.1 is part of a global install
+1430 silly linkStuff lodash@3.10.1 is installed into a global node_modules
+1431 verbose linkBins lodash@3.10.1
+1432 verbose linkMans lodash@3.10.1
+1433 verbose rebuildBundles lodash@3.10.1
+1434 info install lodash@3.10.1
+1435 info postinstall lodash@3.10.1
+1436 verbose unlock done using /Users/VidSecki/.npm/_locks/lodash-ceb86bf4fe227c3e.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder/node_modules/lodash
+1437 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder
+1438 info build /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder
+1439 info linkStuff xmlbuilder@4.0.0
+1440 silly linkStuff xmlbuilder@4.0.0 has /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules as its parent node_modules
+1441 silly linkStuff xmlbuilder@4.0.0 is part of a global install
+1442 silly linkStuff xmlbuilder@4.0.0 is installed into a global node_modules
+1443 verbose linkBins xmlbuilder@4.0.0
+1444 verbose linkMans xmlbuilder@4.0.0
+1445 verbose rebuildBundles xmlbuilder@4.0.0
+1446 verbose rebuildBundles [ 'lodash' ]
+1447 info install xmlbuilder@4.0.0
+1448 info postinstall xmlbuilder@4.0.0
+1449 verbose unlock done using /Users/VidSecki/.npm/_locks/xmlbuilder-30b3bfef66e40ad3.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist/node_modules/xmlbuilder
+1450 verbose about to build /usr/local/lib/node_modules/ios-sim/node_modules/plist
+1451 info build /usr/local/lib/node_modules/ios-sim/node_modules/plist
+1452 info linkStuff plist@1.2.0
+1453 silly linkStuff plist@1.2.0 has /usr/local/lib/node_modules/ios-sim/node_modules as its parent node_modules
+1454 silly linkStuff plist@1.2.0 is part of a global install
+1455 silly linkStuff plist@1.2.0 is installed into a global node_modules
+1456 verbose linkBins plist@1.2.0
+1457 verbose linkMans plist@1.2.0
+1458 verbose rebuildBundles plist@1.2.0
+1459 verbose rebuildBundles [ 'base64-js', 'util-deprecate', 'xmlbuilder', 'xmldom' ]
+1460 info install plist@1.2.0
+1461 info postinstall plist@1.2.0
+1462 verbose unlock done using /Users/VidSecki/.npm/_locks/plist-c46bcbb6daba9d53.lock for /usr/local/lib/node_modules/ios-sim/node_modules/plist
+1463 verbose about to build /usr/local/lib/node_modules/ios-sim
+1464 info build /usr/local/lib/node_modules/ios-sim
+1465 info linkStuff ios-sim@5.0.8
+1466 silly linkStuff ios-sim@5.0.8 has /usr/local/lib/node_modules as its parent node_modules
+1467 silly linkStuff ios-sim@5.0.8 is part of a global install
+1468 silly linkStuff ios-sim@5.0.8 is installed into a global node_modules
+1469 silly linkStuff ios-sim@5.0.8 is installed into the top-level global node_modules
+1470 verbose linkBins ios-sim@5.0.8
+1471 verbose link bins [ { 'ios-sim': './bin/ios-sim' }, '/usr/local/bin', true ]
+1472 verbose linkMans ios-sim@5.0.8
+1473 verbose rebuildBundles ios-sim@5.0.8
+1474 verbose rebuildBundles [ '.bin', 'bplist-parser', 'nopt', 'plist', 'simctl' ]
+1475 silly gentlyRm /usr/local/bin/ios-sim is being gently removed
+1476 silly gentlyRm verifying /usr/local is an npm working directory
+1477 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+1478 silly gentlyRm deletion target /usr/local/bin/ios-sim is under /usr/local
+1479 verbose gentlyRm vacuuming from /usr/local/bin/ios-sim up to /usr/local
+1480 info install ios-sim@5.0.8
+1481 info postinstall ios-sim@5.0.8
+1482 verbose unlock done using /Users/VidSecki/.npm/_locks/ios-sim-3bb56db538048d2f.lock for /usr/local/lib/node_modules/ios-sim
+1483 info ios-deploy@1.8.6 Failed to exec preinstall script
+1484 verbose unlock done using /Users/VidSecki/.npm/_locks/ios-deploy-198957223cd98201.lock for /usr/local/lib/node_modules/ios-deploy
+1485 verbose stack Error: ios-deploy@1.8.6 preinstall: `./src/scripts/check_reqs.js && xcodebuild`
+1485 verbose stack Exit status 134
+1485 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+1485 verbose stack     at emitTwo (events.js:87:13)
+1485 verbose stack     at EventEmitter.emit (events.js:172:7)
+1485 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+1485 verbose stack     at emitTwo (events.js:87:13)
+1485 verbose stack     at ChildProcess.emit (events.js:172:7)
+1485 verbose stack     at maybeClose (internal/child_process.js:827:16)
+1485 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+1486 verbose pkgid ios-deploy@1.8.6
+1487 verbose cwd /Users/VidSecki/School/FERI/Mag_1_letnik/ST/projekt/FaksFood/FaksFood
+1488 error Darwin 15.5.0
+1489 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "-g" "install" "ios-sim" "ios-deploy"
+1490 error node v4.4.0
+1491 error npm  v2.14.20
+1492 error code ELIFECYCLE
+1493 error ios-deploy@1.8.6 preinstall: `./src/scripts/check_reqs.js && xcodebuild`
+1493 error Exit status 134
+1494 error Failed at the ios-deploy@1.8.6 preinstall script './src/scripts/check_reqs.js && xcodebuild'.
+1494 error This is most likely a problem with the ios-deploy package,
+1494 error not with npm itself.
+1494 error Tell the author that this fails on your system:
+1494 error     ./src/scripts/check_reqs.js && xcodebuild
+1494 error You can get information on how to open an issue for this project with:
+1494 error     npm bugs ios-deploy
+1494 error Or if that isn't available, you can get their info via:
+1494 error
+1494 error     npm owner ls ios-deploy
+1494 error There is likely additional logging output above.
+1495 verbose exit [ 1, true ]
+1496 verbose unbuild lib/node_modules/ios-deploy
+1497 info preuninstall ios-deploy@1.8.6
+1498 info uninstall ios-deploy@1.8.6
+1499 verbose unbuild rmStuff ios-deploy@1.8.6 from /usr/local/lib/node_modules
+1500 silly gentlyRm /usr/local/bin/ios-deploy is being gently removed
+1501 silly gentlyRm verifying /usr/local is an npm working directory
+1502 silly gentlyRm containing path /usr/local is under npm's control, in /usr/local
+1503 silly gentlyRm deletion target /usr/local/bin/ios-deploy is under /usr/local
+1504 verbose gentlyRm vacuuming from /usr/local/bin/ios-deploy up to /usr/local
+1505 info postuninstall ios-deploy@1.8.6
+1506 silly gentlyRm /usr/local/lib/node_modules/ios-deploy is being purged from base /usr/local
+1507 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/ios-deploy
+1508 silly vacuum-fs purging /usr/local/lib/node_modules/ios-deploy
+1509 silly vacuum-fs quitting because other entries in /usr/local/lib/node_modules
+>>>>>>> b06bb0e3a097d87ff3f185a426b38484ccd68d3c
