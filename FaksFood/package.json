@@ -1,7 +1,7 @@
 {
   "name": "faksfood",
   "version": "1.1.1",
-  "description": "FaksFood: An Ionic project",
+  "description": "FaksFood",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-concat": "^2.2.0",
@@ -24,6 +24,7 @@
     "cordova-sqlite-storage@0.7.14"
   ],
   "cordovaPlatforms": [
-    "ios"
+    "ios",
+    "android"
   ]
 }

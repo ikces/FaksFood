@@ -1,22 +1,13 @@
 <ion-view title="Zemljevid" id="page8" class=" ">
     <ion-content padding="true" class="has-header">
-       <div id="map" data-tap-disabled="true"></div>
+       <!-- <div id="map" data-tap-disabled="true"></div> -->
        <!-- <div style="width:100%;height:400px" id="map_canvas"></div> -->
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw9B72WrPX5kv1BdyH4gIVA-NvG5HV_1U" async="" defer=""></script>
-        <div>
-            <div id="map" style="height: 100%;"></div>
-            <script>
-                var map;
-                  function initMap() {
-                    map = new google.maps.Map(document.getElementById('map'), {
-                      center: {lat: -34.397, lng: 150.644},
-                      zoom: 8
-                    });
-                  }
-            </script>
+            <h3>PhoneGap-GoogleMaps-Plugin</h3>
+            <div style="width:100%;height:400px" id="map_canvas"></div>
+            <button id="button">Full Screen</button>
             
-        </div>
+        <!-- </div> -->
 
     </ion-content>
 </ion-view>
