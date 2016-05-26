@@ -1,0 +1,96 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;\f2\fswiss\fcharset0 ArialMT;
+}
+{\colortbl;\red255\green255\blue255;\red11\green87\blue120;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid1\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid3\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \expnd0\expndtw0\kerning0
+Kon\uc0\u269 ni projekt oddajte v obliki ZIP/RAR (poimenovan 
+\b ImeProjekta-Priimek1_Priimek2_Priimek3
+\b0 ), v kateri datoteke 
+\b OBVEZNO organizirate po naslednjih imenikih
+\b0 :\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f1 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+doc
+\b0 \'a0(v tem imeniku bo shranjena dokumentacija)\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls1\ilvl1
+\b\fs28 \cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f1 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+porocilo.docx
+\b0 \'a0- posodobite dokument, kjer ste\'a0predstavili osnovni namen aplikacije tako, da boste opisali nabor funkcionalnosti, ki so dejansko implementirane. Nato opredelite, kdo je bil odgovoren za kateri del re\'9aitve.\'a0Predstavite kako je re\'9aitev implementirana, katere tehnologije so bile uporabljene (vsi moduli, ki so na stre\'9eni\'9aki strani in vsi vti\uc0\u269 niki, ki jih vsebuje Cordova mobilna aplikacija). Na kratko predstavite tudi te\'9eave, na katere ste pri razvoju naleteli in kako ste jih re\'9aili ter povzetek o tem, kako ste aplikacijo testirali (na katerih napravah, katere napake/pomanjkljivosti ste odkrili, kako ste jih odpravili, itd.).
+\fs26 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls1\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f1 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
++ morebitni drugi dokumenti (glede namestitve, itd.)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f1 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+src
+\b0  (z naslednjimi pod-imeniki):\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls1\ilvl1
+\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f1 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+ExpressJS 
+\b0 -\'a0v tem imeniku naj bo izvorna koda implementiranih spletnih storitev.\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls1\ilvl2\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f1 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+Oddajte vse, razen imenika 
+\b node_modules
+\b0 , vendar pred tem posodobite\'a0
+\b package.json
+\b0  datoteko, ki se nahaja na korenu strani. To storite tako, da izbri\'9aete obstoje\uc0\u269 o\'a0package.json datoteko in v konzoli za\'9eenete 
+\b npm init
+\b0 \'a0({\field{\*\fldinst{HYPERLINK "https://docs.npmjs.com/getting-started/using-a-package.json"}}{\fldrslt \cf2 \ul \ulc2 dodatna navodila}}).\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls1\ilvl1
+\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f1 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+Cordova\'a0
+\b0 - v tem imeniku naj bo izvorna koda mobilne aplikacije, ki jo je mo\'9eno uvoziti na poljubnem ra\uc0\u269 unalniku, ki ima vzpostavljeno okolje za razvoj na osnovi ogrodja Cordova. \u268 e ste za izgradnjo mobilne aplikacije uporabili jQuery Mobile ogrodje ali katerokoli drugo ogrodje, mora biti izvorna koda ogrodja vklju\u269 ena v samo re\'9aitev. Torej, naj ne bo povezav na zunanje oz. "online" datoteke .js in .css.\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls1\ilvl2\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f1 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+Oddajte vse, razen imenika 
+\b platforms
+\b0 .\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls1\ilvl1
+\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f1 \uc0\u9702 
+\f0 	}\expnd0\expndtw0\kerning0
+RaspberryPi
+\b0 * - imenik naj vsebuje izvorno kodo implementacije Raspberry Pi.\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 *za tiste, ki so uporabljali Raspberry Pi pri implementaciji projekta.\
+\
+Rok za oddajo je za vse enak - 
+\b po tem roku oddaja in predstavitev ne bo mo\'9ena!
+\b0 \
+\
+
+\b Projektno nalogo odda samo en \uc0\u269 lan skupine!
+\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 "start": "node ./bin/www"}
