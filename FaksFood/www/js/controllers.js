@@ -8,7 +8,7 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('restavracijeCtrl', function($scope, $ionicScrollDelegate, filterFilter, Restavracije) {
+.controller('restavracijeCtrl', function($scope, $ionicScrollDelegate, filterFilter, Restavracije, CurrentRestavracija) {
 	var data = null;
     var ind = 0
     $scope.buffer = [];
@@ -40,6 +40,10 @@ angular.module('app.controllers', [])
     $scope.$on('$stateChangeSuccess', function() {
         $scope.loadMore();
     });
+
+    $scope.clickRestavracija=function(current){
+        CurrentRestavracija.setCurrent(current);
+    }
 })
    
 .controller('zemljevidCtrl', function($scope, NgMap) {
@@ -55,12 +59,17 @@ angular.module('app.controllers', [])
 	
 })
    
-.controller('restavracijaCtrl', function($scope) {
+.controller('restavracijaCtrl', function($scope, CurrentRestavracija) {
+    $scope.restavracija = CurrentRestavracija.getCurrent();
 
 })
    
-.controller('meniCtrl', function($scope) {
-
+.controller('meniCtrl', function($scope, CurrentRestavracija,Restavracije) {
+    $scope.restavracija = CurrentRestavracija.getCurrent();
+    Restavracije.getMenije($scope.restavracija.id).then(function(data){
+        $scope.jedi = data;
+        console.log(data);
+    });
 })
    
 .controller('komentarjiCtrl', function($scope) {
@@ -71,13 +80,13 @@ angular.module('app.controllers', [])
 
 })
 .controller('headerCtrl', function($scope, $cordovaToast, $http, Version, Restavracije){
-    $scope.refresh=function(){
+    $scope.refreshDatabase=function(){
         $http({
           method: 'GET',
           url: 'http://faksfood2-ikces.rhcloud.com/restavracije/version'})
         .then(function successCallback(response) {
             var update = false;
-            var onlineVersion = response.data.version;
+            var onlineVersion = Date.now().toString();//response.data[0].version;
             Version.get().then(function(data){
                 if(data.length == 0){
                     Version.add(onlineVersion);
@@ -89,17 +98,26 @@ angular.module('app.controllers', [])
                     }
                 }
                 if(update == true){
-                    console.log('database is updating');
-                    $cordovaToast.show('Database is updating', 'long', 'center');
+                    $scope.showToast("Baza se posodablja");
+                    Version.update(onlineVersion);
                     Restavracije.getFromApiRestavracije();
                 }
                 else{
-                    console.log("current version")
-                    $cordovaToast.show('Current version', 'medium', 'center');
+                    $scope.showToast("Trenutna verzija");
                 }
             });
         }, function errorCallback(response) {
           return "Cannot connect to faksfood API";
         });
     }
+
+    $scope.showToast = function(msg) {
+        if (window.plugins && window.plugins.toast) {
+            $cordovaToast.show(msg, 'long', 'center');
+        } else {
+            alert(msg);
+        }
+    };
 })
+
+

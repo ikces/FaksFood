@@ -35,9 +35,13 @@ angular.module('app.services', [])
 
   // Proces a single result
   self.getById = function(result) {
-    var output = null;
-    output = angular.copy(result.rows.item(0));
-    return output;
+    if(result.rows.length != 0){
+        var output = null;
+        output = angular.copy(result.rows.item(0));
+        return output;
+    }
+    else return [];
+
   }
 
   return self;
@@ -79,7 +83,7 @@ angular.module('app.services', [])
 
   return self;
 })
-.factory('Restavracije', function($cordovaSQLite, DBA, $http) {
+.factory('Restavracije', function($cordovaSQLite, DBA, $http, $cordovaToast) {
   var self = this;
 
   self.getFromApiRestavracije = function(){
@@ -97,7 +101,9 @@ angular.module('app.services', [])
       if(sqlArr.length != 0){
         sqlString += sqlArr.join();
         DBA.query(sqlString).then(function(resp){
-          console.log(resp);
+          self.getFromApiMenus();
+        }).catch(function(err){
+          console.log(err);
         });
       }   
   	}, function errorCallback(response) {
@@ -109,7 +115,18 @@ angular.module('app.services', [])
       method: 'GET',
       url: 'http://faksfood2-ikces.rhcloud.com/restavracije/jedi'})
     .then(function successCallback(response) {
-
+      DBA.query("DELETE FROM jedilniki");
+      var sqlArr = [];
+      var sqlString = "INSERT INTO jedilniki(restavracije_id, jedi) VALUES";
+      angular.forEach(response.data, function(value, key) {
+        sqlArr.push("('"+value.restavracije_id+"','"+value.jedi+"')");
+      });
+      if(sqlArr.length != 0){
+        sqlString += sqlArr.join();
+        DBA.query(sqlString).then(function(resp){
+          self.showToast("Posodobljeno!");
+        });
+      }   
     }, function errorCallback(response) {
       return "Cannot connect to faksfood API";
     });
@@ -122,6 +139,22 @@ angular.module('app.services', [])
         return DBA.getAll(result);
       });
   }
+  self.getMenije = function(id){
+
+    return DBA.query("SELECT * FROM jedilniki WHERE restavracije_id="+id)
+      .then(function(result){
+        return DBA.getAll(result);
+      });
+  }
+
+
+  self.showToast = function(msg) {
+      if (window.plugins && window.plugins.toast) {
+          $cordovaToast.show(msg, 'long', 'center');
+      } else {
+          alert(msg);
+      }
+  };
 
   return self;
 })
@@ -131,7 +164,7 @@ angular.module('app.services', [])
   self.get = function() {
     return DBA.query("SELECT id, version FROM version WHERE id = (1)")
       .then(function(result) {
-        return result.rows
+        return DBA.getById(result);
       });
   }
 
@@ -141,8 +174,26 @@ angular.module('app.services', [])
 
 
   self.update = function(value) {
-    return DBA.query("UPDATE version SET id = 1, version = '"+value+"' WHERE id = 1");
+    return DBA.query("UPDATE version SET version = '"+value+"' WHERE id = 1").catch(function(err){console.log(err)});
   }
 
   return self;
 })
+
+.service('CurrentRestavracija', function() {
+  var productList = null;
+
+  var setCurrent = function(restavracija) {
+      productList = restavracija;
+  };
+
+  var getCurrent = function(){
+      return productList;
+  };
+
+  return {
+    setCurrent: setCurrent,
+    getCurrent: getCurrent
+  };
+
+});
