@@ -55,11 +55,18 @@ angular.module('app.controllers', [])
     });
 
     $scope.selectKraj = function(){
-        Restavracije.getRestavracije({'kraj_id': $scope.selectedKraj.id}).then(function(getdata){
-            data = getdata;
-            $scope.buffer = angular.copy(getdata);
-            $scope.restavracije = getdata.slice(0, 10)
-        });
+        if($scope.selectedKraj != null)
+            Restavracije.getRestavracije({'kraj_id': $scope.selectedKraj.id}).then(function(getdata){
+                data = getdata;
+                $scope.buffer = angular.copy(getdata);
+                $scope.restavracije = getdata.slice(0, 10)
+            });
+        else
+            Restavracije.getRestavracije().then(function(getdata){
+                data = getdata;
+                $scope.buffer = angular.copy(getdata);
+                $scope.restavracije = getdata.slice(0, 10)
+            });
     }
 
     $scope.clickRestavracija=function(current){
