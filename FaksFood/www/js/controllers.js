@@ -155,9 +155,29 @@ angular.module('app.controllers', [])
 	
 })
 
-.controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap) {
+.controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap, Restavracije) {
+    //Grega1
+    $scope.delovnicasi=null;
+    //Grega1konec
+
+
     $scope.$watch(function(){ return CurrentRestavracija.getCurrent()}, function(){
         $scope.restavracija = CurrentRestavracija.getCurrent();
+        //Grega RABI TOLE
+        Restavracije.getDelovneCase($scope.restavracija.id).then(function(getdata){
+            $scope.delovnicasi=getdata;
+            angular.forEach(getdata, function(value, key){
+                if(value.tip == 0){
+                    this[key].tip_s="Pon-Pet"
+                }else if(value.tip == 1){
+                    this[key].tip_s="Sobota"
+                }else{
+                    this[key].tip_s="Nedelja"
+                }
+            }, $scope.delovnicasi);
+            console.log(getdata);
+        });     
+        //Grega KONECCCC
     })
  
 
@@ -169,7 +189,7 @@ angular.module('app.controllers', [])
     }); 
 })
    
-.controller('meniCtrl', function($scope, CurrentRestavracija,Restavracije) {
+.controller('meniCtrl', function($scope, CurrentRestavracija, Restavracije) {
     $scope.restavracija = CurrentRestavracija.getCurrent();
     Restavracije.getMenije($scope.restavracija.id).then(function(data){
         var newData = [];
@@ -198,7 +218,7 @@ angular.module('app.controllers', [])
           url: 'http://faksfood2-ikces.rhcloud.com/restavracije/version'})
         .then(function successCallback(response) {
             var update = false;
-            var onlineVersion = /*Date.now().toString();*/response.data[0].version;
+            var onlineVersion = Date.now().toString();//response.data[0].version;
             Version.get().then(function(data){
                 if(data.length == 0){
                     Version.add(onlineVersion);

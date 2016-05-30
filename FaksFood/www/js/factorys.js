@@ -146,6 +146,28 @@ angular.module('app.factorys', [])
       if(sqlArr.length != 0){
         sqlString += sqlArr.join();
         DBA.query(sqlString).then(function(resp){
+          self.getFromApiDelovniCasi();
+        });
+      }   
+    }, function errorCallback(response) {
+      return "Cannot connect to faksfood API";
+    });
+  }
+
+  self.getFromApiDelovniCasi = function(){
+    $http({
+      method: 'GET',
+      url: 'http://faksfood2-ikces.rhcloud.com/restavracije/odpiralnicasi'})
+    .then(function successCallback(response) {
+      DBA.query("DELETE FROM odpiralni_casi");
+      var sqlArr = [];
+      var sqlString = "INSERT INTO odpiralni_casi(id, tip, cas_odpre, cas_zapre, restavracije_id) VALUES";
+      angular.forEach(response.data, function(value, key) {
+        sqlArr.push("('"+value.id+"','"+value.tip+"','"+value.cas_odpre+"','"+value.cas_zapre+"','"+value.restavracije_id+"')");
+      });
+      if(sqlArr.length != 0){ 
+        sqlString += sqlArr.join();
+        DBA.query(sqlString).then(function(resp){
           self.showToast("Posodobljeno!");
         });
       }   
@@ -182,7 +204,12 @@ angular.module('app.factorys', [])
         return DBA.getAll(result);
       });
   }
-
+  self.getDelovneCase = function(id){
+      return DBA.query("SELECT * FROM odpiralni_casi WHERE restavracije_id="+id)
+      .then(function(result){
+        return DBA.getAll(result);
+      });
+  }
 
   self.showToast = function(msg) {
       if (window.plugins && window.plugins.toast) {
