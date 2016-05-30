@@ -8,16 +8,28 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('restavracijeCtrl', function($scope, $ionicScrollDelegate, filterFilter, Restavracije, CurrentRestavracija) {
+.controller('restavracijeCtrl', function($scope, $ionicScrollDelegate, filterFilter, Restavracije, CurrentRestavracija, UpdateRestavracije) {
 	var data = null;
+    var prikaziVse = 0;
     var ind = 0
     $scope.buffer = [];
 
-    Restavracije.getRestavracije().then(function(getdata){
-		data = getdata;
-        $scope.buffer = angular.copy(getdata);
-        $scope.restavracije = getdata.slice(0, 10)
-	});
+    Restavracije.getKraji().then(function(getdata){
+        $scope.kraji = getdata;
+        console.log(getdata)
+
+    });
+    
+    $scope.$watch(function () { return UpdateRestavracije.getVersion(); },
+         function (value) {
+            console.log(value)
+             Restavracije.getRestavracije().then(function(getdata){
+                data = getdata;
+                $scope.buffer = angular.copy(getdata);
+                $scope.restavracije = getdata.slice(0, 10)
+            });
+         }
+      );
     $scope.typed = function(searchText){
         $scope.buffer = filterFilter(data, searchText);
     }
@@ -43,6 +55,10 @@ angular.module('app.controllers', [])
 
     $scope.clickRestavracija=function(current){
         CurrentRestavracija.setCurrent(current);
+    }
+
+    $scope.selectKraj = function(clicked){
+
     }
 })
    
@@ -71,8 +87,10 @@ angular.module('app.controllers', [])
 
     //prikaz infowindow okvirčka z podrobnostmi
     $scope.showRestavrant = function(event, restavrant) {
+        console.log(restavrant, "SHOW");
+        CurrentRestavracija.setCurrent(restavrant);
         $scope.restavrant = restavrant;
-      $scope.dist = $scope.distance($scope.lat, $scope.long, restavrant.sirina, restavrant.dolzina);
+        $scope.dist = $scope.distance($scope.lat, $scope.long, restavrant.sirina, restavrant.dolzina);
         $scope.map.showInfoWindow('myInfoWindow', this);
       };
 
@@ -112,7 +130,6 @@ angular.module('app.controllers', [])
     };
 
      $scope.clickRestavracija=function(current){
-        console.log("zemljevid",current);
         CurrentRestavracija.setCurrent(current);
     }
 
@@ -122,16 +139,12 @@ angular.module('app.controllers', [])
 .controller('profilCtrl', function($scope) {
 	
 })
-   
+
 .controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap) {
-    
-    $scope.$watch(CurrentRestavracija.getCurrent(), function(){
-        console.log("tu sm 2");
-            $scope.restavracija = CurrentRestavracija.getCurrent();
-        })
-
-
-   
+    $scope.$watch(function(){ return CurrentRestavracija.getCurrent()}, function(){
+        $scope.restavracija = CurrentRestavracija.getCurrent();
+    })
+ 
 
     //prikaz zemljevida
     NgMap.getMap({id:'map'}).then(function(map) {
@@ -139,14 +152,18 @@ angular.module('app.controllers', [])
     $scope.lat= $scope.restavracija.sirina;
     $scope.long = $scope.restavracija.dolzina;
     }); 
-
 })
    
 .controller('meniCtrl', function($scope, CurrentRestavracija,Restavracije) {
     $scope.restavracija = CurrentRestavracija.getCurrent();
     Restavracije.getMenije($scope.restavracija.id).then(function(data){
-        $scope.jedi = data;
-        console.log(data);
+        var newData = [];
+        angular.forEach(data, function(value, key){
+            this.push(JSON.parse(value.jedi));
+
+        }, newData);
+        $scope.jedi = newData;
+
     });
 })
 
@@ -159,14 +176,14 @@ angular.module('app.controllers', [])
 .controller('oceneCtrl', function($scope) {
 
 })
-.controller('headerCtrl', function($scope, $cordovaToast, $http, Version, Restavracije){
+.controller('headerCtrl', function($scope, $cordovaToast, $http, Version, Restavracije, UpdateRestavracije){
     $scope.refreshDatabase=function(){
         $http({
           method: 'GET',
           url: 'http://faksfood2-ikces.rhcloud.com/restavracije/version'})
         .then(function successCallback(response) {
             var update = false;
-            var onlineVersion = Date.now().toString();//response.data[0].version;
+            var onlineVersion = /*Date.now().toString();*/response.data[0].version;
             Version.get().then(function(data){
                 if(data.length == 0){
                     Version.add(onlineVersion);
@@ -181,6 +198,7 @@ angular.module('app.controllers', [])
                     $scope.showToast("Baza se posodablja");
                     Version.update(onlineVersion);
                     Restavracije.getFromApiRestavracije();
+                    UpdateRestavracije.setVersion(onlineVersion);
                 }
                 else{
                     $scope.showToast("Trenutna verzija");

@@ -1,7 +1,11 @@
 <ion-view title="Meni" id="page11" class=" ">
     <ion-content padding="true" class="has-header">
-        <ion-list id="meni-list9" class=" " ng-repeat="jed in jedi">
-            <ion-item class="  ">{{jed.jedi}}</ion-item>
+        <ion-list id="meni-list9" class=" " ng-repeat="arrjedi in jedi">
+            <ion-item class="  ">
+            <ul ng-repeat="jed in arrjedi">
+            	<li>{{jed}}</li>
+            </ul>
+            </ion-item>
         </ion-list>
     </ion-content>
 </ion-view>
