@@ -24,9 +24,35 @@ angular.module('app.services', [])
     }
     function setVersion(newVersion) {
         version = newVersion;
+
     }
     return {
         getVersion: getVersion,
         setVersion: setVersion,
     }
+});
+
+
+.service ('UporabnikPrijavlen', function(Uporabnik){
+  var user = null;
+
+
+function getUser() {
+        return user;
+    }
+    function setUser() {
+    Uporabnik.getUser().then(function(getdata){  
+      console.log(getdata);
+       if(getdata.length != 0){
+
+        user = getdata;
+       }
+
+    });
+    }
+    return {
+        getUser: getUser,
+        setUser: setUser,
+    }
+
 });

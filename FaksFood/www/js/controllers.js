@@ -151,22 +151,41 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('profilCtrl', function($scope) {
-	
+.controller('profilCtrl', function($scope, UporabnikPrijavlen) {
+
+
+   if(UporabnikPrijavlen.getUser == null){
+
+    
+   }
+
+ 
+
+
+ 	
 })
 
 .controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap) {
+    $scope.showMap = false;
     $scope.$watch(function(){ return CurrentRestavracija.getCurrent()}, function(){
+        $scope.showMap = true;
+        
         $scope.restavracija = CurrentRestavracija.getCurrent();
+        console.log("dasghadskjshk ajhdaks l jhdas kjDKLS", $scope.restavracija);
+        NgMap.getMap({id:'map2'}).then(function(map2) {
+    $scope.map2 = map2;
+    $scope.lat= $scope.restavracija.sirina;
+    $scope.long = $scope.restavracija.dolzina;
+     
+    
+
+    }); 
+           //prikaz zemljevida
+    
     })
  
 
-    //prikaz zemljevida
-    NgMap.getMap({id:'map'}).then(function(map) {
-    $scope.map = map;
-    $scope.lat= $scope.restavracija.sirina;
-    $scope.long = $scope.restavracija.dolzina;
-    }); 
+ 
 })
    
 .controller('meniCtrl', function($scope, CurrentRestavracija,Restavracije) {

@@ -216,3 +216,27 @@ angular.module('app.factorys', [])
 
   return self;
 })
+
+.factory('Uporabnik', function($cordovaSQLite, DBA, $http, $cordovaToast) {
+
+
+
+
+    var self= this
+
+    self.getUser = function(){
+      return DBA.query("SELECT id FROM uporabnik") 
+        .then(function(result){
+          return DBA.getById(result);
+
+        });
+
+    }
+
+    return self;
+  
+})
+
+
+
+
