@@ -155,8 +155,12 @@ angular.module('app.factorys', [])
   }
 
 
-  self.getRestavracije = function(){
-    return DBA.query("SELECT r.*, k.naziv as kraj FROM restavracije r LEFT JOIN kraj k ON k.id = r.kraj_id")
+  self.getRestavracije = function(filter){
+    var query = "SELECT r.*, k.naziv as kraj FROM restavracije r LEFT JOIN kraj k ON k.id = r.kraj_id";
+    if(filter != null){
+      query+=" WHERE r.kraj_id="+filter.kraj_id;
+    }
+    return DBA.query(query)
       .then(function(result){
                         DBA.query("SELECT version FROM version WHERE id=1")
                           .then(function(version){

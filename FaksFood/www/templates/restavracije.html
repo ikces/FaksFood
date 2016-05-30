@@ -5,11 +5,7 @@
 
       <form style="float:right; width: 50%; display: block" id="cameraTabDefaultPage-form2" class="list ng-pristine ng-valid">
             <label style="height: 34px; padding: 0px;" class="item item-select " id="cameraTabDefaultPage-select1">
-                <span style="padding: 5px;" class="input-label" aria-label="Select" id="_label-0"></span>
-                <select>
-                    <option ng-click="selectKraj(prikaziVse)">POKAŽI VSE</option>
-                    <option ng-click="selectKraj(kraj)" ng-repeat="kraj in kraji">{{kraj.naziv}}</option>
-                </select>
+                <select style="width: 1000px; max-width: 100%;" ng-options="kraj.naziv for kraj in kraji" ng-model="selectedKraj" ng-change="selectKraj()"></select>
             </label>
         </form>
 

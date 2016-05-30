@@ -13,10 +13,11 @@ angular.module('app.controllers', [])
     var prikaziVse = 0;
     var ind = 0
     $scope.buffer = [];
+    $scope.selectedKraj = null;
 
     Restavracije.getKraji().then(function(getdata){
         $scope.kraji = getdata;
-        console.log(getdata)
+        console.log("KRAJI",getdata);
 
     });
     
@@ -53,13 +54,18 @@ angular.module('app.controllers', [])
         $scope.loadMore();
     });
 
+    $scope.selectKraj = function(){
+        Restavracije.getRestavracije({'kraj_id': $scope.selectedKraj.id}).then(function(getdata){
+            data = getdata;
+            $scope.buffer = angular.copy(getdata);
+            $scope.restavracije = getdata.slice(0, 10)
+        });
+    }
+
     $scope.clickRestavracija=function(current){
         CurrentRestavracija.setCurrent(current);
     }
 
-    $scope.selectKraj = function(clicked){
-
-    }
 })
    
 
