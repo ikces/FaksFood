@@ -123,12 +123,22 @@ angular.module('app.controllers', [])
 	
 })
    
-.controller('restavracijaCtrl', function($scope, CurrentRestavracija) {
+.controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap) {
     
     $scope.$watch(CurrentRestavracija.getCurrent(), function(){
         console.log("tu sm 2");
             $scope.restavracija = CurrentRestavracija.getCurrent();
         })
+
+
+   
+
+    //prikaz zemljevida
+    NgMap.getMap({id:'map'}).then(function(map) {
+    $scope.map = map;
+    $scope.lat= $scope.restavracija.sirina;
+    $scope.long = $scope.restavracija.dolzina;
+    }); 
 
 })
    

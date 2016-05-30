@@ -139,6 +139,9 @@ angular.module('app.services', [])
         return DBA.getAll(result);
       });
   }
+
+
+
   self.getMenije = function(id){
 
     return DBA.query("SELECT * FROM jedilniki WHERE restavracije_id="+id)
