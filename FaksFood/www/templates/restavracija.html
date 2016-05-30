@@ -11,7 +11,11 @@
         <ion-list id="restavracija-list7" class=" ">
             <ion-item id="restavracija-list-item12" class="  ">{{restavracija.naziv}}</ion-item>
             <ion-item id="restavracija-list-item13" class="  ">Ocene in komentarji</ion-item>
-            <ion-item id="restavracija-list-item14" class="  ">Delovni čas</ion-item>
+            <ion-item id="restavracija-list-item14" class="  ">
+                <div ng-repeat="dc in delovnicasi" >
+                    {{dc.tip_s}}: <span ng-if="dc.cas_odpre!=='undefined'">{{dc.cas_odpre}}-{{dc.cas_zapre}}</span><span ng-if="dc.cas_odpre=='undefined'">Ne obratuje</span>
+                </div>
+            </ion-item>
             <ion-item class="item-icon-right  " id="restavracija-list-item15" ui-sref="tabsController.meni">Meniji
                 <i class="icon ion-arrow-right-c"></i>
             </ion-item>

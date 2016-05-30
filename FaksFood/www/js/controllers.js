@@ -165,27 +165,41 @@ angular.module('app.controllers', [])
  	
 })
 
-.controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap) {
+
+.controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap, Restavracije) {
+    //Grega1
+    $scope.delovnicasi=null;
+
     $scope.showMap = false;
+
     $scope.$watch(function(){ return CurrentRestavracija.getCurrent()}, function(){
         $scope.showMap = true;
-        
         $scope.restavracija = CurrentRestavracija.getCurrent();
-        console.log("dasghadskjshk ajhdaks l jhdas kjDKLS", $scope.restavracija);
-        NgMap.getMap({id:'map2'}).then(function(map2) {
-    $scope.map2 = map2;
-    $scope.lat= $scope.restavracija.sirina;
-    $scope.long = $scope.restavracija.dolzina;
-    }); 
-           //prikaz zemljevida
-    
-    })
- 
 
+
+        NgMap.getMap({id:'map2'}).then(function(map2) {
+            $scope.map2 = map2;
+            $scope.lat= $scope.restavracija.sirina;
+            $scope.long = $scope.restavracija.dolzina;
+        }); 
+        Restavracije.getDelovneCase($scope.restavracija.id).then(function(getdata){
+            $scope.delovnicasi=getdata;
+            angular.forEach(getdata, function(value, key){
+                if(value.tip == 0){
+                    this[key].tip_s="Pon-Pet"
+                }else if(value.tip == 1){
+                    this[key].tip_s="Sobota"
+                }else{
+                    this[key].tip_s="Nedelja"
+                }
+            }, $scope.delovnicasi);
+            console.log(getdata);
+        });     
+    })
  
 })
    
-.controller('meniCtrl', function($scope, CurrentRestavracija,Restavracije) {
+.controller('meniCtrl', function($scope, CurrentRestavracija, Restavracije) {
     $scope.restavracija = CurrentRestavracija.getCurrent();
     Restavracije.getMenije($scope.restavracija.id).then(function(data){
         var newData = [];
@@ -214,7 +228,7 @@ angular.module('app.controllers', [])
           url: 'http://faksfood2-ikces.rhcloud.com/restavracije/version'})
         .then(function successCallback(response) {
             var update = false;
-            var onlineVersion = /*Date.now().toString();*/response.data[0].version;
+            var onlineVersion = Date.now().toString();//response.data[0].version;
             Version.get().then(function(data){
                 if(data.length == 0){
                     Version.add(onlineVersion);
