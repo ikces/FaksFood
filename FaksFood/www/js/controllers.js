@@ -55,6 +55,7 @@ angular.module('app.controllers', [])
     });
 
     $scope.selectKraj = function(){
+            console.log("daskjdlkjas");
         Restavracije.getRestavracije({'kraj_id': $scope.selectedKraj.id}).then(function(getdata){
             data = getdata;
             $scope.buffer = angular.copy(getdata);
