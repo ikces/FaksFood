@@ -2,13 +2,13 @@
     <ion-content padding="true" class="has-header">
      	<div id="map" style="height: 100%" map-lazy-load="https://maps.google.com/maps/api/js">
 		  <ng-map id="map" center="[{{lat}}, {{long}}]" zoom="15">
-		   <marker  position="[{{lat}}, {{long}}]" animation="Animation.DROP"> 
-    		</marker>
+		   <marker  position="[{{lat}}, {{long}}]" optimized="false" icon="{{customIconCourent}}" animation="Animation.DROP"> </marker>
 
     		<marker ng-repeat="p in array"
        				 position="[{{p.sirina}},{{p.dolzina}}]"
        				 on-click="showRestavrant(event, p)";
-       				 title="pos: {{p.id}}"></marker>
+       				 title="pos: {{p.id}}"
+       				 ></marker>
 
 
 			 <info-window id="myInfoWindow" >

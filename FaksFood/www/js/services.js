@@ -30,7 +30,7 @@ angular.module('app.services', [])
         getVersion: getVersion,
         setVersion: setVersion,
     }
-});
+})
 
 
 .service ('UporabnikPrijavlen', function(Uporabnik){
