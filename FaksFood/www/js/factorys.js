@@ -245,20 +245,35 @@ angular.module('app.factorys', [])
 })
 
 .factory('Uporabnik', function($cordovaSQLite, DBA, $http, $cordovaToast) {
-
-
-
-
     var self= this
 
     self.getUser = function(){
-      return DBA.query("SELECT id FROM uporabnik") 
+      return DBA.query("SELECT * FROM uporabnik") 
         .then(function(result){
           return DBA.getById(result);
 
         });
 
     }
+    self.setUser = function(data){
+      return DBA.query("INSERT INTO uporabnik (id, username, password) VALUES (1, 'test','test')");
+    }
+
+    self.login = function(data){
+      $http({
+          method: 'POST',
+          data:{
+            username: data.username,
+            password: data.password
+          },
+          url: 'http://faksfood2-ikces.rhcloud.com/login'})
+      .then(function successCallback(response) {
+          self.setUser(response);
+      }, function errorCallback(response) {
+        return "Cannot connect to faksfood API";
+      });
+    } 
+
 
     return self;
   

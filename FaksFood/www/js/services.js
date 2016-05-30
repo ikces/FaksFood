@@ -30,29 +30,21 @@ angular.module('app.services', [])
         getVersion: getVersion,
         setVersion: setVersion,
     }
-});
-
-
-.service ('UporabnikPrijavlen', function(Uporabnik){
+})
+.service('UporabnikPrijavlen', function(Uporabnik){
   var user = null;
 
-
-function getUser() {
-        return user;
-    }
-    function setUser() {
+  function getUser() {
+    return user;
+  } 
+  function setUser() {
     Uporabnik.getUser().then(function(getdata){  
-      console.log(getdata);
-       if(getdata.length != 0){
-
-        user = getdata;
-       }
-
+      user = getdata;
     });
-    }
-    return {
-        getUser: getUser,
-        setUser: setUser,
-    }
+  }
+  return {
+      getUser: getUser,
+      setUser: setUser,
+  }
 
 });

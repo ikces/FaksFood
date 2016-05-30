@@ -152,17 +152,12 @@ angular.module('app.controllers', [])
 })
    
 .controller('profilCtrl', function($scope, UporabnikPrijavlen) {
+    $scope.user=null;
 
-
-   if(UporabnikPrijavlen.getUser == null){
-
-    
-   }
-
- 
-
-
- 	
+    $scope.$watch(function(){ return UporabnikPrijavlen.getUser()}, function(){
+        $scope.user=UporabnikPrijavlen.getUser();
+        console.log(UporabnikPrijavlen.getUser());
+    });
 })
 
 
