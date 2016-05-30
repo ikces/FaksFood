@@ -5,7 +5,7 @@ angular.module('app.services', [])
 
   var setCurrent = function(restavracija) {
       productList = restavracija;
-      console.log("tu sm");
+      console.log("service", productList);
   };
 
   var getCurrent = function(){

@@ -87,8 +87,10 @@ angular.module('app.controllers', [])
 
     //prikaz infowindow okvirčka z podrobnostmi
     $scope.showRestavrant = function(event, restavrant) {
+        console.log(restavrant, "SHOW");
+        CurrentRestavracija.setCurrent(restavrant);
         $scope.restavrant = restavrant;
-      $scope.dist = $scope.distance($scope.lat, $scope.long, restavrant.sirina, restavrant.dolzina);
+        $scope.dist = $scope.distance($scope.lat, $scope.long, restavrant.sirina, restavrant.dolzina);
         $scope.map.showInfoWindow('myInfoWindow', this);
       };
 
@@ -128,7 +130,6 @@ angular.module('app.controllers', [])
     };
 
      $scope.clickRestavracija=function(current){
-        console.log("zemljevid",current);
         CurrentRestavracija.setCurrent(current);
     }
 
@@ -140,10 +141,9 @@ angular.module('app.controllers', [])
 })
    
 .controller('restavracijaCtrl', function($scope, CurrentRestavracija) {    
-    $scope.$watch(CurrentRestavracija.getCurrent(), function(){
-        console.log("tu sm 2");
-            $scope.restavracija = CurrentRestavracija.getCurrent();
-        })
+    $scope.$watch(function(){ return CurrentRestavracija.getCurrent()}, function(){
+        $scope.restavracija = CurrentRestavracija.getCurrent();
+    })
 })
    
 .controller('meniCtrl', function($scope, CurrentRestavracija,Restavracije) {
