@@ -273,8 +273,7 @@ angular.module('app.factorys', [])
         return "Cannot connect to faksfood API";
       });
     } 
-
-
+    
     return self;
   
 })

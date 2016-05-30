@@ -80,19 +80,26 @@ angular.module('app.controllers', [])
 
 .controller('zemljevidCtrl', function($scope, NgMap, $cordovaGeolocation, Restavracije,CurrentRestavracija) {
 
+    $scope.customIconCourent = {
+    "scaledSize": [40, 40],
+    "url": "https://cdn0.iconfinder.com/data/icons/android-icons/512/gps-01-512.png"
+    };
+    
+   
+
     //Pridobi podatke o restavracijah
     Restavracije.getRestavracije().then(function(getdata){    
         $scope.array=getdata; 
     });
     //pridobitev trenutne lokacije
     var posOptions = {timeout: 10000, enableHighAccuracy: false};
-    $cordovaGeolocation
-    .getCurrentPosition(posOptions)
-    .then(function (position) {
-      $scope.lat  = position.coords.latitude;
-      $scope.long = position.coords.longitude;
+        $cordovaGeolocation
+        .getCurrentPosition(posOptions)
+        .then(function (position) {
+          $scope.lat  = position.coords.latitude;
+          $scope.long = position.coords.longitude;
 
-    }, function(err) {
+        }, function(err) {
       // error
     });
     //prikaz zemljevida
@@ -153,7 +160,7 @@ angular.module('app.controllers', [])
    
 .controller('profilCtrl', function($scope, UporabnikPrijavlen) {
     $scope.user=null;
-
+    
     $scope.$watch(function(){ return UporabnikPrijavlen.getUser()}, function(){
         $scope.user=UporabnikPrijavlen.getUser();
         console.log(UporabnikPrijavlen.getUser());
@@ -161,22 +168,45 @@ angular.module('app.controllers', [])
 })
 
 
-.controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap, Restavracije) {
+.controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap, Restavracije,$cordovaGeolocation) {
+    
+
+    $scope.customIconCourent = {
+        "scaledSize": [40, 40],
+        "url": "https://cdn0.iconfinder.com/data/icons/android-icons/512/gps-01-512.png"
+    };
+    
     //Grega1
     $scope.delovnicasi=null;
 
     $scope.showMap = false;
 
+    
+
+
     $scope.$watch(function(){ return CurrentRestavracija.getCurrent()}, function(){
+        
         $scope.showMap = true;
         $scope.restavracija = CurrentRestavracija.getCurrent();
 
+
+        //pridobitev trenutne lokacije
+        var posOptions = {timeout: 10000, enableHighAccuracy: false};
+            $cordovaGeolocation
+            .getCurrentPosition(posOptions)
+            .then(function (position) {
+              $scope.latCourent  = position.coords.latitude;
+              $scope.longCourent = position.coords.longitude;
+
+            }, function(err) {
+          // error
+        });
+            //prikaži mapo
         NgMap.getMap({id:'map2'}).then(function(map2) {
             $scope.map2 = map2;
             $scope.lat= $scope.restavracija.sirina;
             $scope.long = $scope.restavracija.dolzina;
         }); 
-
 
         Restavracije.getDelovneCase($scope.restavracija.id).then(function(getdata){
             $scope.delovnicasi=getdata;

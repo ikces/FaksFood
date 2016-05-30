@@ -31,6 +31,7 @@ angular.module('app.services', [])
         setVersion: setVersion,
     }
 })
+
 .service('UporabnikPrijavlen', function(Uporabnik){
   var user = null;
 
