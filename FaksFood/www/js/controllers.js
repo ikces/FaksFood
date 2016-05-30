@@ -63,17 +63,15 @@ angular.module('app.controllers', [])
 })
    
 
-.controller('zemljevidCtrl', function($scope, NgMap, $cordovaGeolocation, Restavracije) {
-    //pridobitev trenutne lokacije
+.controller('zemljevidCtrl', function($scope, NgMap, $cordovaGeolocation, Restavracije,CurrentRestavracija) {
 
-
-//Pridobi podatke o restavracijah
+    //Pridobi podatke o restavracijah
     Restavracije.getRestavracije().then(function(getdata){    
         $scope.array=getdata; 
     });
-
+    //pridobitev trenutne lokacije
     var posOptions = {timeout: 10000, enableHighAccuracy: false};
-  $cordovaGeolocation
+    $cordovaGeolocation
     .getCurrentPosition(posOptions)
     .then(function (position) {
       $scope.lat  = position.coords.latitude;
@@ -82,34 +80,57 @@ angular.module('app.controllers', [])
     }, function(err) {
       // error
     });
+    //prikaz zemljevida
+    NgMap.getMap({id:'map'}).then(function(map) {
+    $scope.map = map;
+    }); 
 
-
-
-$scope.showData = function(event, marker) {
-        console.log('clicked pin!');
-        //HOW CAN I GET THE MARKER OBJECT (The one that was clicked) HERE?
-        console.log('id_restavracije ->', marker); //prints undefined
+    //prikaz infowindow okvirčka z podrobnostmi
+    $scope.showRestavrant = function(event, restavrant) {
+        $scope.restavrant = restavrant;
+      $scope.dist = $scope.distance($scope.lat, $scope.long, restavrant.sirina, restavrant.dolzina);
+        $scope.map.showInfoWindow('myInfoWindow', this);
       };
 
-  //watch.clearWatch();
-        //Prikaz zemljevida 
-        NgMap.getMap().then(function(map) {
-                    console.log("zemljevd test");
-                    console.log(map.getCenter());
-                    console.log('markers', map.markers);
-                    console.log('shapes', map.shapes);
-                    $scope.map = map;
-                });
-   
+    //izračun razdalje med dvena geolokacijama
+    $scope.distance = function(lat1, lon1, lat2, lon2){
+        var R = 6371e3; // metres
+        var rad = 0.0174532925199433;
+        var φ1 = lat1*rad;
+        var φ2 = lat2*rad;
+        var Δφ = (lat2-lat1)*rad;
+        var Δλ = (lon2-lon1)*rad;
+
+        var a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+            Math.cos(φ1) * Math.cos(φ2) *
+            Math.sin(Δλ/2) * Math.sin(Δλ/2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+        var d = R * c;
+           d =  Math.round(d * 100) / 100
+           d = +d.toFixed(0);
 
 
+           if(d > 1000)
+           {
+            d = d/1000;
+            d =  Math.round(d * 100) / 100
+           d = +d.toFixed(0)
+            var ret = d +"km";
+           }else
 
+           {
+            var ret = d + "m";
+           }
 
- $scope.clickFn = function(id){
-    $scope.info = id;
-    console.log(id)
- }
+           return ret;
 
+    };
+
+     $scope.clickRestavracija=function(current){
+        console.log("zemljevid",current);
+        CurrentRestavracija.setCurrent(current);
+    }
 
 
 })
@@ -118,11 +139,11 @@ $scope.showData = function(event, marker) {
 	
 })
    
-.controller('restavracijaCtrl', function($scope, CurrentRestavracija) {
-    //$scope.restavracija = CurrentRestavracija.getCurrent();
+.controller('restavracijaCtrl', function($scope, CurrentRestavracija) {    
     $scope.$watch(CurrentRestavracija.getCurrent(), function(){
-        $scope.restavracija = CurrentRestavracija.getCurrent();
-    })
+        console.log("tu sm 2");
+            $scope.restavracija = CurrentRestavracija.getCurrent();
+        })
 })
    
 .controller('meniCtrl', function($scope, CurrentRestavracija,Restavracije) {
@@ -137,6 +158,8 @@ $scope.showData = function(event, marker) {
 
     });
 })
+
+
    
 .controller('komentarjiCtrl', function($scope) {
 
