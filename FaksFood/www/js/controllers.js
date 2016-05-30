@@ -156,7 +156,7 @@ angular.module('app.controllers', [])
 
    if(UporabnikPrijavlen.getUser == null){
 
-    
+
    }
 
  
@@ -176,9 +176,6 @@ angular.module('app.controllers', [])
     $scope.map2 = map2;
     $scope.lat= $scope.restavracija.sirina;
     $scope.long = $scope.restavracija.dolzina;
-     
-    
-
     }); 
            //prikaz zemljevida
     
