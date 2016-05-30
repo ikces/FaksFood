@@ -151,19 +151,38 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('profilCtrl', function($scope) {
-	
+.controller('profilCtrl', function($scope, UporabnikPrijavlen) {
+
+
+   if(UporabnikPrijavlen.getUser == null){
+
+    
+   }
+
+ 
+
+
+ 	
 })
+
 
 .controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap, Restavracije) {
     //Grega1
     $scope.delovnicasi=null;
-    //Grega1konec
 
+    $scope.showMap = false;
 
     $scope.$watch(function(){ return CurrentRestavracija.getCurrent()}, function(){
+        $scope.showMap = true;
         $scope.restavracija = CurrentRestavracija.getCurrent();
-        //Grega RABI TOLE
+
+        NgMap.getMap({id:'map2'}).then(function(map2) {
+            $scope.map2 = map2;
+            $scope.lat= $scope.restavracija.sirina;
+            $scope.long = $scope.restavracija.dolzina;
+        }); 
+
+
         Restavracije.getDelovneCase($scope.restavracija.id).then(function(getdata){
             $scope.delovnicasi=getdata;
             angular.forEach(getdata, function(value, key){
@@ -177,16 +196,8 @@ angular.module('app.controllers', [])
             }, $scope.delovnicasi);
             console.log(getdata);
         });     
-        //Grega KONECCCC
     })
  
-
-    //prikaz zemljevida
-    NgMap.getMap({id:'map'}).then(function(map) {
-    $scope.map = map;
-    $scope.lat= $scope.restavracija.sirina;
-    $scope.long = $scope.restavracija.dolzina;
-    }); 
 })
    
 .controller('meniCtrl', function($scope, CurrentRestavracija, Restavracije) {

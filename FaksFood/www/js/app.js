@@ -37,6 +37,7 @@ angular.module('app', ['ionic', 'app.factorys', 'app.controllers', 'app.routes',
     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS vrste_ponudbe (id integer primary key, naziv text, icona text, restavracije_id integer)");
     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS jedilniki (id integer primary key, jedi text, restavracije_id integer)");
     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS version (id integer, version text)");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS uporabnik (id integer, username text, ime text, priimek text, naslov text, kraj_id integer)");
     
   
 
@@ -49,29 +50,3 @@ angular.module('app', ['ionic', 'app.factorys', 'app.controllers', 'app.routes',
     $ionicConfigProvider.tabs.position('bottom'); // other values: top
     $ionicConfigProvider.navBar.alignTitle('center');
 }]);
-
-
-
-//google maps
-// var map;
-//     document.addEventListener("deviceready", function() {
-//       var div = document.getElementById("map_canvas");
-
-//       // Initialize the map view
-//       map = plugin.google.maps.Map.getMap(div);
-
-//       // Wait until the map is ready status.
-//       map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
-//     }, false);
-
-//     function onMapReady() {
-//       var button = document.getElementById("button");
-//       button.addEventListener("click", onBtnClicked, false);
-       
-//     }
-
-//     function onBtnClicked() {
-       
-//       map.showDialog();
-
-//     }
