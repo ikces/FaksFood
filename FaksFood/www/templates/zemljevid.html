@@ -4,33 +4,25 @@
 		  <ng-map id="map" center="[{{lat}}, {{long}}]" zoom="15">
 		   <marker  position="[{{lat}}, {{long}}]" animation="Animation.DROP"> 
     		</marker>
-    		
-    		
-
-    		
 
     		<marker ng-repeat="p in array"
        				 position="[{{p.sirina}},{{p.dolzina}}]"
-       				 on-click="showInfoWindow(event, 'marker-info')";
-       				 ng-click="clickFn(p.id)";
+       				 on-click="showRestavrant(event, p)";
        				 title="pos: {{p.id}}"></marker>
 
 
-
-        <info-window id="marker-info">
-          <h4>Hi, {{infos}}}my lat/lng is [[this.getPosition()]]</h4>
-        </info-window>
-
-
-
+			 <info-window id="myInfoWindow" >
+			      <div ng-non-bindable>
+			        <h4>{{restavrant.naziv}}</h4>
+			        <div>
+				        <p>{{restavrant.ulica}}, {{dist}}</p>
+				        
+				        <ion-item ng-click="clickRestavracija(restavrant)" id="restavracije-list-item2" ui-sref="tabsController.restavracija" class="ion-information-circled"></ion-item>
+			        </div>
+			      </div> 
+			 </info-window>
 
 		  </ng-map>
 		</div>
     </ion-content>
 </ion-view>
-
-
-<!-- icon ="{  
-      				url: '../images/android-locate.png',
-      				scaledSize: [25, 25]
- 				 }"-->
