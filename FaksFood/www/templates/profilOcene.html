@@ -1,7 +1,9 @@
 <ion-view title="Komentarji" id="page123" class=" ">
     <ion-content padding="true" class="has-header">
         <ion-list class=" " ng-repeat="ocena in ocene">
-            <ion-item class="  ">{{ocena.ocena}}
+            <ion-item class="  ">
+                <p style="">{{ocena.naziv}}</p>
+                <span style="float: left; white-space:normal;">Ocena: {{ocena.ocena}}</span>
             </ion-item>
         </ion-list>
     </ion-content>

@@ -1,17 +1,17 @@
 <ion-view title="Komentarji" id="page12" class=" ">
     <ion-content padding="true" class="has-header">
         <p>povprečna ocena restavracije: {{povpr}}/5</p>
-        <div ng-if="uprijava"> test
+        <div ng-if="uprijava">
             <form id="ocena-form" class="list ">
                 <ion-list id="ocena-list" class=" ">
-                    <label class="item item-input " id="ocena-input">
-                        <span class="input-label">Ocena</span>
+                    <div class="item item-input " id="ocena-input" style="padding:3px 0px 3px 0px;">
+                        <span style="width: 50px" class="input-label">Ocena</span>
                         <ion-radio ng-model="ocena" ng-value="'1'">1</ion-radio>
                         <ion-radio ng-model="ocena" ng-value="'2'">2</ion-radio>
                         <ion-radio ng-model="ocena" ng-value="'3'">3</ion-radio>
                         <ion-radio ng-model="ocena" ng-value="'4'">4</ion-radio>
                         <ion-radio ng-model="ocena" ng-value="'5'">5</ion-radio>
-                    </label>
+                    </div>
                 </ion-list>
                 <button id="ocena-button" class=" button button-stable  button-block " ng-click="oceni(ocena)">Oceni</button>
             </form>

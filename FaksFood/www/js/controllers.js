@@ -432,7 +432,7 @@ angular.module('app.controllers', [])
     };
 })
 
-.controller('profilOceneCtrl', function($scope) {
+.controller('profilOceneCtrl', function($scope, Ocene, UporabnikPrijavlen, Restavracije) {
     $scope.$on('$ionicView.beforeEnter', function(event, viewData) {
         viewData.enableBack = true;
     });
@@ -441,7 +441,7 @@ angular.module('app.controllers', [])
 
     UporabnikPrijavlen.getCurrentUser(function(data) {
         $scope.ocene = [];
-        Ocene.getOceneById(data.id).then(function(getocene) {
+        Ocene.getOceneByUser(data.id).then(function(getocene) {
             angular.forEach(getocene, function(value, key) {
                 Restavracije.getRestavracijaById(value.restavracije_id).then(function(getrest) {
                     $scope.ocene.push({

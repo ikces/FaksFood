@@ -1,7 +1,9 @@
 <ion-view title="Komentarji" id="page123" class=" ">
     <ion-content padding="true" class="has-header">
         <ion-list class=" " ng-repeat="kom in komentarji">
-            <ion-item class="  ">{{kom.vsebina}}
+            <ion-item class="  ">
+                <p style="">{{kom.naziv}}</p>
+                <span style="float: left; white-space:normal;">{{kom.vsebina}}</span>
                 <span ng-click="removeKomentar(kom, $index, komentarji)" class="ion-close-round" style="float:right;"></span>
             </ion-item>
         </ion-list>
