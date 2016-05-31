@@ -414,8 +414,8 @@ angular.module('app.controllers', [])
 
     $scope.removeKomentar = function(koment, index, koments) {
         var confirmPopup = $ionicPopup.confirm({
-            title: 'Consume Ice Cream',
-            template: 'Are you sure you want to eat this ice cream?'
+            title: 'Izbriši komentar',
+            template: 'Ali si prepričan da želiš izbrisati komentar?'
         });
 
         confirmPopup.then(function(res) {
