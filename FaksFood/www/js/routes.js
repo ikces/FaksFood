@@ -105,7 +105,7 @@ angular.module('app.routes', [])
     .state('tabsController.komentarji', {
         url: '/komentarji',
         views: {
-            'tab3': {
+            'tab1': {
                 templateUrl: 'templates/komentarji.html',
                 controller: 'komentarjiCtrl'
             }
@@ -115,7 +115,7 @@ angular.module('app.routes', [])
     .state('tabsController.ocene', {
         url: '/ocene',
         views: {
-            'tab3': {
+            'tab1': {
                 templateUrl: 'templates/ocene.html',
                 controller: 'oceneCtrl'
             }

@@ -311,6 +311,30 @@ angular.module('app.factorys', [])
         });
     }
 
+
+
+    self.addOcena = function(ocena, restavracija, uporabnik) {
+        $http({
+            method: 'POST',
+            data: {
+                ocena: ocena,
+                uporabnik_id: uporabnik,
+                restavracije_id: restavracija
+            },
+            url: 'http://faksfood2-ikces.rhcloud.com/ocene/'
+
+        }).then(function successCallback(response) {
+            console.log("shranjena ocena")
+                // if (response.data != true) {
+                //     self.setUser(response.data);
+                // }
+            return response.data;
+        }, function errorCallback(response) {
+            console.log("ni shranjena ocena");
+            // return null;
+        });
+    }
+
     return self;
 })
 
@@ -347,6 +371,30 @@ angular.module('app.factorys', [])
             return response.data;
         }, function errorCallback(response) {
             return "Cannot connect to faksfood API";
+        });
+    }
+
+    self.addKomentar = function(vsebina, restavracija, uporabnik) {
+        var da = new Date();
+        return $http({
+            method: 'POST',
+            data: {
+                vsebina: vsebina,
+                uporabnik_id: uporabnik,
+                restavracije_id: restavracija,
+                datum: da
+            },
+            url: 'http://faksfood2-ikces.rhcloud.com/komentarji/'
+
+        }).then(function successCallback(response) {
+
+            // if (response.data != true) {
+            //     self.setUser(response.data);
+            // }
+            return response.data;
+        }, function errorCallback(response) {
+
+            return null;
         });
     }
 

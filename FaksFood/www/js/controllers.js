@@ -314,11 +314,19 @@ angular.module('app.controllers', [])
     };
 })
 
-.controller('komentarjiCtrl', function($scope, Ocene, CurrentRestavracija, Komentarji) {
+.controller('komentarjiCtrl', function($scope, Ocene, CurrentRestavracija, Komentarji, UporabnikPrijavlen) {
     //force show back button
     $scope.$on('$ionicView.beforeEnter', function(event, viewData) {
         viewData.enableBack = true;
     });
+
+    if (UporabnikPrijavlen.getCurrentUser() != null) {
+        $scope.uprijava = true;
+
+    } else {
+
+        $scope.uprijava = false;
+    }
 
     $scope.$watch(function() {
         return CurrentRestavracija.getCurrent();
@@ -338,19 +346,43 @@ angular.module('app.controllers', [])
                 $scope.povpr = (povprecna / ocene.length)
             }
         });
-        // $scope.komentarjiPrikazani = [];
 
-        Komentarji.getKomentarjiByRestavracija($scope.restavracija.guid).then(function(koment) {
-
-            if (koment.length == 0) {
-                $scope.komentarjiPrikazani = [{ "vsebina": "Trenutno ni komentarjev za to restavracijo" }];
-            } else {
-                $scope.komentarjiPrikazani = koment;
-            }
-        });
+        $scope.getKomentarje();
 
     });
 
+    $scope.getKomentarje = function() {
+        $scope.komentarjiPrikazani = [];
+        Komentarji.getKomentarjiByRestavracija($scope.restavracija.guid).then(function(koment) {
+
+            if (koment.length == 0) {
+                $scope.komentarjiPrikazani.push({ vsebina: "Trenutno ni komentarjev za to restavracijo" });
+            } else {
+                $scope.komentarjiPrikazani = koment;
+            }
+
+        });
+
+    }
+
+    $scope.oceni = function(ocena) {
+
+        Ocene.addOcena(ocena, $scope.restavracija.guid, UporabnikPrijavlen.getCurrentUser().id);
+
+        if ($scope.povpr != 0) {
+            var tmp = parseInt($scope.povpr, 10);
+            tmp = parseInt(tmp, 10) + parseInt(ocena, 10);
+            $scope.povpr = parseInt(tmp, 10) / 2;
+        } else {
+            $scope.povpr = ocena;
+        }
+    }
+
+    $scope.komentiraj = function(komentar) {
+        Komentarji.addKomentar(komentar, $scope.restavracija.guid, UporabnikPrijavlen.getCurrentUser().id).then(function() {
+            $scope.getKomentarje();
+        });
+    }
 
 })
 
