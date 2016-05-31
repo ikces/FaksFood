@@ -1,22 +1,26 @@
 <ion-view title="Restavracija" id="page10" class=" ">
     <ion-content padding="true" class="has-header">
         <div ng-if="showMap">
-        <div id="map2" style="height:60%" ap-lazy-load="https://maps.google.com/maps/api/js">
-          <ng-map id="map2" center="[{{lat}}, {{long}}]" zoom="15">
-           <marker  position="[{{lat}}, {{long}}]"  animation="Animation.DROP"> 
-            </marker>
-            <marker  position="[{{latCourent}}, {{longCourent}}]"  icon="{{customIconCourent}}"  draggable="true" animation="Animation.DROP"> 
-            
-
-            </marker>
-          </ng-map>
-        </div>
+            <div id="map2" style="height:60%" ap-lazy-load="https://maps.google.com/maps/api/js">
+                <ng-map id="map2" center="[{{lat}}, {{long}}]" zoom="15">
+                    <marker position="[{{lat}}, {{long}}]" animation="Animation.DROP">
+                    </marker>
+                    <marker position="[{{latCourent}}, {{longCourent}}]" icon="{{customIconCourent}}" draggable="true" animation="Animation.DROP">
+                    </marker>
+                </ng-map>
+            </div>
         </div>
         <ion-list id="restavracija-list7" class=" ">
-            <ion-item id="restavracija-list-item12" class="  ">{{restavracija.naziv}}</ion-item>
-            <ion-item id="restavracija-list-item13" class="  ">Ocene in komentarji</ion-item>
+            <ion-item id="restavracija-list-item12" class="  ">
+                <h2>{{restavracija.naziv}}</h2></ion-item>
+            <!-- <ion-item id="restavracija-list-item13" class="  ">Ocene in komentarji
+                <i class="icon ion-arrow-right-c"></i>
+            </ion-item> -->
+            <ion-item class="item-icon-right  " id="restavracija-list-item15" ui-sref="tabsController.komentarji">Komentarji in ocene
+                <i class="icon ion-arrow-right-c"></i>
+            </ion-item>
             <ion-item id="restavracija-list-item14" class="  ">
-                <div ng-repeat="dc in delovnicasi" >
+                <div ng-repeat="dc in delovnicasi">
                     {{dc.tip_s}}: <span ng-if="dc.cas_odpre!=='undefined'">{{dc.cas_odpre}}-{{dc.cas_zapre}}</span><span ng-if="dc.cas_odpre=='undefined'">Ne obratuje</span>
                 </div>
             </ion-item>

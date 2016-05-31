@@ -1,51 +1,53 @@
 angular.module('app.services', [])
 
 .service('CurrentRestavracija', function() {
-  var productList = null;
+        var productList = null;
 
-  var setCurrent = function(restavracija) {
-      productList = restavracija;
-      console.log("service", productList);
-  };
+        var setCurrent = function(restavracija) {
+            productList = restavracija;
+            console.log("service", productList);
+        };
 
-  var getCurrent = function(){
-      return productList;
-  };
+        var getCurrent = function() {
+            return productList;
+        };
+        return {
+            setCurrent: setCurrent,
+            getCurrent: getCurrent
+        };
+    })
+    .service('UpdateRestavracije', function() {
+        var version = 1;
 
-  return {
-    setCurrent: setCurrent,
-    getCurrent: getCurrent
-  };
-})
-.service('UpdateRestavracije', function() {
-   var version = 1;
-     function getVersion() {
-        return version;
+        function getVersion() {
+            return version;
+        }
+
+        function setVersion(newVersion) {
+            version = newVersion;
+
+        }
+        return {
+            getVersion: getVersion,
+            setVersion: setVersion,
+        }
+    })
+
+.service('UporabnikPrijavlen', function(Uporabnik) {
+    var user = null;
+
+    function getUser() {
+        return user;
     }
-    function setVersion(newVersion) {
-        version = newVersion;
 
+    function setUser() {
+        Uporabnik.getUser().then(function(getdata) {
+            user = getdata;
+        });
     }
     return {
-        getVersion: getVersion,
-        setVersion: setVersion,
+        getUser: getUser,
+        setUser: setUser,
     }
-})
-
-.service('UporabnikPrijavlen', function(Uporabnik){
-  var user = null;
-
-  function getUser() {
-    return user;
-  } 
-  function setUser() {
-    Uporabnik.getUser().then(function(getdata){  
-      user = getdata;
-    });
-  }
-  return {
-      getUser: getUser,
-      setUser: setUser,
-  }
 
 });
