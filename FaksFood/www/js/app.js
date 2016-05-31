@@ -1,4 +1,3 @@
-
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -11,39 +10,39 @@ var db = null;
 angular.module('app', ['ionic', 'app.factorys', 'app.controllers', 'app.routes', 'app.services', 'app.directives', 'ngCordova', 'ngMap'])
 
 .run(function($ionicPlatform, $cordovaSQLite, UporabnikPrijavlen) {
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
-    }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-    }
+    $ionicPlatform.ready(function() {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            cordova.plugins.Keyboard.disableScroll(true);
+        }
+        if (window.StatusBar) {
+            // org.apache.cordova.statusbar required
+            StatusBar.styleDefault();
+        }
 
-    if(window.cordova) {
-      // App syntax
-      db = $cordovaSQLite.openDB("myapp.db",{location:'default'});
-    } else {
-      // Ionic serve syntax
-      db = window.openDatabase("myapp.db", "1.0", "My app", -1);
-    }
+        if (window.cordova) {
+            // App syntax
+            db = $cordovaSQLite.openDB("myapp.db", { location: 'default' });
+        } else {
+            // Ionic serve syntax
+            db = window.openDatabase("myapp.db", "1.0", "My app", -1);
+        }
 
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS restavracije (id integer primary key, guid text, naziv text, telefon text, ulica text, kraj_id integer, vrednost_obroka text, sirina real, dolzina real)"); 
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS odpiralni_casi (id integer, tip integer, cas_odpre text, cas_zapre text, restavracije_id integer)");
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS kraj (id integer, naziv text)");
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS vrste_ponudbe (id integer primary key, naziv text, icona text, restavracije_id integer)");
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS jedilniki (id integer primary key, jedi text, restavracije_id integer)");
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS version (id integer, version text)");
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS uporabnik (id integer, password text, username text, ime text, priimek text, naslov text, kraj_id integer)");
-    
-  
+        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS restavracije (id integer primary key, guid text, naziv text, telefon text, ulica text, kraj_id integer, vrednost_obroka text, sirina real, dolzina real)");
+        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS odpiralni_casi (id integer, tip integer, cas_odpre text, cas_zapre text, restavracije_id integer)");
+        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS kraj (id integer, naziv text)");
+        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS vrste_ponudbe (id integer primary key, naziv text, icona text, restavracije_id integer)");
+        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS jedilniki (id integer primary key, jedi text, restavracije_id integer)");
+        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS version (id integer, version text)");
+        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS uporabnik (id integer, password text, username text, ime text, priimek text, email text, telefon text, naslov text, kraj_id integer)");
 
-    UporabnikPrijavlen.setUser();
 
-  });
+
+        UporabnikPrijavlen.setUser();
+
+    });
 
 
 }).config(['$ionicConfigProvider', function($ionicConfigProvider) {
