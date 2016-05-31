@@ -30,7 +30,6 @@ angular.module('app.controllers', [])
             alert(msg);
         }
     };
-
 })
 
 .controller('restavracijeCtrl', function($scope, $ionicScrollDelegate, filterFilter, Restavracije, CurrentRestavracija, UpdateRestavracije) {
@@ -42,7 +41,6 @@ angular.module('app.controllers', [])
 
     Restavracije.getKraji().then(function(getdata) {
         $scope.kraji = getdata;
-
     });
 
     $scope.$watch(function() {
@@ -107,10 +105,8 @@ angular.module('app.controllers', [])
 
     $scope.customIconCourent = {
         "scaledSize": [40, 40],
-        "url": "https://cdn0.iconfinder.com/data/icons/android-icons/512/gps-01-512.png"
+        "url": "http://bintangraya.com/assets/back/dist/css/ionicons/png/512/android-location.png"
     };
-
-
 
     //Pridobi podatke o restavracijah
     Restavracije.getRestavracije().then(function(getdata) {
@@ -200,11 +196,15 @@ angular.module('app.controllers', [])
     }
 })
 
-
 .controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap, Restavracije, $cordovaGeolocation) {
+
+    //force show back button
+    $scope.$on('$ionicView.beforeEnter', function(event, viewData) {
+        viewData.enableBack = true;
+    });
     $scope.customIconCourent = {
         "scaledSize": [40, 40],
-        "url": "https://cdn0.iconfinder.com/data/icons/android-icons/512/gps-01-512.png"
+        "url": "http://bintangraya.com/assets/back/dist/css/ionicons/png/512/android-location.png"
     };
 
     //Grega1
@@ -271,53 +271,89 @@ angular.module('app.controllers', [])
 })
 
 
+.controller('headerCtrl', function($scope, $cordovaToast, $http, Version, Restavracije, UpdateRestavracije, UporabnikPrijavlen) {
+    $scope.refreshDatabase = function() {
+        $http({
+                method: 'GET',
+                url: 'http://faksfood2-ikces.rhcloud.com/restavracije/version'
+            })
+            .then(function successCallback(response) {
+                var update = false;
+                var onlineVersion = Date.now().toString(); //response.data[0].version;
+                Version.get().then(function(data) {
+                    if (data.length == 0) {
+                        Version.add(onlineVersion);
+                        update = true;
+                    } else {
+                        if (data.version != onlineVersion) {
+                            update = true;
+                        }
+                    }
+                    if (update == true) {
+                        $scope.showToast("Baza se posodablja");
+                        Version.update(onlineVersion);
+                        Restavracije.getFromApiRestavracije();
+                        UpdateRestavracije.setVersion(onlineVersion);
+                    } else {
+                        $scope.showToast("Trenutna verzija");
+                    }
+                });
+            }, function errorCallback(response) {
+                return "Cannot connect to faksfood API";
+            });
+    }
 
-.controller('komentarjiCtrl', function($scope) {
+    UporabnikPrijavlen.getUser();
+
+    $scope.showToast = function(msg) {
+        if (window.plugins && window.plugins.toast) {
+            $cordovaToast.show(msg, 'long', 'center');
+        } else {
+            alert(msg);
+        }
+    };
+})
+
+.controller('komentarjiCtrl', function($scope, Ocene, CurrentRestavracija, Komentarji) {
+    //force show back button
+    $scope.$on('$ionicView.beforeEnter', function(event, viewData) {
+        viewData.enableBack = true;
+    });
+
+    $scope.$watch(function() {
+        return CurrentRestavracija.getCurrent();
+
+    }, function() {
+        $scope.restavracija = CurrentRestavracija.getCurrent();
+
+
+        Ocene.getOceneByRestavracija($scope.restavracija.guid).then(function(ocene) {
+            var povprecna = 0;
+            if (ocene.length == 0) {
+                $scope.povpr = 0;
+            } else {
+                for (var i = 0; i < ocene.length; i++) {
+                    povprecna = povprecna + ocene[i].ocena;
+                }
+                $scope.povpr = (povprecna / ocene.length)
+            }
+        });
+        // $scope.komentarjiPrikazani = [];
+
+        Komentarji.getKomentarjiByRestavracija($scope.restavracija.guid).then(function(koment) {
+
+            if (koment.length == 0) {
+                $scope.komentarjiPrikazani = [{ "vsebina": "Trenutno ni komentarjev za to restavracijo" }];
+            } else {
+                $scope.komentarjiPrikazani = koment;
+            }
+        });
+
+    });
+
 
 })
 
 .controller('oceneCtrl', function($scope) {
 
-    })
-    .controller('headerCtrl', function($scope, $cordovaToast, $http, Version, Restavracije, UpdateRestavracije, UporabnikPrijavlen) {
-        $scope.refreshDatabase = function() {
-            $http({
-                    method: 'GET',
-                    url: 'http://faksfood2-ikces.rhcloud.com/restavracije/version'
-                })
-                .then(function successCallback(response) {
-                    var update = false;
-                    var onlineVersion = Date.now().toString(); //response.data[0].version;
-                    Version.get().then(function(data) {
-                        if (data.length == 0) {
-                            Version.add(onlineVersion);
-                            update = true;
-                        } else {
-                            if (data.version != onlineVersion) {
-                                update = true;
-                            }
-                        }
-                        if (update == true) {
-                            $scope.showToast("Baza se posodablja");
-                            Version.update(onlineVersion);
-                            Restavracije.getFromApiRestavracije();
-                            UpdateRestavracije.setVersion(onlineVersion);
-                        } else {
-                            $scope.showToast("Trenutna verzija");
-                        }
-                    });
-                }, function errorCallback(response) {
-                    return "Cannot connect to faksfood API";
-                });
-        }
-
-        UporabnikPrijavlen.getUser();
-
-        $scope.showToast = function(msg) {
-            if (window.plugins && window.plugins.toast) {
-                $cordovaToast.show(msg, 'long', 'center');
-            } else {
-                alert(msg);
-            }
-        };
-    })
+})

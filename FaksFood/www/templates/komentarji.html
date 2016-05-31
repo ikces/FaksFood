@@ -1,9 +1,8 @@
 <ion-view title="Komentarji" id="page12" class=" ">
     <ion-content padding="true" class="has-header">
-        <ion-list id="komentarji-list10" class=" ">
-            <ion-item id="komentarji-list-item19" class="  ">Komentarji 1</ion-item>
-            <ion-item id="komentarji-list-item20" class="  ">Item 2</ion-item>
-            <ion-item id="komentarji-list-item21" class="  ">Item 3</ion-item>
+        <p>povprečna ocena restavracije: {{povpr}}/5</p>
+        <ion-list class=" " ng-repeat="kom in komentarjiPrikazani">
+            <ion-item class="  ">{{kom.vsebina}}</ion-item>
         </ion-list>
     </ion-content>
 </ion-view>

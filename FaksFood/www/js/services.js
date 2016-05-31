@@ -11,7 +11,6 @@ angular.module('app.services', [])
         var getCurrent = function() {
             return productList;
         };
-
         return {
             setCurrent: setCurrent,
             getCurrent: getCurrent
@@ -36,7 +35,6 @@ angular.module('app.services', [])
 
 .service('UporabnikPrijavlen', function(Uporabnik) {
     var user = null;
-
 
     function getCurrentUser() {
         return user;
