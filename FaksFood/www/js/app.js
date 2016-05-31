@@ -36,7 +36,7 @@ angular.module('app', ['ionic', 'app.factorys', 'app.controllers', 'app.routes',
         $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS vrste_ponudbe (id integer primary key, naziv text, icona text, restavracije_id integer)");
         $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS jedilniki (id integer primary key, jedi text, restavracije_id integer)");
         $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS version (id integer, version text)");
-        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS uporabnik (id integer, password text, username text, ime text, priimek text, email text, telefon text, naslov text, kraj_id integer)");
+        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS uporabnik (id_c integer, id integer, password text, username text, ime text, priimek text, email text, telefon text, naslov text, kraj_id integer)");
 
 
 

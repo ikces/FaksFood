@@ -48,6 +48,7 @@ angular.module('app.controllers', [])
         },
         function(value) {
             Restavracije.getRestavracije().then(function(getdata) {
+                console.log("SAFDASF")
                 data = getdata;
                 $scope.buffer = angular.copy(getdata);
                 $scope.restavracije = getdata.slice(0, 10)
@@ -291,9 +292,8 @@ angular.module('app.controllers', [])
                     }
                     if (update == true) {
                         $scope.showToast("Baza se posodablja");
-                        Version.update(onlineVersion);
-                        Restavracije.getFromApiRestavracije();
-                        UpdateRestavracije.setVersion(onlineVersion);
+                        Restavracije.getFromApiRestavracije(onlineVersion);
+                        //UpdateRestavracije.setVersion(onlineVersion);
                     } else {
                         $scope.showToast("Trenutna verzija");
                     }
@@ -356,4 +356,69 @@ angular.module('app.controllers', [])
 
 .controller('oceneCtrl', function($scope) {
 
+})
+
+.controller('profilKomentarjiCtrl', function($scope, Komentarji, UporabnikPrijavlen, Restavracije, $ionicPopup) {
+    $scope.$on('$ionicView.beforeEnter', function(event, viewData) {
+        viewData.enableBack = true;
+    });
+
+    $scope.komentarji = [];
+
+    UporabnikPrijavlen.getCurrentUser(function(data) {
+        $scope.komentarji = [];
+        Komentarji.getKomentarjiByUser(data.id).then(function(getkoment) {
+            angular.forEach(getkoment, function(value, key) {
+                Restavracije.getRestavracijaById(value.restavracije_id).then(function(getrest) {
+                    $scope.komentarji.push({
+                        vsebina: value.vsebina,
+                        id: value.id,
+                        naziv: getrest.naziv
+                    });
+                })
+            })
+        })
+    })
+
+    $scope.removeKomentar = function(koment, index, koments) {
+        var confirmPopup = $ionicPopup.confirm({
+            title: 'Consume Ice Cream',
+            template: 'Are you sure you want to eat this ice cream?'
+        });
+
+        confirmPopup.then(function(res) {
+            if (res) {
+                Komentarji.removeKomentar(koment).then(function(get) {
+                    koments.splice(index, 1);
+                });
+            }
+        });
+    }
+
+    $scope.showConfirm = function() {
+
+    };
+})
+
+.controller('profilOceneCtrl', function($scope) {
+    $scope.$on('$ionicView.beforeEnter', function(event, viewData) {
+        viewData.enableBack = true;
+    });
+
+    $scope.ocene = [];
+
+    UporabnikPrijavlen.getCurrentUser(function(data) {
+        $scope.ocene = [];
+        Ocene.getOceneById(data.id).then(function(getocene) {
+            angular.forEach(getocene, function(value, key) {
+                Restavracije.getRestavracijaById(value.restavracije_id).then(function(getrest) {
+                    $scope.ocene.push({
+                        ocena: value.ocena,
+                        id: value.id,
+                        naziv: getrest.naziv
+                    });
+                })
+            })
+        })
+    })
 })

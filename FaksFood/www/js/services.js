@@ -36,7 +36,8 @@ angular.module('app.services', [])
 .service('UporabnikPrijavlen', function(Uporabnik) {
     var user = null;
 
-    function getCurrentUser() {
+    function getCurrentUser(callback) {
+        if (callback != null) callback(user);
         return user;
     }
 

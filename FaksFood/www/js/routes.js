@@ -62,6 +62,26 @@ angular.module('app.routes', [])
         }
     })
 
+    .state('tabsController.profilKomentarji', {
+        url: '/profilKomentarji',
+        views: {
+            'tab3': {
+                templateUrl: 'templates/profilKomentarji.html',
+                controller: 'profilKomentarjiCtrl'
+            }
+        }
+    })
+
+    .state('tabsController.profilOcene', {
+        url: '/profilOcene',
+        views: {
+            'tab3': {
+                templateUrl: 'templates/profilOcene.html',
+                controller: 'profilOceneCtrl'
+            }
+        }
+    })
+
     .state('tabsController.restavracija', {
         url: '/restavracija',
         views: {

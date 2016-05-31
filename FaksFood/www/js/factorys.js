@@ -45,10 +45,10 @@ angular.module('app.factorys', [])
 })
 
 
-.factory('Restavracije', function($cordovaSQLite, DBA, $http, $cordovaToast) {
+.factory('Restavracije', function($cordovaSQLite, DBA, $http, $cordovaToast, UpdateRestavracije) {
     var self = this;
 
-    self.getFromApiRestavracije = function() {
+    self.getFromApiRestavracije = function(version) {
         $http({
                 method: 'GET',
                 url: 'http://faksfood2-ikces.rhcloud.com/restavracije'
@@ -65,6 +65,7 @@ angular.module('app.factorys', [])
                     sqlString += sqlArr.join();
                     DBA.query(sqlString).then(function(resp) {
                         self.getFromApiMenus();
+                        UpdateRestavracije.setVersion(version);
                     }).catch(function(err) {
                         console.log(err);
                     });
@@ -157,6 +158,15 @@ angular.module('app.factorys', [])
                 return DBA.getAll(result);
             });
     }
+
+    self.getRestavracijaById = function(guid) {
+        var query = "SELECT naziv FROM restavracije WHERE guid=" + guid;
+        return DBA.query(query)
+            .then(function(result) {
+                return DBA.getById(result);
+            });
+    }
+
     self.getMenije = function(id) {
 
         return DBA.query("SELECT * FROM jedilniki WHERE restavracije_id=" + id)
@@ -213,7 +223,7 @@ angular.module('app.factorys', [])
     var self = this
 
     self.getUser = function() {
-        return DBA.query("SELECT * FROM uporabnik WHERE id=1")
+        return DBA.query("SELECT * FROM uporabnik WHERE id_c=1")
             .then(function(result) {
                 return DBA.getById(result);
 
@@ -228,11 +238,11 @@ angular.module('app.factorys', [])
             attr.push(key);
         })
         console.log(attr, value)
-        return DBA.query("INSERT INTO uporabnik (id," + attr.join() + ") VALUES (1," + value.join() + ")");
+        return DBA.query("INSERT INTO uporabnik (id_c," + attr.join() + ") VALUES (1," + value.join() + ")");
     }
 
     self.removeUser = function(data) {
-        return DBA.query("DELETE FROM uporabnik WHERE id=1");
+        return DBA.query("DELETE FROM uporabnik WHERE id_c=1");
     }
 
     self.loginUser = function(username, password) {
@@ -322,6 +332,17 @@ angular.module('app.factorys', [])
         return $http({
             method: 'GET',
             url: 'http://faksfood2-ikces.rhcloud.com/komentarji/uporabnik/' + uporabnik_id
+        }).then(function successCallback(response) {
+            return response.data;
+        }, function errorCallback(response) {
+            return "Cannot connect to faksfood API";
+        });
+    }
+
+    self.removeKomentar = function(koment) {
+        return $http({
+            method: 'DELETE',
+            url: 'http://faksfood2-ikces.rhcloud.com/komentarji/' + koment.id
         }).then(function successCallback(response) {
             return response.data;
         }, function errorCallback(response) {
