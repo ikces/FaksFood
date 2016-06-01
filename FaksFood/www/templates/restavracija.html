@@ -20,6 +20,7 @@
                 <i class="icon ion-arrow-right-c"></i>
             </ion-item>
             <ion-item id="restavracija-list-item14" class="  ">
+                <span ng-show="restavracija.telefon != 'null'" style="float:right;">Tel: {{restavracija.telefon}}</span>
                 <div ng-repeat="dc in delovnicasi">
                     {{dc.tip_s}}: <span ng-if="dc.cas_odpre!=='undefined'">{{dc.cas_odpre}}-{{dc.cas_zapre}}</span><span ng-if="dc.cas_odpre=='undefined'">Ne obratuje</span>
                 </div>

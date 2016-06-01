@@ -223,6 +223,10 @@ angular.module('app.controllers', [])
         $scope.showMap = true;
         $scope.restavracija = CurrentRestavracija.getCurrent();
 
+        console.log($scope.restavracija);
+
+
+
 
         //pridobitev trenutne lokacije
         var posOptions = { timeout: 10000, enableHighAccuracy: false };
