@@ -9,7 +9,7 @@ var db = null;
 
 angular.module('app', ['ionic', 'app.factorys', 'app.controllers', 'app.routes', 'app.services', 'app.directives', 'ngCordova', 'ngMap'])
 
-.run(function($ionicPlatform, $cordovaSQLite, UporabnikPrijavlen) {
+.run(function($ionicPlatform, $cordovaSQLite, UporabnikPrijavlen, $window, $rootScope) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -42,7 +42,22 @@ angular.module('app', ['ionic', 'app.factorys', 'app.controllers', 'app.routes',
 
         UporabnikPrijavlen.setUser();
 
+
+
+
+        $rootScope.online = navigator.onLine;
+        $window.addEventListener("offline", function() {
+            $rootScope.$apply(function() {
+                $rootScope.online = false;
+            });
+        }, false);
+        $window.addEventListener("online", function() {
+            $rootScope.$apply(function() {
+                $rootScope.online = true;
+            });
+        }, false);
     });
+
 
 
 }).config(['$ionicConfigProvider', function($ionicConfigProvider) {

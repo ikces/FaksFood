@@ -23,6 +23,16 @@ angular.module('app.controllers', [])
         }
     }
 
+
+    //za preverjanje povezave z internetom
+    $scope.$watch('online', function(newStatus) {
+        console.log("online ali ne online", $rootScope.online);
+
+        if (!$rootScope.online) {
+            $scope.showToast("Niste povezani z internetom, zato je delovanje aplikacije omejeno!!")
+        }
+    });
+
     $scope.showToast = function(msg) {
         if (window.plugins && window.plugins.toast) {
             $cordovaToast.show(msg, 'long', 'center');
@@ -103,6 +113,23 @@ angular.module('app.controllers', [])
 
 
 .controller('zemljevidCtrl', function($scope, NgMap, $cordovaGeolocation, Restavracije, CurrentRestavracija) {
+
+    //za preverjanje povezave z internetom
+    $scope.$watch('online', function(newStatus) {
+        console.log("online ali ne online", $rootScope.online);
+
+        if (!$rootScope.online) {
+            $scope.showToast("Niste povezani z internetom, zato je delovanje aplikacije omejeno!!")
+        }
+    });
+
+    $scope.showToast = function(msg) {
+        if (window.plugins && window.plugins.toast) {
+            $cordovaToast.show(msg, 'long', 'center');
+        } else {
+            alert(msg);
+        }
+    };
 
     $scope.customIconCourent = {
         "scaledSize": [40, 40],
@@ -193,11 +220,60 @@ angular.module('app.controllers', [])
         UporabnikPrijavlen.removeUser();
     }
     $scope.login = function(username, password) {
-        UporabnikPrijavlen.loginUser(username, password);
+        console.log("tu sem");
+        //UporabnikPrijavlen.loginUser(username, password)
+
+
+        UporabnikPrijavlen.loginUser(username, password).then(function(return1) {
+            console.log("neadlksjdlsakjl", return1);
+            if (return1 == false) {
+
+                $scope.showToast("Napačno uporabniško ime ali geslo!");
+            }
+        });
+
     }
+
+    // UporabnikPrijavlen.registerUser(user).then(function(getdata) {
+    //     if (getdata != true) {
+    //         $scope.showToast("Uporabnik ze obstaja");
+    //     } else {
+    //         $ionicHistory.goBack();
+    //     }
+    // })
+
+
+
+    $scope.showToast = function(msg) {
+        if (window.plugins && window.plugins.toast) {
+            $cordovaToast.show(msg, 'long', 'center');
+        } else {
+            alert(msg);
+        }
+    };
 })
 
-.controller('restavracijaCtrl', function($scope, CurrentRestavracija, NgMap, Restavracije, $cordovaGeolocation) {
+.controller('restavracijaCtrl', function($scope, $rootScope, CurrentRestavracija, NgMap, Restavracije, $cordovaGeolocation) {
+
+
+
+
+    //za preverjanje povezave z internetom
+    $scope.$watch('online', function(newStatus) {
+        console.log("online ali ne online", $rootScope.online);
+
+        if (!$rootScope.online) {
+            $scope.showToast("Niste povezani z internetom, zato je delovanje aplikacije omejeno!!")
+        }
+    });
+
+    $scope.showToast = function(msg) {
+        if (window.plugins && window.plugins.toast) {
+            $cordovaToast.show(msg, 'long', 'center');
+        } else {
+            alert(msg);
+        }
+    };
 
     //force show back button
     $scope.$on('$ionicView.beforeEnter', function(event, viewData) {

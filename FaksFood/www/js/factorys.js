@@ -261,7 +261,7 @@ angular.module('app.factorys', [])
                 }
                 return response.data;
             }, function errorCallback(response) {
-                return null;
+                return false;
             });
     }
 
