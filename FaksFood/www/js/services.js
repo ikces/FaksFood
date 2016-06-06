@@ -63,10 +63,27 @@ angular.module('app.services', [])
     }
 
     function loginUser(username, password) {
-        Uporabnik.loginUser(username, password).then(function(getdata) {
-            user = getdata;
+        // Uporabnik.loginUser(username, password).then(function(getdata) {
+        //     user = getdata;
+        // });
+
+
+        return Uporabnik.loginUser(username, password).then(function(getdata1) {
+            console.log("podatki", getdata1);
+            if (getdata1 == null) {
+                console.log("NI prav");
+                return false;
+            } else {
+
+
+                user = getdata1;
+                console.log("prav");
+                return true;
+            }
         });
     }
+
+
 
     function registerUser(data) {
         return Uporabnik.register(data).then(function(getdata) {
