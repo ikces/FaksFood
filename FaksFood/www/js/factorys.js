@@ -365,13 +365,14 @@ angular.module('app.factorys', [])
 
     self.removeKomentar = function(koment) {
         return $http({
-            method: 'DELETE',
-            url: 'http://faksfood2-ikces.rhcloud.com/komentarji/' + koment.id
-        }).then(function successCallback(response) {
-            return response.data;
-        }, function errorCallback(response) {
-            return "Cannot connect to faksfood API";
-        });
+    method: 'DELETE',
+    url: 'http://faksfood2-ikces.rhcloud.com/komentarji/' + koment.id
+}).then(function successCallback(response) {
+    return response.data;
+}, function errorCallback(response) {
+    return "Cannot connect to faksfood API";
+});
+
     }
 
     self.addKomentar = function(vsebina, restavracija, uporabnik) {
